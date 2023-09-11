@@ -109,7 +109,7 @@ const data: Product[] = [
 
 
 
-export function generateMetadata({params: {id}}: Props) {
+function generateMetadata({params: {id}}: Props) {
 
   
   return {
@@ -166,7 +166,7 @@ export default function ProductPage({params: {id}}: Props) {
       </div>
 
       <div className="product__other">
-        
+
       </div>
     </div>
   )
