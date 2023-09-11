@@ -18,9 +18,9 @@ const data = [
   {title: 'Fittings for Building New Cars Series 779'},
 ]
 
-export const metadata: Metadata = {
-  title: 'AETD Products', 
-}
+// export const metadata: Metadata = {
+//   title: 'AETD Products', 
+// }
 
 export default function Products() {
 
