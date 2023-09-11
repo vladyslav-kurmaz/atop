@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'MyCustomFont'; 
+  src: url('/fonts/Hauora-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MyCustomFont'; 
+  src: url('/fonts/Hauora-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MyCustomFont'; 
+  src: url('/fonts/Hauora-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MyCustomFont'; 
+  src: url('/fonts/Hauora-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MyCustomFont'; 
+  src: url('/fonts/Hauora-SemiBold.ttf') format('truetype');
+}
