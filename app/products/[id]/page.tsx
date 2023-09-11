@@ -2,6 +2,10 @@
 import {useState} from 'react';
 import CustomSlider from '@/components/Slider/Slider';
 import './product.scss';
+import Link from 'next/link';
+import Slider from 'react-slick';
+import ServiceProductSlider from '@/components/ServiceProductSlider/ServiceProductSlider';
+import Head from 'next/head';
 
 
 type Props = {
@@ -17,6 +21,7 @@ type Product = {
   options: string[],
   scopeOfDelivery: string[]
 }
+
 
 const data: Product[] = [
   
@@ -105,7 +110,7 @@ const data: Product[] = [
     options: ['61-779 — compartment wagon', '47K — compartment wagon with furniture, which transforms at night'],
     scopeOfDelivery: ['Set of fire protection of heating pipes', 'Wagon wall set', 'A set of wagon ceilings', 'A set of furniture for the service compartment of a wagon', 'Set toilet elements', 'Wagon wall set', 'A set of furniture for the service compartment of a wagon']
   },
-]
+];
 
 
 
@@ -118,10 +123,10 @@ const data: Product[] = [
 // }
 
 export default function ProductPage({params: {id}}: Props) {
+  const [productSlide, setProductSlide] = useState(0);
   const [readMore, setReadMore] = useState(false);
   const currentProduct = data.filter((item, i) => i === +id)[0]
   const {slider, title, description, options, scopeOfDelivery} = currentProduct;
-  // console.log(slider);
 
   const createList = (options: string[]) => {
     return options.map((item, i) => {
@@ -133,41 +138,48 @@ export default function ProductPage({params: {id}}: Props) {
     })
   }
 
-
   return (
-    <div className="product">
-      <CustomSlider data={slider}/>
-   
-      <div className="product__container">
-        <span className='product__container-title'>Product</span>
+    <>
+      <Head>
+        <title>test</title>
+        
+      </Head>
+      <div className="product">
+        <CustomSlider data={slider}/>
+    
+        <div className="product__container">
+          <span className='product__container-title'>Products</span>
 
-        <div className="product__container-info">
-          <h2 className="product__container-info-title">{title}</h2>
-          <div className="product__container-info-container">
-            <p className="product__container-info-container-text" 
-              style={!readMore? {maxHeight: '180px', transition: 'all .3s'} : {maxHeight: '2000px', transition: 'all .3s'}}
-            >
-              {readMore ? description : `${description.slice(0, 421)}...`}
-            </p>
-            <button 
-              className="product__container-info-container-button" 
-              onClick={() => setReadMore(!readMore)}><span>{readMore ? '-' : '+'}</span> Read More</button>
-            <h3 className="product__container-info-container-title">Options:</h3>
-            <ul className="product__container-info-container-list">
-              {createList(options)}
-            </ul>
-            <h3 className="product__container-info-container-title">Scope of Delivery:</h3>
-            <ul className="product__container-info-container-list">
-              {createList(scopeOfDelivery)}
-            </ul>
+          <div className="product__container-info">
+            <h2 className="product__container-info-title">{title}</h2>
+            <div className="product__container-info-container">
+              <p className="product__container-info-container-text" 
+                style={!readMore? {
+                  // maxHeight: '250px',
+                   transition: 'all .3s'} : {maxHeight: '2000px', transition: 'all .3s'}}
+              >
+                {readMore ? description : `${description.slice(0, 421)}...`}
+              </p>
+              <button 
+                className="product__container-info-container-button" 
+                onClick={() => setReadMore(!readMore)}><span>{readMore ? '-' : '+'}</span> Read More</button>
+              <h3 className="product__container-info-container-title">Options:</h3>
+              <ul className="product__container-info-container-list">
+                {createList(options)}
+              </ul>
+              <h3 className="product__container-info-container-title">Scope of Delivery:</h3>
+              <ul className="product__container-info-container-list">
+                {createList(scopeOfDelivery)}
+              </ul>
 
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="product__other">
+        <ServiceProductSlider status={true}/>
 
       </div>
-    </div>
+    </>
+    
   )
 }

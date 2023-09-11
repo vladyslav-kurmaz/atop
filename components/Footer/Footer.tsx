@@ -1,9 +1,10 @@
 'use client'
 
 import {MouseEvent} from 'react'
+import Link from 'next/link';
+import Image from 'next/image';
 
-import Image from 'next/image'
-import logo from '../../image/logo.webp'
+import logo from '../../image/logo.webp';
 
 import './Footer.scss';
 
@@ -80,11 +81,11 @@ const Footer = () => {
 
           <ul className="footer__company">
             
-            <li className="footer__company-item"><a href="" className="footer__company-item-link">Services</a></li>
-            <li className="footer__company-item"><a href="" className="footer__company-item-link">Products</a></li>
-            <li className="footer__company-item"><a href="" className="footer__company-item-link">Quality System</a></li>
-            <li className="footer__company-item"><a href="" className="footer__company-item-link">About</a></li>
-            <li className="footer__company-item"><a href="" className="footer__company-item-link">Contacts</a></li>
+            <li className="footer__company-item"><Link href="/servicesPage" className="footer__company-item-link">Services</Link></li>
+            <li className="footer__company-item"><Link href="/products" className="footer__company-item-link">Products</Link></li>
+            <li className="footer__company-item"><Link href="/qualitySystem" className="footer__company-item-link">Quality System</Link></li>
+            <li className="footer__company-item"><Link href="/about" className="footer__company-item-link">About</Link></li>
+            <li className="footer__company-item"><Link href="/#contacts" className="footer__company-item-link">Contacts</Link></li>
           </ul>
         </div>
 

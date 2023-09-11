@@ -20,6 +20,12 @@
     justify-content: space-between;
     max-width: 1440px;
     width: 100%;
+
+    &-logo {
+      width: 102px;
+      height: 32px;
+    }
+
     & .header__container {
       display: flex;
       align-items: center;

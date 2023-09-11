@@ -5,7 +5,7 @@ import Image from 'next/image';
 import {MouseEvent, useState, ChangeEvent} from 'react'
 
 
-import logoSmall from '../../image/logo-small.webp'
+import logoSmall from '../../image/logo.webp'
 
 
 
@@ -27,10 +27,11 @@ export default function Header() {
   return (
     <header className="header ">
       <div className='header__desctop'>
-        <Link href={'/'}>
+        <Link href={'/'} >
           <Image
             src={logoSmall}
             alt='logo'
+            className='header__desctop-logo'
           />  
         </Link>
         
@@ -102,6 +103,7 @@ export default function Header() {
                 <Image
                   src={logoSmall}
                   alt='logo'
+                  className='header__desctop-logo'
                 />  
               </Link>
             {
