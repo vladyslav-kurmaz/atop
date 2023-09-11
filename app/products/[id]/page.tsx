@@ -109,13 +109,13 @@ const data: Product[] = [
 
 
 
-function generateMetadata({params: {id}}: Props) {
+// export function generateMetadata({params: {id}}: Props) {
 
   
-  return {
-    title: id
-  }
-}
+//   return {
+//     title: id
+//   }
+// }
 
 export default function ProductPage({params: {id}}: Props) {
   const [readMore, setReadMore] = useState(false);
@@ -124,9 +124,9 @@ export default function ProductPage({params: {id}}: Props) {
   // console.log(slider);
 
   const createList = (options: string[]) => {
-    return options.map(item => {
+    return options.map((item, i) => {
       return (
-        <li className="product__container-info-container-list-item">
+        <li className="product__container-info-container-list-item" key={i}>
           {item}
         </li>
       )
