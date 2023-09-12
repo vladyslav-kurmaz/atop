@@ -95,7 +95,7 @@
   
     &__img {
 
-  
+      height: 454px;
     }
   
     &__container {
@@ -142,7 +142,7 @@
 
   
     &__img {
-
+      height: 354px;
   
     }
   
@@ -210,7 +210,11 @@
 
 @media screen and (max-width: 500px) {
   .servicePage {
+    &__img {
+      height: 254px;
   
+    }
+
     &__container {
   
       &-title {
