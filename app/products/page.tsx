@@ -38,6 +38,7 @@ export default function Products() {
 
       return (
         <li className="products__list-item" key={i}>
+          <Link href={`/products/${i}`} className="products__list-item-overLink"></Link>
           <p className="products__list-item-text">{title}</p>
           <div className="products__list-item-container">
             <span className="products__list-item-container-num">{number()}</span>

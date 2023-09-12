@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import {useState} from 'react';
+import Slider from 'react-slick';
 
 import mainImage from '../image/mainPage/mainImage.webp';
 import tarmpel from '../image/mainPage/trampel.webp';
@@ -25,7 +26,35 @@ import './mainPage.scss';
 
 export default function Home() {
   const [growStatus, setGrowStatus] = useState(0);
-  const [partnersStatus, setPartnersStatus] = useState(0);
+
+  const settings = {
+    arrows: true,
+    centerPadding: '0px',
+    dots: false,
+    centerMode: true,
+    infinite: true, 
+    speed: 0, 
+    slidesToShow: 2, 
+    slidesToScroll: 1, 
+    responsive: [
+      {
+        breakpoint: 700, 
+        settings: {
+          slidesToShow: 2,
+          speed: 2000,
+          autoplay: true
+        },
+      },
+      {
+        breakpoint: 500, 
+        settings: {
+          slidesToShow: 1,
+          speed: 2000,
+          autoplay: true
+        },
+      },
+    ],
+  };
 
   const switchSlide = (num: number) => {
     switch(num) {
@@ -40,30 +69,12 @@ export default function Home() {
       default: return {left: '0px'}
     }
   }
-
-  const switchPartnerSlide = (num: number) => {
-    switch(num) {
-      case 0:
-        return {left: '0px'}
-      case 1:
-        return {left: '-216px'}
-      case 2:
-        return {left: '-442px'}
-      case 3:
-        return {left: '-658px'}
-      case 4:
-        return {left: '-878px'}
-      default: return {left: '0px'}
-    }
-  }
-
   
 
   return (
     <div className='mainPage'>
 
       <div className="mainPage__first">
-        {/* <div className="mainPage__first-backgroung"> */}
           <Image
 
             src={mainImage}
@@ -73,7 +84,6 @@ export default function Home() {
             layout='fill'
             style={{ position: 'absolute', top: 0, left: 0 }}
             />
-        {/* </div> */}
 
         <div className="mainPage__first-container">
           <h1 className='mainPage__first-title'>We create products for rail transport & underground</h1>
@@ -225,7 +235,7 @@ export default function Home() {
             <p className="mainPage__direction-list-item-text">
               Molding under pressure of plastic is carried out on thermoplastics machines in a new specially equipped modern building. Enterprise has its own equipment, has its own approaches to the manufacture of plastic products, constantly improves the production process.
             </p>
-            <a href="#" className="mainPage__direction-list-item-readme">
+            <Link href="/servicesPage/7" className="mainPage__direction-list-item-readme">
               Read More
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <mask id="mask0_385_7" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -235,14 +245,14 @@ export default function Home() {
                 <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="#232323"/>
                 </g>
               </svg>
-            </a>
+            </Link>
           </li>
           <li className="mainPage__direction-list-item">
             <h3 className="mainPage__direction-list-item-title">Metalworking</h3>
             <p className="mainPage__direction-list-item-text">
               We offer full cycle metal processing services. We work on high precision machines. We use your CD or we are developing a project from the very beginning.
             </p>
-            <a href="#" className="mainPage__direction-list-item-readme">
+            <Link href="/servicesPage/6" className="mainPage__direction-list-item-readme">
               Read More
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <mask id="mask0_385_7" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -252,7 +262,7 @@ export default function Home() {
                 <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="#232323"/>
                 </g>
               </svg>
-            </a>
+            </Link>
           </li>
           <li className="mainPage__direction-list-item">
             <h3 className="mainPage__direction-list-item-title">IT and web development</h3>
@@ -281,20 +291,19 @@ export default function Home() {
 
         <ul className="mainPage__enterprise-list">
           <li className="mainPage__enterprise-list-item">
+            <Link href={'/servicesPage/8'} className='mainPage__enterprise-list-item-overLink'></Link>
             <div className="mainPage__enterprise-list-item-img">
               <Image
                 src={first}
                 alt='first'
-                // objectFit='cover'
-                // layout='fill'
+
                 className='mainPage__enterprise-list-item-img-picture'
-                // style={{width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: '12px', borderBottomLeftRadius: '12px'}}
               />
             </div>
             <div className="mainPage__enterprise-list-item-content">
               <div className="mainPage__enterprise-list-item-content-container">
                 <h4 className="mainPage__enterprise-list-item-content-container-title">Appliance development</h4>
-                <a href="#" className="mainPage__enterprise-list-item-content-container-button">
+                <Link href="/servicesPage/8" className="mainPage__enterprise-list-item-content-container-button">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <mask id="mask0_385_345" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                       <rect width="20" height="20" fill="#D9D9D9"/>
@@ -303,13 +312,13 @@ export default function Home() {
                       <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="#232323"/>
                     </g>
                   </svg>
-                </a>
+                </Link>
               </div>
               
               <p className="mainPage__enterprise-list-item-content-text">
                 We specializes in the development and manufacture of electronic devices of various complexity, testing equipment for rail transport and aviation industry.
               </p>
-              <a href="#" className="mainPage__enterprise-list-item-content-button">
+              <a href="/servicesPage/8" className="mainPage__enterprise-list-item-content-button">
                 Read More
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <mask id="mask0_385_345" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -323,20 +332,18 @@ export default function Home() {
             </div>
           </li>
           <li className="mainPage__enterprise-list-item">
+            <Link href={'/servicesPage/11'} className='mainPage__enterprise-list-item-overLink'></Link>
             <div className="mainPage__enterprise-list-item-img">
               <Image
                 src={thecond}
                 alt='thecond'
-                // fill={true}
-                // objectFit='cover'
                 className='mainPage__enterprise-list-item-img-picture'
-                // style={{width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: '12px', borderBottomLeftRadius: '12px'}}
               />
             </div>
             <div className="mainPage__enterprise-list-item-content">
               <div className="mainPage__enterprise-list-item-content-container">
                 <h4 className="mainPage__enterprise-list-item-content-container-title">Legal & brokerage services</h4>
-                <a href="#" className="mainPage__enterprise-list-item-content-container-button">
+                <Link href="/servicesPage/11" className="mainPage__enterprise-list-item-content-container-button">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <mask id="mask0_385_345" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                       <rect width="20" height="20" fill="#D9D9D9"/>
@@ -345,12 +352,12 @@ export default function Home() {
                       <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="#232323"/>
                     </g>
                   </svg>
-                </a>
+                </Link>
               </div>
               <p className="mainPage__enterprise-list-item-content-text">
                 We povide quality legal services to organizations that will help management to better focus on the peculiarities of registration, development and promotion of business in the market.
               </p>
-              <a href="#" className="mainPage__enterprise-list-item-content-button">
+              <Link href="/servicesPage/11" className="mainPage__enterprise-list-item-content-button">
                 Read More
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <mask id="mask0_385_345" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -360,22 +367,22 @@ export default function Home() {
                     <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="#232323"/>
                   </g>
                 </svg>
-              </a>
+              </Link>
             </div>
           </li>
           <li className="mainPage__enterprise-list-item">
+            <Link href={'/servicesPage/9'} className='mainPage__enterprise-list-item-overLink'></Link>
             <div className="mainPage__enterprise-list-item-img">
               <Image
                 src={third}
                 alt='third'
                 className='mainPage__enterprise-list-item-img-picture'
-                // style={{width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: '12px', borderBottomLeftRadius: '12px'}}
               />
             </div>
             <div className="mainPage__enterprise-list-item-content">
               <div className="mainPage__enterprise-list-item-content-container">
                 <h4 className="mainPage__enterprise-list-item-content-container-title">Construction manufacturing</h4>
-                <a href="#" className="mainPage__enterprise-list-item-content-container-button">
+                <Link href="/servicesPage/9" className="mainPage__enterprise-list-item-content-container-button">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <mask id="mask0_385_345" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                       <rect width="20" height="20" fill="#D9D9D9"/>
@@ -384,12 +391,12 @@ export default function Home() {
                       <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="#232323"/>
                     </g>
                   </svg>
-                </a>
+                </Link>
               </div>
               <p className="mainPage__enterprise-list-item-content-text">
                 The production is equipped with all necessary equipment and tool for collecting, packing and shipment of products to the customer.
               </p>
-              <a href="#" className="mainPage__enterprise-list-item-content-button">
+              <Link href="/servicesPage/9" className="mainPage__enterprise-list-item-content-button">
                 Read More
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <mask id="mask0_385_345" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -399,22 +406,22 @@ export default function Home() {
                     <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="#232323"/>
                   </g>
                 </svg>
-              </a>
+              </Link>
             </div>
           </li>
           <li className="mainPage__enterprise-list-item">
+            <Link href={'/servicesPage/10'} className='mainPage__enterprise-list-item-overLink'></Link>
             <div className="mainPage__enterprise-list-item-img">
               <Image
                 src={fourth}
                 alt='fourth'
                 className='mainPage__enterprise-list-item-img-picture'
-                // style={{width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: '12px', borderBottomLeftRadius: '12px'}}
               />
             </div>
             <div className="mainPage__enterprise-list-item-content">
               <div className="mainPage__enterprise-list-item-content-container">
                 <h4 className="mainPage__enterprise-list-item-content-container-title">Painting manufacturing</h4>
-                <a href="#" className="mainPage__enterprise-list-item-content-container-button">
+                <Link href="/servicesPage/10" className="mainPage__enterprise-list-item-content-container-button">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <mask id="mask0_385_345" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                       <rect width="20" height="20" fill="#D9D9D9"/>
@@ -423,12 +430,12 @@ export default function Home() {
                       <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="#232323"/>
                     </g>
                   </svg>
-                </a>
+                </Link>
               </div>
               <p className="mainPage__enterprise-list-item-content-text">
                 It offers services for powder painting of metal and metal structures. In our work we use powder paints of well-known and well-proven European manufacturers. With only drawings on hand, we can create and paint for you any product of any shape.
               </p>
-              <a href="#" className="mainPage__enterprise-list-item-content-button">
+              <Link href="/servicesPage/10" className="mainPage__enterprise-list-item-content-button">
                 Read More
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <mask id="mask0_385_345" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -438,7 +445,7 @@ export default function Home() {
                     <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="#232323"/>
                   </g>
                 </svg>
-              </a>
+              </Link>
             </div>
           </li>
         </ul>
@@ -448,68 +455,55 @@ export default function Home() {
         <h3 className='mainPage__partners-title'>Our Partners & Clients</h3>
 
         <div className="mainPage__partners-container">
-          <div className="mainPage__partners-container-switchers">
-            <button 
-              className="mainPage__partners-container-switchers-prev" 
-              disabled={partnersStatus < 1 ? true : false} 
-              onClick={() => setPartnersStatus(partnersStatus - 1)}>&lt;</button>
-            <button 
-              className="mainPage__partners-container-switchers-next" 
-              disabled={partnersStatus > 3 ? true : false} 
-              onClick={() => setPartnersStatus(partnersStatus + 1)}>&gt;</button>
-          </div>
 
-          <ul className="mainPage__partners-container-list" style={switchPartnerSlide(partnersStatus)}>
-            <li className="mainPage__partners-container-list-item">
-              <Image
-                src={aps}
-                alt='aps'
-                className="mainPage__partners-container-list-item-img"
-              />
-              <h3>APS Energia</h3>
-            </li>
-            <li className="mainPage__partners-container-list-item">
-              <Image
-                src={lviv}
-                alt='aps'
-                className="mainPage__partners-container-list-item-img"
-              />
-              <h3>Lviv Railroad</h3>
-            </li>
-            <li className="mainPage__partners-container-list-item">
-              <Image
-                src={donetck}
-                alt='aps'
-                className="mainPage__partners-container-list-item-img"
-              />
-              <h3>Donetsk Railroad</h3>
-            </li>
-            <li className="mainPage__partners-container-list-item">
-              <Image
-                src={odesa}
-                alt='aps'
-                className="mainPage__partners-container-list-item-img"
-              />  
-              <h3>Odesa Railroad</h3>
-            </li>
-            <li className="mainPage__partners-container-list-item">
-              <Image
-                src={ukr}
-                alt='aps'
-                className="mainPage__partners-container-list-item-img"
-              />
-              <h3>Ukrzaliznytsia</h3>
-            </li>
-
-          </ul>
-
+          <Slider {...settings}>
+              <div className="mainPage__partners-container-list-item">
+                <Image
+                  src={aps}
+                  alt='aps'
+                  className="mainPage__partners-container-list-item-img"
+                />
+                <h3>APS Energia</h3>
+              </div>
+              <div className="mainPage__partners-container-list-item">
+                <Image
+                  src={lviv}
+                  alt='aps'
+                  className="mainPage__partners-container-list-item-img"
+                />
+                <h3>Lviv Railroad</h3>
+              </div>
+              <div className="mainPage__partners-container-list-item">
+                <Image
+                  src={donetck}
+                  alt='aps'
+                  className="mainPage__partners-container-list-item-img"
+                />
+                <h3>Donetsk Railroad</h3>
+              </div>
+              <div className="mainPage__partners-container-list-item">
+                <Image
+                  src={odesa}
+                  alt='aps'
+                  className="mainPage__partners-container-list-item-img"
+                />  
+                <h3>Odesa Railroad</h3>
+              </div>
+              <div className="mainPage__partners-container-list-item">
+                <Image
+                  src={ukr}
+                  alt='aps'
+                  className="mainPage__partners-container-list-item-img"
+                />
+                <h3>Ukrzaliznytsia</h3>
+              </div>
+          </Slider>
         </div>
       </div>
 
       <div className="mainPage__contacts" id='contacts'>
         
         <div className="mainPage__contacts-container">
-          {/* <a  name='contacts'></a> */}
           <h3 className="mainPage__contacts-container-title">Contacts</h3>
           <ul className="mainPage__contacts-container-list">
             <li className="mainPage__contacts-container-list-item">
@@ -533,9 +527,6 @@ export default function Home() {
           src={contact}
           alt=''/>
       </div>
-
     </div>
-
-
   )
 }

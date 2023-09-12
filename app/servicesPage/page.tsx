@@ -32,6 +32,7 @@ export default function ServicesPage() {
     return data.map((item, i) => {
       return (
         <li className="service__list-item" key={i}>
+          <Link href={`/servicesPage/${i}`} className="service__list-item-overLink"></Link>
           <Image
             src={item.src}
             alt={item.title}  
@@ -41,6 +42,7 @@ export default function ServicesPage() {
           />
           
           <div className="service__list-item-container">
+            
             <h3 className="service__list-item-title">{item.title}</h3>
             <p className="service__list-item-text">
               {item.description}

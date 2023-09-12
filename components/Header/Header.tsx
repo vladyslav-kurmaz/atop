@@ -62,7 +62,7 @@ export default function Header() {
             </ul>
           </nav>
 
-          <button className='header__button button'>
+          <Link href={'/writeUs'} className='header__button button'>
             Write Us
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <mask id="mask0_346_285" style={{'maskType':'alpha'}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -72,7 +72,7 @@ export default function Header() {
               <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="white"/>
               </g>
             </svg>
-          </button>
+          </Link>
         </div>
       </div>
       
@@ -145,19 +145,19 @@ export default function Header() {
                 <li className='header__list-item'><Link href={'/qualitySystem'}>Quality System</Link></li>
                 <li className='header__list-item'><Link href={'/about'}>About</Link></li>
                 <li className='header__list-item'><Link href={'/#contacts'}>Contacts</Link></li>
-                <li className='header__list-item'>
+                {/* <li className='header__list-item'>
                   <select name="" id="">
                     <option value="uk">UK</option>
                     <option value="EN">EN</option>
                   </select>
-                </li>
+                </li> */}
               </ul>)
               :
               null
             }
             
           </nav>
-          <button className='header__button button'>
+          <Link href={'/writeUs'} className='header__button button'>
             Write Us
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <mask id="mask0_346_285" style={{'maskType':'alpha'}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -167,7 +167,7 @@ export default function Header() {
               <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="white"/>
               </g>
             </svg>
-          </button>
+          </Link>
         </div>
       </div>
 

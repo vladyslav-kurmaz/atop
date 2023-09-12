@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image';
+import {useState} from 'react';
 import './servicePage.scss';
 import ServiceProductSlider from '@/components/ServiceProductSlider/ServiceProductSlider';
 
@@ -32,6 +33,8 @@ const dataServices: Service[] = [
 ]
 
 export default function ServicePage() {
+  const [readMore, setReadMore] = useState(false);
+
   return (
     <>
       <div className="servicePage">
@@ -67,11 +70,74 @@ export default function ServicePage() {
               alt=''
               width={2000}
               height={2000}
+              className="servicePage__container-info-img"
             />
+
+            <div className="servicePage__container-info-container">
+              <div className="servicePage__container-info-container-work">
+                <h3 className="servicePage__container-info-container-work-title">We Offer</h3>
+                <ul className="servicePage__container-info-container-work-list">
+                  <li className="servicePage__container-info-container-work-list-item">
+                    <span className="servicePage__container-info-container-work-list-item-num">1.</span>
+                    <p className="servicePage__container-info-container-work-list-item-text">
+                      Development of Design Documentation
+                    </p>
+                  </li>
+                  <li className="servicePage__container-info-container-work-list-item">
+                    <span className="servicePage__container-info-container-work-list-item-num">2.</span>
+                    <p className="servicePage__container-info-container-work-list-item-text">
+                      Reverse Engineering of Products
+                    </p>
+                  </li>
+                  <li className="servicePage__container-info-container-work-list-item">
+                    <span className="servicePage__container-info-container-work-list-item-num">3.</span>
+                    <p className="servicePage__container-info-container-work-list-item-text">
+                      Development The Design Documentation on The Details Provided by The Sample
+                    </p>
+                  </li>
+                  <li className="servicePage__container-info-container-work-list-item">
+                    <span className="servicePage__container-info-container-work-list-item-num">4.</span>
+                    <p className="servicePage__container-info-container-work-list-item-text">
+                      Development of Documentation for Non-standard Designs, Mechanisms
+                    </p>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="servicePage__container-info-container-work">
+              <h3 className="servicePage__container-info-container-work-title">How We Work</h3>
+                <ul className="servicePage__container-info-container-work-list">
+                  <li className="servicePage__container-info-container-work-list-item">
+                    <span className="servicePage__container-info-container-work-list-item-num">1.</span>
+                    <p className="servicePage__container-info-container-work-list-item-text">
+                      Our specialist attends customer to perform all necessary measurements in order to evaluate the fraud.
+                    </p>
+                  </li>
+                  <li className="servicePage__container-info-container-work-list-item">
+                    <span className="servicePage__container-info-container-work-list-item-num">2.</span>
+                    <p className="servicePage__container-info-container-work-list-item-text">
+                      The technical task is developed, with the direct participation of the customer.
+                    </p>
+                  </li>
+                  <li className="servicePage__container-info-container-work-list-item">
+                    <span className="servicePage__container-info-container-work-list-item-num">3.</span>
+                    <p className="servicePage__container-info-container-work-list-item-text">
+                      According to technical task, three-dimensional modeling and drawing of drawings are carried out.
+                    </p>
+                  </li>
+                  <li className="servicePage__container-info-container-work-list-item">
+                    <span className="servicePage__container-info-container-work-list-item-num">4.</span>
+                    <p className="servicePage__container-info-container-work-list-item-text">
+                      At the stage of production, our specialists consult the customer.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div> 
           </div>
         </div>
 
-        {/* <ServiceProductSlider status={false}/> */}
+        <ServiceProductSlider status={false}/>
       </div>
     </>
   )

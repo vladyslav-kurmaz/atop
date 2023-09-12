@@ -64,6 +64,7 @@ const ServiceProductSlider = ({status}: {status: boolean}) => {
       const {title} = item;
       return (
         <div className="other-item" key={i}>
+          <Link href={`/${status ? 'products' : 'servicesPage'}/${i}`} className='other-item-overLink'></Link>
           <span className="other-item-span">{status? 'Product' : 'Service'}</span>
           <h3 className="other-item-title">{title}</h3>
           <Link href={`/${status ? 'products' : 'servicesPage'}/${i}`} className="other-item-link">

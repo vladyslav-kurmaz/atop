@@ -57,7 +57,7 @@ const Footer = () => {
             className="footer__info-img"
           />
           <p className="footer__info-text">Aerospace technologies, equipment and development</p>
-          <a href="#" className="footer__info-contact">
+          <Link href="/writeUs" className="footer__info-contact">
             Write Us
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <mask id="mask0_385_95" style={{maskType:'alpha'}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -67,7 +67,7 @@ const Footer = () => {
               <path d="M5.0625 15L4 13.9375L12.4375 5.5H5V4H15V14H13.5V6.5625L5.0625 15Z" fill="#232323"/>
               </g>
             </svg>
-          </a>
+          </Link>
         </div>
 
         <div className="footer__container-company">
@@ -91,9 +91,9 @@ const Footer = () => {
 
         <ul className="footer__social">
           <li className="footer__social-item">Social</li>
-          <li className="footer__social-item"><a href="#" className="footer__social-item-link">Facebook</a></li>
-          <li className="footer__social-item"><a href="#" className="footer__social-item-link">Instagram</a></li>
-          <li className="footer__social-item"><a href="#" className="footer__social-item-link">Youtube</a></li>
+          <li className="footer__social-item"><a href="https://www.linkedin.com/company/ator-llc/" target="_blank" className="footer__social-item-link">Linkedin</a></li>
+          {/* <li className="footer__social-item"><a href="#" className="footer__social-item-link">Instagram</a></li>
+          <li className="footer__social-item"><a href="#" className="footer__social-item-link">Youtube</a></li> */}
           <li className="footer__social-item">
             <a href="#" className="footer__social-item-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
