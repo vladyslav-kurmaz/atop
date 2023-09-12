@@ -84,11 +84,11 @@ const ServiceProductSlider = ({status}: {status: boolean}) => {
   return (
     <div className="other">
       <div className="other-container">
-        <h3 className="other-container-title">Explore More Products</h3>
+        <h3 className="other-container-title">{status ? 'Explore More Products' : 'Explore More Services'}</h3>
         
         <div className="other-slider">
           <Slider {...settings} >
-            {renderProductsOrService(status? dataProduct: dataService)}
+            {renderProductsOrService(status ? dataProduct: dataService)}
           </Slider>
         </div>
       </div>
