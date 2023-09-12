@@ -38,7 +38,7 @@ export default function ServicePage() {
         <Image
           src={'/servicesPage/aboutus.webp'}
           alt=''
-          width={1000}
+          width={7000}
           height={1000}
           className='servicePage__img'
         />
