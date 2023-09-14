@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import Image from 'next/image';
-import {MouseEvent, useState, ChangeEvent} from 'react'
+import {useState, ChangeEvent} from 'react'
+import { usePathname, useParams } from 'next/navigation'
 
 
 import logoSmall from '../../image/logo.webp'
@@ -11,9 +12,11 @@ import logoSmall from '../../image/logo.webp'
 
 import './Header.scss';
 
-export default function Header() {
-  const [openMobileMenu, setOpenMobileMenu] = useState(false)
-
+export default function Header({open}: {open: () => void}) {
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const pathname = usePathname()
+  
+  
   const onChangeInput = (e: ChangeEvent) => {
     const target = e.target as HTMLInputElement;
 
@@ -21,8 +24,17 @@ export default function Header() {
     console.log(openMobileMenu);
     console.log(target);
     
-    
   }
+
+  const activeLink = (path: string) => {
+    let id: string = '';
+
+    const arr = pathname.split('')
+    arr.map(item => +item >= 0 ? id += item : null);
+
+    return pathname === path || pathname === `${path}/${id}` ? {color: '#2044A1'} : {};
+  }
+
 
   return (
     <header className="header ">
@@ -43,26 +55,29 @@ export default function Header() {
               <li className='header__list-item' 
                 // onMouseEnter={(e: MouseEvent) => setServiceSub(true)}
               >
-                <Link className='header__list-item-link' href={'/servicesPage'}>Services</Link>                    
+                <Link 
+                  className='header__list-item-link'
+                  href={'/servicesPage'} 
+                  style={activeLink('/servicesPage')}>Services</Link>                    
               </li>
               <li className='header__list-item'
                 // onMouseEnter={(e: MouseEvent) => setProductSub(true)}
               >
-                <Link href={'/products'}>Products</Link>  
+                <Link href={'/products'} style={activeLink('/products')}>Products</Link>  
               </li>
-              <li className='header__list-item'><Link href={'/qualitySystem'}>Quality System</Link></li>
-              <li className='header__list-item'><Link href={'/about'}>About</Link></li>
-              <li className='header__list-item'><Link href={'/#contacts'}>Contacts</Link></li>
-              <li className='header__list-item'>
+              <li className='header__list-item'><Link href={'/qualitySystem'} style={activeLink('/qualitySystem')}>Quality System</Link></li>
+              <li className='header__list-item'><Link href={'/about'} style={activeLink('/about')}>About</Link></li>
+              <li className='header__list-item'><Link href={'/#contacts'} style={activeLink('/#contacts')}>Contacts</Link></li>
+              {/* <li className='header__list-item'>
                 <select name="" id="">
                   <option value="uk">UK</option>
                   <option value="EN">EN</option>
                 </select>
-              </li>
+              </li> */}
             </ul>
           </nav>
 
-          <Link href={'/writeUs'} className='header__button button'>
+          <button onClick={open} className='header__button button'>
             Write Us
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <mask id="mask0_346_285" style={{'maskType':'alpha'}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -72,7 +87,7 @@ export default function Header() {
               <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="white"/>
               </g>
             </svg>
-          </Link>
+          </button>
         </div>
       </div>
       
@@ -157,7 +172,7 @@ export default function Header() {
             }
             
           </nav>
-          <Link href={'/writeUs'} className='header__button button'>
+          <button onClick={open} className='header__button button'>
             Write Us
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <mask id="mask0_346_285" style={{'maskType':'alpha'}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -167,7 +182,7 @@ export default function Header() {
               <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="white"/>
               </g>
             </svg>
-          </Link>
+          </button>
         </div>
       </div>
 

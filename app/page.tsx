@@ -26,6 +26,7 @@ import './mainPage.scss';
 
 export default function Home() {
   const [growStatus, setGrowStatus] = useState(0);
+  
 
   const settings = {
     arrows: true,
@@ -34,15 +35,34 @@ export default function Home() {
     centerMode: true,
     infinite: true, 
     speed: 0, 
-    slidesToShow: 2, 
+    slidesToShow: 5, 
     slidesToScroll: 1, 
     responsive: [
+      {
+        breakpoint: 1200, 
+        settings: {
+          slidesToShow: 4,
+          speed: 2000,
+          autoplay: true,
+          autoplaySpeed: 3000
+        },
+      },
+      {
+        breakpoint: 1000, 
+        settings: {
+          slidesToShow: 3,
+          speed: 2000,
+          autoplay: true,
+          autoplaySpeed: 3000
+        },
+      },
       {
         breakpoint: 700, 
         settings: {
           slidesToShow: 2,
           speed: 2000,
-          autoplay: true
+          autoplay: true,
+          autoplaySpeed: 3000
         },
       },
       {
@@ -50,7 +70,8 @@ export default function Home() {
         settings: {
           slidesToShow: 1,
           speed: 2000,
-          autoplay: true
+          autoplay: true,
+          autoplaySpeed: 3000
         },
       },
     ],
@@ -83,6 +104,7 @@ export default function Home() {
             objectFit='cover'
             layout='fill'
             style={{ position: 'absolute', top: 0, left: 0 }}
+            loading='lazy'
             />
 
         <div className="mainPage__first-container">
@@ -136,6 +158,7 @@ export default function Home() {
               objectFit='contain'
               // layout='fill'
               style={{maxWidth: '656px', maxHeight: '437px', width: '100%', height: '100%', }}
+              loading='lazy'
             />
           </div>
 
@@ -145,6 +168,7 @@ export default function Home() {
               alt='chair'
               objectFit='contain'
               style={{maxWidth: '656px', maxHeight: '437px', width: '100%', height: '100%'}}
+              loading='lazy'
             />
           </div>
         </div>
@@ -296,7 +320,7 @@ export default function Home() {
               <Image
                 src={first}
                 alt='first'
-
+                loading='lazy'
                 className='mainPage__enterprise-list-item-img-picture'
               />
             </div>
@@ -337,6 +361,7 @@ export default function Home() {
               <Image
                 src={thecond}
                 alt='thecond'
+                loading='lazy'
                 className='mainPage__enterprise-list-item-img-picture'
               />
             </div>
@@ -376,6 +401,7 @@ export default function Home() {
               <Image
                 src={third}
                 alt='third'
+                loading='lazy'
                 className='mainPage__enterprise-list-item-img-picture'
               />
             </div>
@@ -415,6 +441,7 @@ export default function Home() {
               <Image
                 src={fourth}
                 alt='fourth'
+                loading='lazy'
                 className='mainPage__enterprise-list-item-img-picture'
               />
             </div>
@@ -461,6 +488,7 @@ export default function Home() {
                 <Image
                   src={aps}
                   alt='aps'
+                  loading='lazy'
                   className="mainPage__partners-container-list-item-img"
                 />
                 <h3>APS Energia</h3>
@@ -469,6 +497,7 @@ export default function Home() {
                 <Image
                   src={lviv}
                   alt='aps'
+                  loading='lazy'
                   className="mainPage__partners-container-list-item-img"
                 />
                 <h3>Lviv Railroad</h3>
@@ -477,6 +506,7 @@ export default function Home() {
                 <Image
                   src={donetck}
                   alt='aps'
+                  loading='lazy'
                   className="mainPage__partners-container-list-item-img"
                 />
                 <h3>Donetsk Railroad</h3>
@@ -485,6 +515,7 @@ export default function Home() {
                 <Image
                   src={odesa}
                   alt='aps'
+                  loading='lazy'
                   className="mainPage__partners-container-list-item-img"
                 />  
                 <h3>Odesa Railroad</h3>
@@ -493,6 +524,7 @@ export default function Home() {
                 <Image
                   src={ukr}
                   alt='aps'
+                  loading='lazy'
                   className="mainPage__partners-container-list-item-img"
                 />
                 <h3>Ukrzaliznytsia</h3>
@@ -525,6 +557,7 @@ export default function Home() {
         <Image
           className='mainPage__contacts-img'
           src={contact}
+          loading='lazy'
           alt=''/>
       </div>
     </div>

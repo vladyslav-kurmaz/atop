@@ -131,7 +131,7 @@ export default function ProductPage({params: {id}}: Props) {
   const createList = (options: string[]) => {
     return options.map((item, i) => {
       return (
-        <li className="product__container-info-container-list-item" key={i}>
+        <li className="product__container-info-container-list-item"  key={i}>
           {item}
         </li>
       )

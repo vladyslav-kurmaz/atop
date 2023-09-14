@@ -8,7 +8,7 @@ import logo from '../../image/logo.webp';
 
 import './Footer.scss';
 
-const Footer = () => {
+const Footer = ({open}: {open: () => void}) => {
 
   const showCloseMenu = (e: MouseEvent) => {
     const target = e.target as HTMLElement;
@@ -57,7 +57,7 @@ const Footer = () => {
             className="footer__info-img"
           />
           <p className="footer__info-text">Aerospace technologies, equipment and development</p>
-          <Link href="/writeUs" className="footer__info-contact">
+          <button onClick={open} className="footer__info-contact">
             Write Us
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <mask id="mask0_385_95" style={{maskType:'alpha'}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -67,7 +67,7 @@ const Footer = () => {
               <path d="M5.0625 15L4 13.9375L12.4375 5.5H5V4H15V14H13.5V6.5625L5.0625 15Z" fill="#232323"/>
               </g>
             </svg>
-          </Link>
+          </button>
         </div>
 
         <div className="footer__container-company">

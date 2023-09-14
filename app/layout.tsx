@@ -1,15 +1,11 @@
-import './globals.css'
+'use client'
+
+import './globals.css';
 import type { Metadata } from 'next'
-// import { Inter } from 'next/font/google'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
-// import dynamic from 'next/dynamic';
-
-// const Header = dynamic(() => import('../components/Header/Header'), {
-//   ssr: false,
-// });
-
-// const inter = Inter({ subsets: ['latin'] })
+import WriteUs from '@/components/WriteUs/WriteUs';
+import {useState} from 'react';
 
 export const metadata: Metadata = {
   title: 'AETD',
@@ -17,15 +13,24 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+
 }: {
   children: React.ReactNode
 }) {
+
+  const [modal, setModal] = useState(false);
   return (
     <html lang="en">
       <body>
-        <Header/>
-        {children}
-        <Footer/>
+
+        
+        <Header open={() => setModal(true)}/>
+          {modal ? <WriteUs close={() => setModal(false)}/> : null}
+          <main>
+            {children}
+          </main>
+          
+        <Footer open={() => setModal(true)}/>
       </body>
     </html>
   )

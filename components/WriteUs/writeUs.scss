@@ -1,0 +1,174 @@
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #fff, $alpha: .5);
+  z-index: 199;
+  
+
+  &__form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    max-width: 1344px;
+    padding: 48px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #E1E1E1;
+    background-color: #FAFAFA;
+    display: flex;
+    flex-direction: column;
+    
+    // margin: 0 auto;
+    transform: translate(-50%, -50%);
+    // box-sizing:border-box;
+    max-height: 741px;
+    height: 100%;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    &-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+
+    &-content {
+      max-width: 864px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &-submit {
+      width: 176px;
+      height: 49px;
+      border-radius: 100px;
+      background: #232323;
+      color: #FFF;
+      font-size: 18px;
+      font-weight: 500;
+      transition: all .3s;
+      padding: 10px 12px;
+    }
+
+    &-submit:hover {
+      background-color: #3e3e3e;
+      transition: all .3s;
+    }
+
+    &-submit:disabled {
+      background-color: #EAEAEA;
+    }
+
+    &-title {
+      color: #232323;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 120%;
+    }
+
+    &-close {
+      cursor: pointer;
+
+    }
+
+    &-label {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      width: 100%;
+      margin-bottom: 48px;
+
+      &:last-child {
+        max-width: 100%;
+        
+      }
+
+      & span {
+        color: #232323;
+        font-size: 20px;
+        font-weight: 500;
+        // margin-bottom: 12px;
+      }
+
+      &-input {
+        padding: 12px 0px;
+        color: #232323;
+        font-size: 16px;
+        font-weight: 500;
+        border-bottom: 1px solid #EAEAEA;
+        background-color: transparent;
+        outline: none;
+        // resize: none;
+        overflow: hidden;
+
+        &::placeholder {
+          color: #929292;
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 902px) {
+  
+
+    .modal {
+
+    
+      &__form {
+        height: 100%;
+        overflow: scroll;
+        max-height: 890px;
+    
+    
+        &-label {
+          &-input {
+            max-width: 300px;
+  
+          }
+        }
+      }
+    }
+}
+
+@media screen and (max-width: 500px) {
+  
+
+  .modal {
+
+    &__form {
+
+      &-title {
+        font-size: 32px;
+      }
+
+      &-label {
+        
+        & span {
+          font-size: 18px;
+        }
+  
+        &-input {
+          max-width: 300px;
+  
+          &::placeholder {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

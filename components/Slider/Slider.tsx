@@ -29,7 +29,7 @@ const CustomSlider = ({data}: {data: string[]}) => {
   const renderSlide = () => {
     return data.map((item, i) => {
       return <div className="slider__image" key={i }>
-        <img src={item} alt={`slide ${i}`} key={i } />
+        <img src={item} loading='lazy' alt={`slide ${i}`} key={i } />
       </div>
     })
   }
