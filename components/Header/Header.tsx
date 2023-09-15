@@ -12,7 +12,9 @@ import logoSmall from '../../image/logo.webp'
 
 import './Header.scss';
 
-export default function Header({open}: {open: () => void}) {
+// {open}: {open: boolean}
+
+export default function Header() {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const pathname = usePathname()
   
@@ -77,7 +79,9 @@ export default function Header({open}: {open: () => void}) {
             </ul>
           </nav>
 
-          <button onClick={open} className='header__button button'>
+          <button 
+            // onClick={() => open = true} 
+            className='header__button button'>
             Write Us
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <mask id="mask0_346_285" style={{'maskType':'alpha'}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -172,7 +176,9 @@ export default function Header({open}: {open: () => void}) {
             }
             
           </nav>
-          <button onClick={open} className='header__button button'>
+          <button 
+            // onClick={open} 
+            className='header__button button'>
             Write Us
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <mask id="mask0_346_285" style={{'maskType':'alpha'}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">

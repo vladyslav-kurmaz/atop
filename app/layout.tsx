@@ -1,4 +1,4 @@
-'use client'
+
 
 import './globals.css';
 import type { Metadata } from 'next'
@@ -18,19 +18,26 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  const [modal, setModal] = useState(false);
+  // const [modal, setModal] = useState(false);
+  let openModal = false;
   return (
     <html lang="en">
       <body>
 
         
-        <Header open={() => setModal(true)}/>
-          {modal ? <WriteUs close={() => setModal(false)}/> : null}
+        <Header 
+          // open={() => setModal(true)}
+          // open={openModal}
+          />
+          {/* {modal ? <WriteUs close={() => setModal(false)}/> : null} */}
+
           <main>
             {children}
           </main>
           
-        <Footer open={() => setModal(true)}/>
+        <Footer 
+          // open={() => setModal(true)}
+        />
       </body>
     </html>
   )
