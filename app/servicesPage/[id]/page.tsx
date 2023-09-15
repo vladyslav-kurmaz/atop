@@ -200,8 +200,8 @@ export default function ServicePage({params}: Props) {
 
   const renderList = (subListTitle?: string, subList?: string[]) => {
     const renderItem = (subList: string[]) => {
-      return subList.map(item => {
-        return <li className='service__subInfo-subList-item'>{item}</li>
+      return subList.map((item, i) => {
+        return <li className='service__subInfo-subList-item' key={i}>{item}</li>
       })
     }
     return (
@@ -228,8 +228,8 @@ export default function ServicePage({params}: Props) {
 
   const renderSubDescription = (subDesription?: string[]) => {
     return subDesription && subDesription.length > 0 ? 
-    subDesription.map(item => {
-      return <p className='service__subInfo-subDescription'>{item}</p>
+    subDesription.map((item, i) => {
+      return <p className='service__subInfo-subDescription' key={i}>{item}</p>
     })
     :
     null
