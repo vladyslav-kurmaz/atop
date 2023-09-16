@@ -40,6 +40,70 @@
       &-container {
         max-width: 656px;
 
+        &-subListWithDesc {
+
+          &-item {
+
+            &-title {
+              color: #232323;
+              font-size: 16px;
+              font-weight: 600;
+              line-height: 150%;
+              margin-bottom: 15px;
+            }
+
+            &-description {
+              color: #232323;
+              font-size: 16px;
+              font-weight: 300;
+              line-height: 150%; 
+              margin-bottom: 24px;
+            }
+          }
+        }
+
+        &-subListTitle {
+          color: #232323;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 150%;
+          margin-bottom: 12px;
+        }
+      
+        &-subtitle {
+          color: #232323;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 150%;
+          margin-bottom: 12px;
+        }
+      
+        &-subList {
+          display: flex;
+          flex-direction: column;
+          // justify-content: center;
+          margin-bottom: 24px;
+          padding-left: 25px;
+          list-style: disc;
+      
+          &-item {
+            color: #232323;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 150%;
+            margin-bottom: 10px;
+          }
+      
+        }
+      
+        &-subDescription {
+          color: #232323;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 150%;
+          margin-bottom: 24px;
+        }
+
         &-text {
           margin-bottom: 24px;
           color: #232323;

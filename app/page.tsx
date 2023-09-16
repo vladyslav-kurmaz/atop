@@ -112,7 +112,7 @@ export default function Home() {
 
           <p className='mainPage__first-description'>We offer components for major repairs of wagons of different series, electrical equipment, interior elements for passenger cars, control panels and other.</p>
 
-          <Link href={''} className='mainPage__first-button'>Read More</Link>
+          <Link href={'/products/2'} className='mainPage__first-button'>Read More</Link>
         </div>
       </div>
 
@@ -242,7 +242,7 @@ export default function Home() {
             <p className="mainPage__direction-list-item-text">
               We are a production and engineering company with a combined warehouse a design and technological division, which is engaged in the creation of new types products for passenger cars, motorized wagons (diesel trains and electric trains), locomotives, subway cars, specially equipped caravans.
             </p>
-            <a href="#" className="mainPage__direction-list-item-readme">
+            <a href="/servicesPage/1" className="mainPage__direction-list-item-readme">
               Read More
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <mask id="mask0_385_7" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -293,7 +293,7 @@ export default function Home() {
             <p className="mainPage__direction-list-item-text">
               Integrated IT outsourcing and web development services are the most needed and effective solutions for your business
             </p>
-            <a href="#" className="mainPage__direction-list-item-readme">
+            <a href="servicesPage/3" className="mainPage__direction-list-item-readme">
               Read More
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <mask id="mask0_385_7" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -342,7 +342,7 @@ export default function Home() {
               <p className="mainPage__enterprise-list-item-content-text">
                 We specializes in the development and manufacture of electronic devices of various complexity, testing equipment for rail transport and aviation industry.
               </p>
-              <a href="/servicesPage/8" className="mainPage__enterprise-list-item-content-button">
+              <Link href="/servicesPage/8" className="mainPage__enterprise-list-item-content-button">
                 Read More
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <mask id="mask0_385_345" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -352,14 +352,16 @@ export default function Home() {
                     <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="#232323"/>
                   </g>
                 </svg>
-              </a>
+              </Link>
             </div>
           </li>
           <li className="mainPage__enterprise-list-item">
             <Link href={'/servicesPage/11'} className='mainPage__enterprise-list-item-overLink'></Link>
             <div className="mainPage__enterprise-list-item-img">
               <Image
-                src={thecond}
+                src={'/servicesPage/legal_and_brokerage_services.webp'}
+                width={1000}
+                height={1000}
                 alt='thecond'
                 loading='lazy'
                 className='mainPage__enterprise-list-item-img-picture'

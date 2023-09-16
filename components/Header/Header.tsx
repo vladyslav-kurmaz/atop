@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image';
 import {useState, ChangeEvent} from 'react'
 import { usePathname, useParams } from 'next/navigation'
+import WriteUs from '../WriteUs/WriteUs';
 
 
 import logoSmall from '../../image/logo.webp'
@@ -16,6 +17,7 @@ import './Header.scss';
 
 export default function Header() {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const [showModal, setshowModal] = useState(false);
   const pathname = usePathname()
   
   
@@ -40,6 +42,7 @@ export default function Header() {
 
   return (
     <header className="header ">
+      {showModal ? <WriteUs close={() => setshowModal(false)}/> : null}
       <div className='header__desctop'>
         <Link href={'/'} >
           <Image
@@ -80,7 +83,7 @@ export default function Header() {
           </nav>
 
           <button 
-            // onClick={() => open = true} 
+            onClick={() => setshowModal(true)} 
             className='header__button button'>
             Write Us
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -177,7 +180,7 @@ export default function Header() {
             
           </nav>
           <button 
-            // onClick={open} 
+            onClick={() => setshowModal(true)} 
             className='header__button button'>
             Write Us
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
