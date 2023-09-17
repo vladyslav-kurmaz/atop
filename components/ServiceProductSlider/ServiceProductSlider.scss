@@ -62,8 +62,8 @@
       border: 1px solid #E1E1E1;
       top: 0;
       left: 0;
-      width: 28px;
-      height: 28px;
+      width: 40px;
+      height: 40px;
       background-image: url(/Arrow_left.webp);
       background-size: contain;
       background-repeat: no-repeat;
@@ -81,8 +81,8 @@
       border: 1px solid #E1E1E1;
       top: 0px;
       left: 0;
-      width: 28px;
-      height: 28px;
+      width: 40px;
+      height: 40px;
       background-image: url(/Arrow_right.webp);
       background-size: contain;
       background-repeat: no-repeat;
@@ -202,16 +202,29 @@
     &-slider {
   
       .slick-arrow {
-        top: 70px;
-        
+        top: 85px;
+        width: 28px;
+        height: 28px;
       } 
-      
+
       .slick-prev {
-        left: 16px;
+        left: 16px;         
       }
-  
+
       .slick-next {
         left: 106px;
+      }
+      
+      .slick-prev::before {
+        top: 0;
+        width: 28px;
+        height: 28px;
+      }
+  
+      .slick-next::before {
+        top: 0;
+        width: 28px;
+        height: 28px;
       }
     }
   

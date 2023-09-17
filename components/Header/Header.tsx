@@ -3,32 +3,17 @@
 import Link from 'next/link'
 import Image from 'next/image';
 import {useState, ChangeEvent} from 'react'
-import { usePathname, useParams } from 'next/navigation'
-import WriteUs from '../WriteUs/WriteUs';
-
+import { usePathname } from 'next/navigation'
+import { Spiral as Hamburger, Spiral } from 'hamburger-react';
 
 import logoSmall from '../../image/logo.webp'
 
-
-
 import './Header.scss';
 
-// {open}: {open: boolean}
 
 export default function Header() {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
-  const [showModal, setshowModal] = useState(false);
-  const pathname = usePathname()
-  
-  
-  const onChangeInput = (e: ChangeEvent) => {
-    const target = e.target as HTMLInputElement;
-
-    setOpenMobileMenu(target.checked);
-    console.log(openMobileMenu);
-    console.log(target);
-    
-  }
+  const pathname = usePathname();
 
   const activeLink = (path: string) => {
     let id: string = '';
@@ -40,9 +25,8 @@ export default function Header() {
   }
 
 
-  return (
-    <header className="header ">
-      {showModal ? <WriteUs close={() => setshowModal(false)}/> : null}
+  return pathname === '/writeUs' ? null :
+      <header className="header" style={openMobileMenu ? {'position': 'fixed'} : {'position': 'static'}}>
       <div className='header__desctop'>
         <Link href={'/'} >
           <Image
@@ -51,23 +35,17 @@ export default function Header() {
             className='header__desctop-logo'
           />  
         </Link>
-        
-      
 
         <div className="header__container">
           <nav className='header__navigation desctop'>
             <ul className="header__list ">
-              <li className='header__list-item' 
-                // onMouseEnter={(e: MouseEvent) => setServiceSub(true)}
-              >
+              <li className='header__list-item'>
                 <Link 
                   className='header__list-item-link'
                   href={'/servicesPage'} 
                   style={activeLink('/servicesPage')}>Services</Link>                    
               </li>
-              <li className='header__list-item'
-                // onMouseEnter={(e: MouseEvent) => setProductSub(true)}
-              >
+              <li className='header__list-item'>
                 <Link href={'/products'} style={activeLink('/products')}>Products</Link>  
               </li>
               <li className='header__list-item'><Link href={'/qualitySystem'} style={activeLink('/qualitySystem')}>Quality System</Link></li>
@@ -82,8 +60,8 @@ export default function Header() {
             </ul>
           </nav>
 
-          <button 
-            onClick={() => setshowModal(true)} 
+          <Link 
+            href={'/writeUs'}
             className='header__button button'>
             Write Us
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -94,93 +72,27 @@ export default function Header() {
               <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="white"/>
               </g>
             </svg>
-          </button>
+          </Link>
         </div>
       </div>
       
-
       <div className='header__mobile'>
-        
-
         <div className="header__container flex justify-between items-center">
-
-
           <nav className='header__navigation mobile'>
-              
-            <div id="amp-burger">
-              <div className="lines">
-                <input 
-                  type="checkbox" 
-                  className="openMenu"
-                  onChange={(e) => onChangeInput(e)}/>
-                <div className="lines-icon" data-menu="">
-                  <div className="icon-left"></div>
-                  <div className="icon-right"></div> 
-                </div>
-                
-              </div>
-              
+            <div className='header__navigation-icon'>
+              <Spiral label="Show menu" toggled={openMobileMenu} toggle={setOpenMobileMenu}/>
             </div>
             <Link href={'/'} className='header__mobile-logo'>
-                <Image
-                  src={logoSmall}
-                  alt='logo'
-                  className='header__desctop-logo'
-                />  
-              </Link>
-            {
-              openMobileMenu ?
-              (<ul className="header__list">
-                <li className='header__list-item' 
-                
-                >
-                  <Link className='header__list-item-link' href={'/servicesPage'}>
-                    Services 
-                    <span onClick={(e) => {
-                      const target = e.target as HTMLElement;
-
-                      if (target.tagName === 'SPAN' && target.textContent === '+') {
-                        target.textContent = '-'
-                      }
-                      if (target.tagName === 'SPAN' && target.textContent === '-') {
-                        target.textContent = '+'
-                      }
-                      
-                    }}>+</span>
-                  </Link>   
-                  {/* <ul className="header__submenu">
-                    <li className="header__submenu-item"><Link href={'/servicesPage#developmentOfConstructionDocumentation'}>Development of Construction Documentation</Link></li>
-                    <li className="header__submenu-item"><Link href={'/servicesPage#softwareDevelopment'}>Software Development</Link></li>
-                    <li className="header__submenu-item"><Link href={'/servicesPage#metalworking'}>Metalworking</Link></li>
-                    <li className="header__submenu-item"><Link href={'/servicesPage#productionOfCompositeMaterials'}>Production of Composite Materials</Link></li>
-                    <li className="header__submenu-item"><Link href={'/servicesPage#applianceDevelopment'}>Appliance Development</Link></li>
-                    <li className="header__submenu-item"><Link href={'/servicesPage#constructionManufacturing'}>Construction Manufacturing</Link></li>
-                    <li className="header__submenu-item"><Link href={'/servicesPage#paintingManufacturing'}>Painting Manufacturing</Link></li>
-                    <li className="header__submenu-item"><Link href={'/servicesPage#legalBrokerageServices'}>Legal & Brokerage Services</Link></li>
-                  </ul>                   */}
-                </li>
-                <li className='header__list-item'
-                  // onMouseEnter={(e: MouseEvent) => setProductSub(true)}
-                >
-                  <Link href={'/products'}>Products</Link>  
-                </li>
-                <li className='header__list-item'><Link href={'/qualitySystem'}>Quality System</Link></li>
-                <li className='header__list-item'><Link href={'/about'}>About</Link></li>
-                <li className='header__list-item'><Link href={'/#contacts'}>Contacts</Link></li>
-                {/* <li className='header__list-item'>
-                  <select name="" id="">
-                    <option value="uk">UK</option>
-                    <option value="EN">EN</option>
-                  </select>
-                </li> */}
-              </ul>)
-              :
-              null
-            }
-            
+              <Image
+                src={logoSmall}
+                alt='logo'
+                className='header__desctop-logo'
+              />  
+            </Link>
           </nav>
-          <button 
-            onClick={() => setshowModal(true)} 
+          <Link
+            href={'/writeUs'}
+            // onClick={() => setshowModal(true)} 
             className='header__button button'>
             Write Us
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -191,8 +103,31 @@ export default function Header() {
               <path d="M5.24517 14.7035L4.375 13.8333L12.5753 5.62496H5.12019V4.375H14.7035V13.9583H13.4535V6.50315L5.24517 14.7035Z" fill="white"/>
               </g>
             </svg>
-          </button>
+          </Link>
         </div>
+
+        {
+            openMobileMenu ?
+            (<ul className="header__list-mobile">
+              <li className='header__list-item'>
+                <Link className='header__list-item-link' onClick={() => setOpenMobileMenu(false)} href={'/servicesPage'}>Services</Link>   
+              </li>
+              <li className='header__list-item'>
+                <Link href={'/products'} onClick={() => setOpenMobileMenu(false)}>Products</Link>  
+              </li>
+              <li className='header__list-item'><Link href={'/qualitySystem'} onClick={() => setOpenMobileMenu(false)}>Quality System</Link></li>
+              <li className='header__list-item'><Link href={'/about'} onClick={() => setOpenMobileMenu(false)}>About</Link></li>
+              <li className='header__list-item'><Link href={'/#contacts'} onClick={() => setOpenMobileMenu(false)}>Contacts</Link></li>
+              {/* <li className='header__list-item'>
+                <select name="" id="">
+                  <option value="uk">UK</option>
+                  <option value="EN">EN</option>
+                </select>
+              </li> */}
+            </ul>)
+            :
+            null
+          }
       </div>
 
       {/* {
@@ -233,5 +168,7 @@ export default function Header() {
           null
       } */}
     </header>
-  )
+    
+   
+  
 }

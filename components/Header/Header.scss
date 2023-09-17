@@ -6,10 +6,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 72px;
   margin: 0 auto;
   border-bottom: 1px solid #EAEAEA;
-
+  position: relative;
+  background-color: #fff;
+  z-index: 199;
   
 
   &__desctop {
@@ -86,6 +88,8 @@
     position: relative;
     width: 100%;
     padding: 0 48px;
+    z-index: 199;
+    
 
     & .header__button {
       display: flex;
@@ -110,151 +114,47 @@
     }
 
     .header__container {
+      position: relative;
       .header__navigation {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        // position: relative;
 
         .header__mobile-logo {
           margin-left: 10px;
         }
+
+        
       }
+
     }
 
 
-    #amp-burger {
-      width: 50px;
-      height: 45px;
-      cursor:pointer;
-      position: relative;
-    }
-    
-    #amp-burger div.lines, #amp-burger div.text  { padding-left : 10px; display:inline-block; }
-    #amp-burger div.text {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 50px;
-      z-index: 100;
-      opacity: 1;
-      cursor: pointer;
-      font-size: 24px;
-      font-weight: 700;
+  }
+
+  .header__list-mobile {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    z-index: 199;
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 0px);
+    background-color: #fff;
+    padding: 24px 16px;
+
+
+    .header__list-item {
+      background-color: #fff;
       color: #232323;
-    }
-    #amp-burger div.lines input {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      height: 100%;
-      z-index: 10000;
-      opacity: 0;
-      cursor: pointer;
-    }
-    
-    #amp-burger div.lines-icon {
-      position: relative;
-      width: 50px;
-      height: 50px;
-      -webkit-transition-duration: 0.5s;
-              transition-duration: 0.5s;
-    }
-    #amp-burger div.lines-icon .icon-left {
-      -webkit-transition-duration: 0.5s;
-              transition-duration: 0.5s;
-      position: absolute;
-      height: 4px;
-      width: 15px;
-      top: 20px;
-      background-color: #232323;
-      visibility: hidden;
-    }
-    #amp-burger div.lines-icon .icon-left:before {
-      -webkit-transition-duration: 0.5s;
-              transition-duration: 0.5s;
-      position: absolute;
-      width: 15px;
-      height: 4px;
-      background-color: #232323;
-      content: "";
-      top: -10px;
-      visibility: visible;
-    }
-    #amp-burger div.lines-icon .icon-left:after {
-      -webkit-transition-duration: 0.5s;
-              transition-duration: 0.5s;
-      position: absolute;
-      width: 15px;
-      height: 4px;
-      background-color: #232323;
-      content: "";
-      top: 10px;
-      visibility: visible;
-    }
-    #amp-burger div.lines-icon .icon-left:hover {
-      cursor: pointer;
-    }
-    #amp-burger div.lines-icon .icon-right {
-      -webkit-transition-duration: 0.5s;
-              transition-duration: 0.5s;
-      position: absolute;
-      height: 4px;
-      width: 15px;
-      top: 20px;
-      background-color: #232323;
-      left: 15px;
-      visibility: hidden;
-    }
-    #amp-burger div.lines-icon .icon-right:before {
-      -webkit-transition-duration: 0.5s;
-              transition-duration: 0.5s;
-      position: absolute;
-      width: 15px;
-      height: 4px;
-      background-color: #232323;
-      content: "";
-      top: -10px;
-      visibility: visible;
-    }
-    #amp-burger div.lines-icon .icon-right:after {
-      -webkit-transition-duration: 0.5s;
-              transition-duration: 0.5s;
-      position: absolute;
-      width: 15px;
-      height: 4px;
-      background-color: #232323;
-      content: "";
-      top: 10px;
-      visibility: visible;
-    }
-    
-    
-    #amp-burger input:checked + div.lines-icon .icon-left {
-      -webkit-transition-duration: 0.5s;
-              transition-duration: 0.5s;
-      background: transparent;
-    }
-    #amp-burger input:checked + div.lines-icon .icon-left:before {
-      -webkit-transform: rotateZ(45deg) scaleX(1.4) translate(2px, 2px);
-              transform: rotateZ(45deg) scaleX(1.4) translate(2px, 2px);
-    }
-    #amp-burger input:checked + div.lines-icon .icon-left:after {
-      -webkit-transform: rotateZ(-45deg) scaleX(1.4) translate(2px, -2px);
-              transform: rotateZ(-45deg) scaleX(1.4) translate(2px, -2px);
-    }
-    #amp-burger input:checked + div.lines-icon .icon-right {
-      -webkit-transition-duration: 0.5s;
-              transition-duration: 0.5s;
-      background: transparent;
-    }
-    #amp-burger input:checked + div.lines-icon .icon-right:before {
-      -webkit-transform: rotateZ(-45deg) scaleX(1.4) translate(-2px, 2px);
-              transform: rotateZ(-45deg) scaleX(1.4) translate(-2px, 2px);
-    }
-    #amp-burger input:checked + div.lines-icon .icon-right:after {
-      -webkit-transform: rotateZ(45deg) scaleX(1.4) translate(-2px, -2px);
-              transform: rotateZ(45deg) scaleX(1.4) translate(-2px, -2px);
+      font-size: 16px;
+      font-weight: 600;
+      padding: 16px 0;
+      border-bottom: 1px solid #EAEAEA;
+
     }
   }
 }

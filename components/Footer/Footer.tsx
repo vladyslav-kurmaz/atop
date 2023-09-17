@@ -3,6 +3,7 @@
 import {MouseEvent} from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation'
 
 import logo from '../../image/logo.webp';
 
@@ -11,6 +12,8 @@ import './Footer.scss';
 // {open}: {open: () => void}
 
 const Footer = () => {
+
+  const pathname = usePathname()
 
   const showCloseMenu = (e: MouseEvent) => {
     const target = e.target as HTMLElement;
@@ -49,7 +52,7 @@ const Footer = () => {
 
   }
 
-  return (
+  return pathname === '/writeUs' ? null :
     <footer className="footer">
       <div className="footer__container">
         <div className="footer__info">
@@ -95,7 +98,7 @@ const Footer = () => {
 
         <ul className="footer__social">
           <li className="footer__social-item">Social</li>
-          <li className="footer__social-item"><a href="https://www.linkedin.com/company/ator-llc/" target="_blank" className="footer__social-item-link">Linkedin</a></li>
+          <li className="footer__social-item"><a href="https://www.linkedin.com/company/ator-llc/" target="_blank" className="footer__social-item-link">LinkedIn</a></li>
           {/* <li className="footer__social-item"><a href="#" className="footer__social-item-link">Instagram</a></li>
           <li className="footer__social-item"><a href="#" className="footer__social-item-link">Youtube</a></li> */}
           <li className="footer__social-item">
@@ -113,7 +116,6 @@ const Footer = () => {
         </ul>
       </div>
     </footer>
-  )
 }
 
 export default Footer

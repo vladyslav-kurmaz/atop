@@ -1,12 +1,15 @@
 'use client'
 import {useState, useEffect} from 'react';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+
 import './writeUs.scss';
 
-export default function WriteUs({close}: {close: () => void}) {
+
+export default function WriteUs() {
   const [disabled, setDisabled] = useState(false);
-  // const router = useRouter();
-  // console.log(router.pathname);
+  const router = useRouter();
+  console.log(router);
   
 
   useEffect(() => {
@@ -20,14 +23,19 @@ export default function WriteUs({close}: {close: () => void}) {
   return (
     <>
       <div className='modal'>
-        <form className='modal__form'>
+        <form 
+          className='modal__form'
+          action='https://formsubmit.co/posolkoronovan@gmail.com'
+          // action="https://getform.io/f/338cc610-385d-4496-b71c-74bff6585f43" 
+          method="POST"
+
+          >
+          {/* <input type="hidden" name="_captcha" value="false"></input> */}
           <div className="modal__form-container">
             <h1 className='modal__form-title'>Hello, ATED!</h1>
-            <div className='modal__form-close' onClick={() => {
-              
-              close()
-              
-              }}>
+            <div className='modal__form-close' 
+              onClick={router.back}
+              >
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                 <mask id="mask0_566_2429" style={{maskType:"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
                   <rect width="40" height="40" fill="#D9D9D9"/>
@@ -47,6 +55,8 @@ export default function WriteUs({close}: {close: () => void}) {
                 type="text" 
                 className='modal__form-label-input'
                 placeholder='Type your name'/>
+
+                {false ? <div className="modal__form-label-error">Write your name</div> : null}
             </label>
             <label htmlFor="company" className='modal__form-label'>
               <span>Company or organization name</span>
@@ -102,7 +112,7 @@ export default function WriteUs({close}: {close: () => void}) {
                 className='modal__form-label-input'/>
             </label>
           </div>
-          <button className='modal__form-submit' disabled={disabled}>Send Message</button>
+          <button className='modal__form-submit' type='submit' disabled={disabled}>Send Message</button>
         </form>
       </div>
     </>

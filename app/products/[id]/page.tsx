@@ -455,7 +455,23 @@ export default function ProductPage({params: {id}}: Props) {
               </p>
               <button 
                 className="product__container-info-container-button" 
-                onClick={() => setReadMore(!readMore)}><span>{readMore ? '-' : '+'}</span> Read More</button>
+                onClick={() => setReadMore(!readMore)}>
+                  <span>
+                  {readMore ? 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <mask id="mask0_215_4316" style={{maskType:"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                        <rect width="20" height="20" fill="#D9D9D9"/>
+                      </mask>
+                      <g mask="url(#mask0_215_4316)">
+                        <path d="M4.1665 10.7241V9.32299H15.8332V10.7241H4.1665Z" fill="#232323"/>
+                      </g>
+                    </svg> : 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                      <path d="M4.45817 5.54165H0.416504V4.45835H4.45817V0.416687H5.54146V4.45835H9.58313V5.54165H5.54146V9.58331H4.45817V5.54165Z" fill="#232323"/>
+                    </svg>
+                  }
+                  </span>
+                   Read More</button>
 
               {readMore ? renderInfoItem() : null}
               {/* <h3 className="product__container-info-container-title">Options:</h3>

@@ -184,11 +184,29 @@ export default function Home() {
               <button 
                 className="mainPage__grow-container-slider-switchers-prev" 
                 disabled={growStatus < 1 ? true : false} 
-                onClick={() => setGrowStatus(growStatus - 1)}>&lt;</button>
+                onClick={() => setGrowStatus(growStatus - 1)}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <mask id="mask0_215_4424" style={{maskType:"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                      <rect width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_215_4424)">
+                      <path d="M14 18L8 12L14 6L15.4 7.4L10.8 12L15.4 16.6L14 18Z" fill="#232323"/>
+                    </g>
+                  </svg>
+                </button>
               <button 
                 className="mainPage__grow-container-slider-switchers-next" 
                 disabled={growStatus > 2 ? true : false} 
-                onClick={() => setGrowStatus(growStatus + 1)}>&gt;</button>
+                onClick={() => setGrowStatus(growStatus + 1)}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <mask id="mask0_215_4436" style={{maskType:"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                      <rect width="24" height="24" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_215_4436)">
+                      <path d="M12.6 12L8 7.4L9.4 6L15.4 12L9.4 18L8 16.6L12.6 12Z" fill="#232323"/>
+                    </g>
+                  </svg>
+              </button>
             </div>
 
             <ul className="mainPage__grow-container-slider-list" style={switchSlide(growStatus)}>
