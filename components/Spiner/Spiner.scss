@@ -1,0 +1,21 @@
+@keyframes rotateSpiner {
+  // 0% {
+  //   transform: rotate(0deg);
+  // }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spiner {
+  width: 100px;
+  height: 100px;
+  
+  animation-name: rotateSpiner;
+  animation-duration: 2s;
+
+  animation-timing-function: linear;
+  // animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
