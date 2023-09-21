@@ -28,10 +28,13 @@ export default function Header() {
   const activeLink = (path: string) => {
     let id: string = '';
 
-    const arr = pathname.split('')
-    arr.map(item => +item >= 0 ? id += item : null);
-
-    return pathname === path || pathname === `${path}/${id}` ? {color: '#2044A1'} : {};
+    if (pathname !== null) {
+      const arr = pathname.split('')
+      arr.map(item => +item >= 0 ? id += item : null);
+  
+      return pathname === path || pathname === `${path}/${id}` ? {color: '#2044A1'} : {};
+    }
+    
   }
 
   const closeModileMenu = (e?: MouseEvent) => {
