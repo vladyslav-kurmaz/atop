@@ -1,3 +1,4 @@
+import Link from 'next/link';
 
 import './QualitySystem.scss'; 
 
@@ -17,21 +18,23 @@ export default function QualitySystem() {
 
       <ul className="qualitySystem__list">
         <li className="qualitySystem__list-item">
+          <Link href={'/qualitySystem/certificate'} className='qualitySystem__list-item-link'></Link>
           <span className="qualitySystem__list-item-number">01</span>
-          <h3 className="qualitySystem__list-item-title">Reliability</h3>
+          <h3 className="qualitySystem__list-item-title">Certificates</h3>
         </li>
         <li className="qualitySystem__list-item">
+          <Link href={'/qualitySystem/patents'} className='qualitySystem__list-item-link'></Link>
           <span className="qualitySystem__list-item-number">02</span>
-          <h3 className="qualitySystem__list-item-title">International Standards</h3>
+          <h3 className="qualitySystem__list-item-title">Patents</h3>
         </li>
-        <li className="qualitySystem__list-item">
+        {/* <li className="qualitySystem__list-item">
           <span className="qualitySystem__list-item-number">03</span>
           <h3 className="qualitySystem__list-item-title">Responsibility</h3>
         </li>
         <li className="qualitySystem__list-item">
           <span className="qualitySystem__list-item-number">04</span>
           <h3 className="qualitySystem__list-item-title">Modernity</h3>
-        </li>
+        </li> */}
       </ul>
     </div>
    </>

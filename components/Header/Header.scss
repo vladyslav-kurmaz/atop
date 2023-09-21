@@ -133,6 +133,24 @@
 
   }
 
+  @keyframes openMenu {
+    0% {
+      max-width: 0%;
+    }
+    100% {
+      max-width: 100%;
+    }
+  }
+
+  @keyframes closeMenu {
+    0% {
+      max-width: 100%;
+    }
+    100% {
+      max-width: 0%;
+    }
+  }
+
   .header__list-mobile {
     display: flex;
     flex-direction: column;
@@ -145,6 +163,11 @@
     min-height: calc(100vh - 0px);
     background-color: #fff;
     padding: 24px 16px;
+    // max-width: 0;
+    animation-name: openMenu;
+    animation-duration: .3s;
+    animation-timing-function: linear;
+
 
 
     .header__list-item {

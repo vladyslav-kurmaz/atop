@@ -195,7 +195,6 @@ export default function ServicePage({params}: Props) {
     subDescription5,
     subListTitle4
   } = currentService;
-  console.log(src);
   
 
   const renderList = (subListTitle?: string, subList?: string[]) => {

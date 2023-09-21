@@ -381,7 +381,8 @@
             display: flex;
 
             &-prev:disabled, &-next:disabled {
-              color: #E1E1E1;
+              // color: #E1E1E1;
+              opacity: .5;
             }
           }
 

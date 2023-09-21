@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image';
-import {useState, ChangeEvent} from 'react'
+import {useState, MouseEvent, useEffect} from 'react'
 import { usePathname } from 'next/navigation'
 import { Spiral as Hamburger, Spiral } from 'hamburger-react';
 
@@ -13,7 +13,17 @@ import './Header.scss';
 
 export default function Header() {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const [animationMobileMenu, setAnimationMobileMenu] = useState(false);
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (openMobileMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+  }, [openMobileMenu])
 
   const activeLink = (path: string) => {
     let id: string = '';
@@ -24,9 +34,24 @@ export default function Header() {
     return pathname === path || pathname === `${path}/${id}` ? {color: '#2044A1'} : {};
   }
 
+  const closeModileMenu = (e?: MouseEvent) => {
+    if (openMobileMenu) {
+      setAnimationMobileMenu(true);
+      setTimeout(() => setOpenMobileMenu(false), 300);
+
+    } else {
+      setAnimationMobileMenu(false);
+      setOpenMobileMenu(true);
+
+    }
+    
+  }
+
 
   return pathname === '/writeUs' ? null :
-      <header className="header" style={openMobileMenu ? {'position': 'fixed'} : {'position': 'static'}}>
+      <header className="header" 
+        // style={openMobileMenu ? {'position': 'fixed'} : {'position': 'static'}}
+        >
       <div className='header__desctop'>
         <Link href={'/'} >
           <Image
@@ -80,9 +105,12 @@ export default function Header() {
         <div className="header__container flex justify-between items-center">
           <nav className='header__navigation mobile'>
             <div className='header__navigation-icon'>
-              <Spiral label="Show menu" toggled={openMobileMenu} toggle={setOpenMobileMenu}/>
+              <Spiral label="Show menu" toggled={openMobileMenu} 
+                // toggle={setOpenMobileMenu}
+                onToggle={() => closeModileMenu()}
+              />
             </div>
-            <Link href={'/'} className='header__mobile-logo'>
+            <Link href={'/'} className='header__mobile-logo' onClick={() => closeModileMenu()}>
               <Image
                 src={logoSmall}
                 alt='logo'
@@ -108,7 +136,11 @@ export default function Header() {
 
         {
             openMobileMenu ?
-            (<ul className="header__list-mobile">
+            (<ul className="header__list-mobile" style={animationMobileMenu ? {
+                  animationName: 'closeMenu',
+                  animationDuration: '.3s',
+                  animationTimingFunction: 'linear'
+                } : {}}>
               <li className='header__list-item'>
                 <Link className='header__list-item-link' onClick={() => setOpenMobileMenu(false)} href={'/servicesPage'}>Services</Link>   
               </li>

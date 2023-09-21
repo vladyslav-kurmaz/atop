@@ -1,12 +1,17 @@
 import Image from 'next/image';
+import { useState, Suspense } from 'react';
 
 import aboutUs from '../../image/aboutus.webp';
 import './About.scss';
+import Preloader from '@/components/Preloader/Preloader';
 
 export default function About() {
+  // const [preloader, setPreloader] = useState(true);
+
   return (
     <>
       <div className="about">
+        {/* {preloader ? <Preloader close={setPreloader}/> : null} */}
         <h1 className='about__title'>About ATED</h1>
 
         <div className="about__container">

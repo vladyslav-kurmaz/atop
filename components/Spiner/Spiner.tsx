@@ -3,7 +3,7 @@ import './Spiner.scss';
 const Spiner = () => {
   return (
     <div className="spiner">
-      <svg xmlns="http://www.w3.org/2000/svg" href="http://www.w3.org/1999/xlink" viewBox="0 0 600 600" width="100" height="100" preserveAspectRatio="xMidYMid meet" 
+      <svg xmlns="http://www.w3.org/2000/svg" href="http://www.w3.org/1999/xlink" viewBox="0 0 600 600"  preserveAspectRatio="xMidYMid meet" 
         // style={{width: '100%', height: '100%', transform: 'translate3d(0px, 0px, 0px)', contentVisibility: 'visible'}} 
         id="Clock Loading">
         <defs>

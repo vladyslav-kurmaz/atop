@@ -53,13 +53,14 @@
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     &-item {
       max-width: 312px;
       width: 100%;
       height: 264px;
       padding: 24px;
+      position: relative;
 
       border-radius: 12px;
       background-color: #1D1D1D;
@@ -67,6 +68,14 @@
       flex-direction: column;
       justify-content: space-between;
       margin-right: 10px;
+
+      &-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
 
       &-number {
         color: #696969;
