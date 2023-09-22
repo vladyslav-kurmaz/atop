@@ -20,6 +20,9 @@ const SliderGalery = ({data, initialSlide, close}: {data: string[], initialSlide
     })
   }
 
+  console.log(initialSlide);
+  
+
   const settings = {
     arrows:true,
     dots: false,

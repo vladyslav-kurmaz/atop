@@ -1,5 +1,5 @@
 'use client';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import Image from 'next/image';
 import {MouseEvent} from 'react';
 
@@ -14,12 +14,22 @@ const patents = [
 const certificates = ['/certificates/1.webp', '/certificates/2.webp', '/certificates/3.webp', '/certificates/4.webp', '/certificates/5.webp', '/certificates/6.webp', '/certificates/7.webp']
 
 const CertificatesAndPatents = ({status}: {status: boolean}) => {
-  // const [initialSlide, setInitialSlide] = useState(0);
+  const [initialSlide, setInitialSlide] = useState(0);
   const [showSlider, setShowSlider] = useState(false);
 
-  let initialSlide = 0;
+  // let initialSlide = 0;
 
   const data = status ? patents : certificates;
+
+  useEffect(() => {
+    setShowSlider(() => true);
+    document.body.style.overflow = 'hidden';
+  }, [initialSlide])
+
+  useEffect(() => {
+    setShowSlider(() => false);
+    document.body.style.overflow = '';
+  }, [])
 
   const renderImage = (data: string[]) => {
     return data.map((item, i) => {
@@ -32,8 +42,7 @@ const CertificatesAndPatents = ({status}: {status: boolean}) => {
           loading='lazy'
           onClick={(e) => {
             openImage(e);
-            setShowSlider(() => true);
-            document.body.style.overflow = 'hidden';
+            
             console.log(initialSlide);
             console.log(showSlider);
             
@@ -52,15 +61,15 @@ const CertificatesAndPatents = ({status}: {status: boolean}) => {
       const num = target.parentElement?.getAttribute('data-num');
 
       if (num !== null && num !== undefined) {
-        // setInitialSlide(() => +num);
-        initialSlide = +num;
+        setInitialSlide(() => +num);
+        // initialSlide = +num;
       }
     } else if (target.tagName === 'LI') {
       const num = target.getAttribute('data-num');
 
       if (num !== null && num !== undefined) {
-        // setInitialSlide(() => +num);
-        initialSlide = +num;
+        setInitialSlide(() => +num);
+        // initialSlide = +num;
       }
     }
   }
