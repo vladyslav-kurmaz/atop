@@ -131,8 +131,8 @@
     
       &__form {
         height: 100%;
-        overflow: scroll;
-        max-height: 890px;
+        // overflow: scroll;
+        min-height: 890px;
     
     
         &-label {
