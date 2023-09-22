@@ -14,7 +14,7 @@ const patents = [
 const certificates = ['/certificates/1.webp', '/certificates/2.webp', '/certificates/3.webp', '/certificates/4.webp', '/certificates/5.webp', '/certificates/6.webp', '/certificates/7.webp']
 
 const CertificatesAndPatents = ({status}: {status: boolean}) => {
-  const [initialSlide, setInitialSlide] = useState(0);
+  const [initialSlide, setInitialSlide] = useState<null | number>(null);
   const [showSlider, setShowSlider] = useState(false);
 
   // let initialSlide = 0;
@@ -22,14 +22,21 @@ const CertificatesAndPatents = ({status}: {status: boolean}) => {
   const data = status ? patents : certificates;
 
   useEffect(() => {
-    setShowSlider(() => true);
-    document.body.style.overflow = 'hidden';
+    if (initialSlide !== null) {
+      setShowSlider(() => true);
+      document.body.style.overflow = 'hidden';
+    }
+    
   }, [initialSlide])
 
   useEffect(() => {
     setShowSlider(() => false);
     document.body.style.overflow = '';
   }, [])
+
+  useEffect(() => {
+    !showSlider ? setInitialSlide(null) : initialSlide
+  }, [showSlider])
 
   const renderImage = (data: string[]) => {
     return data.map((item, i) => {
@@ -75,7 +82,7 @@ const CertificatesAndPatents = ({status}: {status: boolean}) => {
 
   return (
     <>
-      {showSlider ? <SliderGalery data={data} initialSlide={initialSlide} close={setShowSlider}/> : null}
+      {showSlider && initialSlide !== null ? <SliderGalery data={data} initialSlide={initialSlide} close={setShowSlider}/> : null}
       <ul className='certificateOrPatents__list'>
         {renderImage(data)}
       </ul>
