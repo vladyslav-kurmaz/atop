@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import CertificatesAndPatents from "@/components/CertificatesAndPatents/CertificatesAndPatents";
 
@@ -19,7 +19,7 @@ import './Patents.scss';
 
 export default function Patents() {
   return (
-    <Suspense fallback={<Preloader/>}>
+    // <Suspense fallback={<Preloader/>}>
       <div className="patents">
         <h1 className="patents__title">Patents</h1>
         <p className="patents__text">
@@ -29,7 +29,7 @@ export default function Patents() {
         <CertificatesAndPatents status={true}/>
 
       </div>
-    </Suspense>
+    // </Suspense>
     
   )
 }

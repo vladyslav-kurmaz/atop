@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import CertificatesAndPatents from "@/components/CertificatesAndPatents/CertificatesAndPatents";
 
@@ -18,7 +18,7 @@ import './Certificates.scss';
 
 export default function Certificate() {
   return (
-    <Suspense fallback={<Preloader/>}>
+    // <Suspense fallback={<Preloader/>}>
       <div className="certificate">
         <h1 className="certificate__title">Certificates</h1>
         <p className="certificate__text">
@@ -27,7 +27,7 @@ export default function Certificate() {
 
         <CertificatesAndPatents status={false}/>
       </div>
-    </Suspense>
+    // </Suspense>
     
   )
 }
