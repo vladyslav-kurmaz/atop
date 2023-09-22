@@ -1,4 +1,9 @@
+'use client'
+
 import CertificatesAndPatents from "@/components/CertificatesAndPatents/CertificatesAndPatents";
+
+import { Suspense } from "react";
+import Preloader from "@/components/Preloader/Preloader";
 
 import type { Metadata } from 'next'
 export const metadata: Metadata = {
@@ -10,15 +15,19 @@ import './Certificates.scss';
 
 
 
+
 export default function Certificate() {
   return (
-    <div className="certificate">
-      <h1 className="certificate__title">Certificates</h1>
-      <p className="certificate__text">
-        The implementation of the quality management system guarantees that the quality of the manufactured products is stable and focused on a specific consumer, and increases the company{`'`}s competitiveness.
-      </p>
+    <Suspense fallback={<Preloader/>}>
+      <div className="certificate">
+        <h1 className="certificate__title">Certificates</h1>
+        <p className="certificate__text">
+          The implementation of the quality management system guarantees that the quality of the manufactured products is stable and focused on a specific consumer, and increases the company{`'`}s competitiveness.
+        </p>
 
-      <CertificatesAndPatents status={false}/>
-    </div>
+        <CertificatesAndPatents status={false}/>
+      </div>
+    </Suspense>
+    
   )
 }

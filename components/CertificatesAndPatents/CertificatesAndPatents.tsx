@@ -39,7 +39,6 @@ const CertificatesAndPatents = ({status}: {status: boolean}) => {
           alt={item}
           width={2000}
           height={2000}
-          loading='lazy'
           onClick={(e) => {
             openImage(e);
             
