@@ -1,5 +1,5 @@
 import Image from "next/image"
-import aboutUs from '../../image/aboutus.webp';
+import aboutUs from '../image/aboutus.webp';
 
 const AboutUs = () => {
 
