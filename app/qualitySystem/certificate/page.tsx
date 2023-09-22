@@ -1,6 +1,14 @@
 import CertificatesAndPatents from "@/components/CertificatesAndPatents/CertificatesAndPatents";
 
+import type { Metadata } from 'next'
+export const metadata: Metadata = {
+  title: 'Certificates – А.E.T.D',
+  description: 'Certificates presented by the company А.E.T.D'
+}
+
 import './Certificates.scss';
+
+
 
 export default function Certificate() {
   return (

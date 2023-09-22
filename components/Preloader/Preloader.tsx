@@ -95,7 +95,7 @@ const Preloader = () => {
   return (
     <>
       <div className="preloader">
-        {/* <img src="/preloader.webp" loading='lazy' alt="preloader gif" className='preloader__background' /> */}
+        <img src="/preloader.webp" loading='lazy' alt="preloader gif" className='preloader__background' />
         <div className="preloader__container">
           {/* <Image
             src={logo}

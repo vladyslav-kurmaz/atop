@@ -69,7 +69,6 @@ const Partners = () => {
               <Image
                 src={aps}
                 alt='aps'
-                loading='lazy'
                 className="mainPage__partners-container-list-item-img"
               />
               <h3>APS Energia</h3>
@@ -78,7 +77,6 @@ const Partners = () => {
               <Image
                 src={lviv}
                 alt='aps'
-                loading='lazy'
                 className="mainPage__partners-container-list-item-img"
               />
               <h3>Lviv Railroad</h3>
@@ -87,7 +85,6 @@ const Partners = () => {
               <Image
                 src={donetck}
                 alt='aps'
-                loading='lazy'
                 className="mainPage__partners-container-list-item-img"
               />
               <h3>Donetsk Railroad</h3>
@@ -96,7 +93,6 @@ const Partners = () => {
               <Image
                 src={odesa}
                 alt='aps'
-                loading='lazy'
                 className="mainPage__partners-container-list-item-img"
               />  
               <h3>Odesa Railroad</h3>
@@ -105,7 +101,6 @@ const Partners = () => {
               <Image
                 src={ukr}
                 alt='aps'
-                loading='lazy'
                 className="mainPage__partners-container-list-item-img"
               />
               <h3>Ukrzaliznytsia</h3>

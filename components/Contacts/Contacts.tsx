@@ -26,7 +26,6 @@ const Contacts = () => {
       <Image
         className='mainPage__contacts-img'
         src={contact}
-        loading='lazy'
         alt=''/>
     </div>
   )

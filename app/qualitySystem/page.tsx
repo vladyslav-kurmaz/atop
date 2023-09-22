@@ -2,6 +2,13 @@ import Link from 'next/link';
 
 import './QualitySystem.scss'; 
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Quality System – А.E.T.D',
+  description: 'Patents presented by the company А.E.T.D'
+}
+
 export default function QualitySystem() {
   return (
    <>

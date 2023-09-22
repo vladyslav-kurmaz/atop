@@ -44,10 +44,8 @@ const Experience = () => {
             <Image
               src={tarmpel}  
               alt='trampel'
-              objectFit='contain'
               // layout='fill'
-              style={{maxWidth: '656px', maxHeight: '437px', width: '100%', height: '100%', }}
-              loading='lazy'
+              style={{maxWidth: '656px', maxHeight: '437px', width: '100%', height: '100%', objectFit: 'contain'}}
             />
           </div>
 
@@ -55,9 +53,8 @@ const Experience = () => {
             <Image
               src={chair}  
               alt='chair'
-              objectFit='contain'
-              style={{maxWidth: '656px', maxHeight: '437px', width: '100%', height: '100%'}}
-              loading='lazy'
+              style={{maxWidth: '656px', maxHeight: '437px', width: '100%', height: '100%', objectFit: 'contain'}}
+
             />
           </div>
         </div>

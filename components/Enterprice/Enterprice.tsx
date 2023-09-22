@@ -19,7 +19,6 @@ const Enterprice = () => {
             <Image
               src={first}
               alt='first'
-              loading='lazy'
               className='mainPage__enterprise-list-item-img-picture'
             />
           </div>
@@ -62,7 +61,6 @@ const Enterprice = () => {
               width={1000}
               height={1000}
               alt='thecond'
-              loading='lazy'
               className='mainPage__enterprise-list-item-img-picture'
             />
           </div>
@@ -102,7 +100,6 @@ const Enterprice = () => {
             <Image
               src={third}
               alt='third'
-              loading='lazy'
               className='mainPage__enterprise-list-item-img-picture'
             />
           </div>
@@ -142,7 +139,6 @@ const Enterprice = () => {
             <Image
               src={fourth}
               alt='fourth'
-              loading='lazy'
               className='mainPage__enterprise-list-item-img-picture'
             />
           </div>
