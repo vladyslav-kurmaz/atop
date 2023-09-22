@@ -38,6 +38,20 @@ export default function Header() {
   }
 
   const closeModileMenu = (e?: MouseEvent) => {
+    const target = e?.target as HTMLElement;
+    console.log(e);
+    
+    if (target && target.tagName === 'IMG') {
+      console.log(1);
+      
+      if (openMobileMenu) {
+        setAnimationMobileMenu(true);
+        setTimeout(() => setOpenMobileMenu(false), 300);
+        
+      }
+      return;
+    }
+
     if (openMobileMenu) {
       setAnimationMobileMenu(true);
       setTimeout(() => setOpenMobileMenu(false), 300);
@@ -47,6 +61,7 @@ export default function Header() {
       setOpenMobileMenu(true);
 
     }
+    
     
   }
 
@@ -113,7 +128,7 @@ export default function Header() {
                 onToggle={() => closeModileMenu()}
               />
             </div>
-            <Link href={'/'} className='header__mobile-logo' onClick={() => closeModileMenu()}>
+            <Link href={'/'} className='header__mobile-logo' onClick={(e) => closeModileMenu(e)}>
               <Image
                 src={logoSmall}
                 alt='logo'
