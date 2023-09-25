@@ -37,15 +37,18 @@
 
       & .header__button {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
-        padding: 8px 13px;
+        padding: 18px 10px;
         background-color: $buttonBlue;
         color: #FFF;
         font-size: 14px;
         font-weight: 500;
         border-radius: 100px;
         transition: all .3s;
+        max-width: 120px;
+        width: 100%;
+        height: 40px;
 
         &:hover {
           background-color: $buttonBlueHover;

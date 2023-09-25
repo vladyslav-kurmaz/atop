@@ -316,7 +316,7 @@
             border: 1px solid #B9C3DE;
 
             &-icon {
-              margin-bottom: 25px;
+              margin-bottom: 10px;
             }
 
 
@@ -706,6 +706,7 @@
           flex-direction: column;
           justify-content: space-between;
           // max-height: 340px;
+          
           height: 340px;
 
           &-container {
@@ -1165,6 +1166,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 104px;
 
     &-container {
 

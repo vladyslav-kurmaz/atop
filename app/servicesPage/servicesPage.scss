@@ -5,6 +5,7 @@
   justify-content: space-between;
   max-width: 1440px;
   margin: 0 auto;
+  padding-bottom: 104px;
 
   &__title {
     color: #232323;
@@ -34,7 +35,7 @@
       height: 481px;
       border-radius: 12px;
       border: 1px solid #EAEAEA;
-      margin: 32px 10px;
+      margin: 16px 10px;
       position: relative;
 
       &-overLink {
