@@ -62,7 +62,7 @@ const Footer = () => {
             className="footer__info-img"
           />
           <p className="footer__info-text">Aerospace technologies, equipment and development</p>
-          <button 
+          <Link href={'/writeUs'}
             // onClick={open} 
             className="footer__info-contact">
             Write Us
@@ -74,7 +74,7 @@ const Footer = () => {
               <path d="M5.0625 15L4 13.9375L12.4375 5.5H5V4H15V14H13.5V6.5625L5.0625 15Z" fill="#232323"/>
               </g>
             </svg>
-          </button>
+          </Link>
         </div>
 
         <div className="footer__container-company">
