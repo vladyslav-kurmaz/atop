@@ -300,13 +300,9 @@ export default function Header() {
                     { value: "UA", text: "UA" },
                     { value: "EN", text: "EN" },
                   ]}
-                  // name=""
-                  // id=""
-                  // padding={0}
-                >
-                  {/* <option value="uk">UK</option>
-                  <option value="EN">EN</option> */}
-                </Select>
+                />
+
+                
               </li>
             </ul>
           </nav>
@@ -462,13 +458,8 @@ export default function Header() {
                   { value: "UA", text: "UA" },
                   { value: "EN", text: "EN" },
                 ]}
-                // name=""
-                // id=""
-                // padding={0}
-              >
-                {/* <option value="uk">UK</option>
-                  <option value="EN">EN</option> */}
-              </Select>
+              />
+              
             </li>
             <li className="header__list-item   mt-auto">
               <ul>
