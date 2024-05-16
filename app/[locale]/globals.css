@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  color: #232323;
+
+}
+
+.max-w-1440px {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}

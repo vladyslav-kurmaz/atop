@@ -32,7 +32,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      max-width: 689px;
+      max-width: 731px;
       width: 100%;
 
       & .header__button {
@@ -46,7 +46,7 @@
         font-weight: 500;
         border-radius: 100px;
         transition: all .3s;
-        max-width: 120px;
+        max-width: 150px;
         width: 100%;
         height: 40px;
 
@@ -61,7 +61,7 @@
       }
 
       & .header__navigation {
-        max-width: 546px;
+        max-width: 560px;
         width: 100%;
       }
 
@@ -70,12 +70,22 @@
         width: 100%;
         justify-content: space-between;
         align-items: center;
+        max-width: 560px;
+
+        & .with-arrow {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
 
         &-item {
           color: #232323;
           font-size: 16px;
           font-weight: 500;
           transition: all .3s;
+          cursor: pointer;
+
+          
 
           &:hover {
             color: $buttonBlueHover;
@@ -154,6 +164,10 @@
     }
   }
 
+  .header__list-mobile::-webkit-scrollbar {
+    width: 0px;
+  }
+
   .header__list-mobile {
     display: flex;
     flex-direction: column;
@@ -162,14 +176,15 @@
     left: 0;
     z-index: 199;
     width: 100%;
-    height: 100%;
-    min-height: calc(100vh - 0px);
+    height: 95%;
+    min-height: calc(100vh - 100px);
     background-color: #fff;
     padding: 24px 16px;
     // max-width: 0;
     animation-name: openMenu;
     animation-duration: .3s;
     animation-timing-function: linear;
+    overflow: auto;
 
 
 
@@ -179,7 +194,7 @@
       font-size: 16px;
       font-weight: 600;
       padding: 16px 0;
-      border-bottom: 1px solid #EAEAEA;
+      // border-bottom: 1px solid #EAEAEA;
 
     }
   }

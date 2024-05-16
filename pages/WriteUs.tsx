@@ -5,8 +5,10 @@ import { useRouter } from 'next/navigation';
 import validationForm from '@/utils/validationForm';
 
 import ThankYou from '@/components/ThankYou/ThankYou';
+import { useTranslation } from 'react-i18next';
 
 const WriteUsComponent = () => {
+  const {t} = useTranslation(['form']);
   const [disabled, setDisabled] = useState(true);
   const router = useRouter();
   const [thankYou, setThenkYou] = useState(false);
@@ -116,6 +118,9 @@ const WriteUsComponent = () => {
           sevices: '',
           message: ''
         }))
+
+        // history.pushState({}, "Сторінка подяки", 'https://www.kyokushinkaidojo.com.ua/thank-you.html')
+        window.location.reload();
       }
 
     } catch (e) {
@@ -133,7 +138,7 @@ const WriteUsComponent = () => {
           onSubmit={(e) => sendForm(e)}
         >
           <div className="modal__form-container">
-            <h1 className='modal__form-title'>Hello, ATED!</h1>
+            <h1 className='modal__form-title'>{t('title')}</h1>
             <div className='modal__form-close' 
               onClick={router.back}
               >
@@ -149,13 +154,13 @@ const WriteUsComponent = () => {
           </div>
           <div className="modal__form-content">
             <label htmlFor="name" className='modal__form-label'>
-              <span>Your name</span>
+              <span>{t('name-label')}</span>
               <input 
                 id='name' 
                 name='name' 
                 type="text" 
                 className='modal__form-label-input'
-                placeholder='Type your name'
+                placeholder={t("name-pleceholder")}
                 value={formData.name}
                 onChange={(e) => changeInput(e)}
                 />
@@ -163,20 +168,20 @@ const WriteUsComponent = () => {
                 {validationForm(formData.name, 'name')?.errorStatus ? <div className="modal__form-label-error">{validationForm(formData.name, 'name')?.message}</div> : null}
             </label>
             <label htmlFor="company" className='modal__form-label'>
-              <span>Company or organization name</span>
+              <span>{t("company-label")}</span>
               <input 
                 id='company' 
                 name='company' 
                 type="text" 
                 className='modal__form-label-input'
-                placeholder='Type your company or organization name'
+                placeholder={t('company-placeholder')}
                 value={formData.company}
                 onChange={(e) => changeInput(e)}/>
 
                 {validationForm(formData.company, 'company')?.errorStatus ? <div className="modal__form-label-error">{validationForm(formData.company, 'company')?.message}</div> : null}
             </label>
             <label htmlFor="email" className='modal__form-label'>
-              <span>Email</span>
+              <span>{t("email-label")}</span>
               <input 
                 id='email' 
                 name='email' 
@@ -189,39 +194,39 @@ const WriteUsComponent = () => {
                 {validationForm(formData.email, 'email')?.errorStatus ? <div className="modal__form-label-error">{validationForm(formData.email, 'email')?.message}</div> : null}
             </label>
             <label htmlFor="number" className='modal__form-label'>
-              <span>Phone number</span>
+              <span>{t("phone-label")}</span>
               <input 
                 id='number' 
                 name='number' 
                 type="tel" 
                 className='modal__form-label-input'
-                placeholder='Type your phone number'
+                placeholder={t("phone-placeholder")}
                 value={formData.number}
                 onChange={(e) => changeInput(e)}/>
 
                 {validationForm(formData.number, 'number')?.errorStatus ? <div className="modal__form-label-error">{validationForm(formData.number, 'number')?.message}</div> : null}
             </label>
             <label htmlFor="country" className='modal__form-label'>
-              <span>Your country</span>
+              <span>{t("country-label")}</span>
               <input 
                 id='country' 
                 name='country' 
                 type="text" 
                 className='modal__form-label-input'
-                placeholder='Type your country'
+                placeholder={t("country-placeholder")}
                 value={formData.country}
                 onChange={(e) => changeInput(e)}/>
 
                 {validationForm(formData.country, 'country')?.errorStatus ? <div className="modal__form-label-error">{validationForm(formData.country, 'country')?.message}</div> : null}
             </label>
             <label htmlFor="sevices" className='modal__form-label'>
-              <span>A product or service that interests you</span>
+              <span>{t('service-label')}</span>
               <input 
                 id='sevices' 
                 name='sevices' 
                 type="text" 
                 className='modal__form-label-input'
-                placeholder='Tell us more'
+                placeholder={t("service-placeholder")}
                 value={formData.sevices}
                 onChange={(e) => changeInput(e)}/>
 

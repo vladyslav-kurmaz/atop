@@ -1,6 +1,9 @@
+import initTranslations from "@/app/i18n";
+import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Link from "next/link";
 
-const MainComponent = () => {
+const MainComponent = async ({params}: {params: Params}) => {
+  const { t } = await initTranslations(params.locale, ["main"]);
   return (
     <div className="mainPage__first">
         <img 
@@ -14,11 +17,11 @@ const MainComponent = () => {
         />
 
         <div className="mainPage__first-container">
-          <h1 className='mainPage__first-title'>We create products for rail transport & underground</h1>
+          <h1 className='mainPage__first-title'>{t("main.title")}</h1>
 
-          <p className='mainPage__first-description'>We offer components for major repairs of wagons of different series, electrical equipment, interior elements for passenger cars, control panels and other.</p>
+          <p className='mainPage__first-description'>{t("main.description")}</p>
 
-          <Link href={'/products/2'} className='mainPage__first-button'>Read More</Link>
+          <Link href={'/products/2'} className='mainPage__first-button'>{t("main.read-me")}</Link>
         </div>
       </div>
   )

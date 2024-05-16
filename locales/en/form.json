@@ -1,0 +1,17 @@
+{
+  "title": "Hello, ATED!",
+  "name-label": "Your name",
+  "name-pleceholder": "Type your name",
+  "company-label": "Company or organization name",
+  "company-placeholder": "Type your company or organization name",
+  "email-label": "Email",
+  "phone-label": "Phone number",
+  "phone-placeholder": "Type your phone number",
+  "country-label": "Your country",
+  "country-placeholder": "Type your country",
+  "service-label": "A product or service that interests you",
+  "service-placeholder": "Tell us more",
+  "message-label": "Message",
+  "message-placeholder": "Type your message",
+  "button": "Send Message"
+}

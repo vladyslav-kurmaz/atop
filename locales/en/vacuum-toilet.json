@@ -1,0 +1,199 @@
+{
+  "title": "Vacuum toilet systems",
+  "description": "Development and production of ecologically clean toilet complexes (ECT) to replace ordinary toilets to improve the quality and comfort of using toilets in trains.",
+
+  "products": "Products",
+
+  "read-more-close": "Fold in",
+  "read-more-open": "Read more",
+
+  "1": {
+    "title": "A set of ecologically clean toilets for passenger cars of the 779, 47 series models",
+    "titleCard": "A set of ecologically clean toilets for passenger cars",
+    "description": {
+      "description": {
+        "0": "The ecologically clean toilet set (ECT) was created to replace ordinary toilets to improve the quality and comfort of using toilets in trains.",
+        "1": "The set is designed to meet the physiological and hygienic needs of personnel and passengers in passenger, service, and technical cars, cars of diesel and electric trains, locomotives,and other types of rail rolling stock, as well as for environmental protection - hygienic storage of household waste before disposal."
+      }
+    },
+    "subListTitle": "Works in the following conditions:",
+    "subList": {
+      "0": "temperature: from -40С to 60С. At 2С, automatic water discharges from the system.",
+      "1": "humidity: no more than 75%.",
+      "2": "An environmentally friendly toilet set consists of the following main elements:",
+      "3": "toilet unit - 2 pcs.",
+      "4": "a set of a drain tank on the working side - 1 set.",
+      "5": "a set of a non-working side drain tank - 1 set.",
+      "6": "compressed air supply unit - 1 pc.",
+      "7": "power supply unit - 2 pcs.",
+      "8": "a set of display devices - 1 set",
+      "9": "a set of brackets, materials, and standard products for installation - 1 set."
+    },
+    "subTitle": "Technical characteristics of the EHT set:",
+    "subDescription": {
+      "0": "The power of the toilet unit, W, no more than:"
+    },
+    "subList2": {
+      "0": "in standby mode​​​​​​​​ -- 2,0",
+      "1": "in flush mode​​​​​​​​​ -- 20,0"
+    },
+    "subDescription2": {
+      "0": "Power of the tank heating system, kW, no more than:"
+    },
+    "subList3": {
+      "0": "у in summer (temperature over 3⁰С) -- ​​​​​0,0",
+      "1": "in the winter period​​​​​​​​ -- 1,0"
+    },
+    "subDescription3": {
+      "0": "The power of the heating system of the drain system, kW, no more than:"
+    },
+    "subList4": {
+      "0": "in summer (temperature over 3⁰С)​​​​​ -- 0,0",
+      "1": "in the winter period -- ​​​​​​​​1,0"
+    },
+    "subDescription4": {
+      "0": "The power of the compressed air supply unit, kW, is no more​​0,5",
+      "1": "Permissible supply voltage fluctuations, V:"
+    },
+    "subList5": {
+      "0": "on-board network of the car DC 24 V​​​​19...30",
+      "1": "on-board network of the car DC 110 V​​​​77...144",
+      "2": "AC 220 V on-board network of the car​​​​198...242"
+    },
+    "subDescription5": {
+      "0": "Water consumption during flushing (one full cycle), l/cycle​​​~ 0,5",
+      "1": "Compressed air consumption for one complete flushing cycle (when the pressure in the system is 5 kg/cm2), l/cycle​​​​​~ 20",
+      "2": "Dilution in the toilet block during flushing, kg/cm2, no less -- ​​0,6",
+      "3": "Working pressure in the toilet block during flushing, kg/cm2, no less -- ​​0,7",
+      "4": "Operating pressure range of compressed air at the inlet in the toilet block, kg/cm -- 2​​​​​​​4,3...8,0",
+      "5": "Working range of water pressure at the entrance to the toilet block, kg/cm -- 2​​0,1…1,5",
+      "6": "Operating temperature range:"
+    },
+    "subList6": {
+      "0": "drain tank​​​​​​​​​minus 45C…45C",
+      "1": "equipment installed inside the car​​​​ -- 2⁰C…45C"
+    },
+    "subListTitle2": "​Toilet equipment provides:",
+    "subList7": {
+      "0": "serving passengers for three days without emptying the storage tank;",
+      "1": "the possibility of emptying the storage tank from both sides of the car;",
+      "2": "flushing fecal waste from the toilet of the toilet unit in no more than two presses of the flush button without splashing water;",
+      "3": "control of the heating system, regulation of the temperature inside the storage tank at an ambient temperature of minus 50 °C;",
+      "4": " control of the presence of water in the water main, control and regulation of pressure in the pneumatic system, control of temperature and filling of the storage tank;"
+    },
+    "subListTitle3": "control of electric motors:",
+    "subList8": {
+      "0": "1. water pump - in automatic and manual mode;",
+      "1": "2. circulation pump - in automatic and manual mode;",
+      "2": "3. compressor installation - in automatic mode;"
+    },
+    "subListTitle4": "light and digital alarm about the condition of the toilet equipment:",
+    "subList9": {
+      "0": "1.  filling the storage tank. Fill levels: 10%, 80%, 95%;",
+      "1": "2. permission and prohibition of toilet operation at tank filling levels '<95%' and '≥ 95%';",
+      "2": "3. permission and prohibition of using the toilet in the presence or absence of water;",
+      "3": "4. permission and prohibition of operation of the toilet in the absence of 220V power supply to the electric motors of the compressor installation;",
+      "4": "5. permission and prohibition of the operation of the toilet according to the pressure in the main line."
+    }
+  },
+  "2": {
+    "title": "Sanitary module of a passenger car",
+    "titleCard": "Sanitary module for passenger cars",
+    "description": {
+      "description": {
+        "0": "It is an assembly unit of a bathroom with a sink and a toilet block, which is ready to be installed in the car and contains everything necessary for connection to the water supply and power supply systems.",
+        "1": "The module is installed in passenger cars of locomotive traction trains, diesel trains,and electric trains to ensure sanitary and hygienic conditions for passengers and train crews during the trip, as well as ecological protection of the environment."
+      }
+    },
+    "subDescription": {
+      "0": "The module is intended for reception and removal employing intensive dosed flushing of human waste with water into the storage tank and creation of the necessary comfortable conditions.",
+      "1": "The module is supplied with electricity and water from the car's sources.",
+      "2": "The equipment of the module provides an automatic mode of control of the flushing preparation system, lighting, ventilation of the module, and heating of the storage tank and pipes, as well as issuing light signals about the functional state of the electrical equipment."
+    },
+    "subListTitle": "The main parameters of the electrical equipment of the module:",
+    "subList": {
+      "0": "equipment power supply voltage, V",
+      "1": "24 V direct current power grids - from 18 to 30;",
+      "2": "110 V direct current power grid - from 85 to 150;",
+      "3": "power consumption at a nominal supply voltage of 110 V, kW, no more than:",
+      "4": "heating of the storage tank and pipes (at -40 ° C) - 2.0;",
+      "5": "sockets for electric shavers - 0.035;",
+      "6": "compressor unit -1.5;",
+      "7": "the power consumption of the control circuits of the toilet, alarm, and lighting module at a nominal voltage of 24 V is no more than 0.15 kW."
+    },
+    "subListTitle2": "List of electrical equipment installed in the module:",
+    "subList2": {
+      "0": "control panel;",
+      "1": "toilet module;",
+      "2": "conductor call console;",
+      "3": "electronic volume control;",
+      "4": "flushing block;",
+      "5": "presence sensor;",
+      "6": "sounding device;",
+      "7": "temperature sensor;",
+      "8": "electric blower heaters;",
+      "9": "LED point lamps;",
+      "10": "LED lines;",
+      "11": "ceiling fan;",
+      "12": "razor converter;",
+      "13": "limit switch for toilet occupancy;",
+      "14": "connector for connection to the car's electrical equipment."
+    },
+    "subListTitle3": "List of electrical equipment installed in the car:",
+    "subList3": {
+      "0": "conductor's console;",
+      "1": "toilet occupancy indicator;",
+      "2": "compressor unit with a voltage converter."
+    },
+    "subListTitle4": "List of undercarriage electrical equipment:",
+    "subList4": {
+      "0": "storage tank with level and temperature sensors and a heating element;",
+      "1": "pipe heating system;",
+      "2": "80% tank filling indicators."
+    }
+  },
+  "3": {
+    "title": "A set of toilet elements for diesel trains and electric trains.",
+    "titleCard": "A set of toilet elements for diesel trains and electric trains",
+    "description": {
+      "description": {
+        "0": " ATOR LLC offers a set of elements for overhaul of diesel trains and electric trains:"
+      },
+      "list": {
+        "0": "a set of facings of the side walls;",
+        "1": "toilet window protection;",
+        "2": "bath floor with linoleum and drain pipe;",
+        "3": "ceiling with lighting;",
+        "4": "mirror;",
+        "5": "washbasin with faucet;",
+        "6": "toilet with a flushing system;",
+        "7": "handrail with accessories;",
+        "8": "door with a lock;",
+        "9": "installation of an electric heater;",
+        "10": "water tank"
+      }
+    },
+    "subDescription": {
+      "0": "The vertical upper rack is made of stainless steel. A vandal-proof faucet is installed on the stand. The supply of water from the washbasin faucet is provided by an electric button that supplies water in a dosed manner. The button only gives a signal to supply water, so when the specified amount of water is used, its flow stops, even if the button is held down.",
+      "1": "The washbasin is made of fiberglass. The drain from the wash basin is discharged into a fan pipe with electric heating. A vandal-proof stainless steel mirror is installed next to the sink.",
+      "2": "Doors for maintenance of sanitary equipment are provided on the counter and under the sink.",
+      "3": "It is possible to install an anti-fouling stainless steel sink. Main advantages:"
+    },
+    "subList": {
+      "0": "all parts (including siphon and water inlet) are located inside the body made of sheet stainless steel with a thickness of 2 mm, which makes intentional damage impossible;",
+      "1": "the water outlet is a tight stainless steel tube that cannot be bent",
+      "2": "the washbasin has a built-in anti-vandal button for a metered water supply."
+    },
+    "subDescription2": {
+      "0": "The facing of the side walls is made of thermoformed PVC plastic. The window protection is made in one piece with the side wall and is attached to the existing strength frame.",
+      "1": "Next to the window is a stainless steel handrail. Under the window, there are toilet paper holders of anti-vandal design.",
+      "2": "Hooks for things of anti-vandal design are installed in the toilet.",
+      "3": "The entrance door to the toilet room is hinged (inside the toilet). The door frame and moldings are made of powder-coated steel, the door leaf is made of plywood lined with HPL plastic.",
+      "4": " A railway-style lock is mounted in the sash (with a T-shaped handle inside the room, with a triangular key on the outside) with an occupancy indicator.",
+      "5": "Protective covers made of stainless steel are installed on electric heaters.",
+      "6": "The floor is made of fiberglass with molded linoleum with an anti-slip effect. A drain pipe is installed in the center.",
+      "7": "The floor toilet is made of stainless steel with an outlet on the floor. Draining of water in the toilet is provided with the help of an electric button, which supplies water in a dosed manner. The toilet is attached to the side wall.",
+      "8": "The tank is made of stainless steel, in which heating is installed (with the help of a heating element), with additional external thermal insulation. A technological hatch on the side of the passenger compartment was made to maintain the heating system."
+    }
+  }
+}

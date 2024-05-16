@@ -1,0 +1,17 @@
+{
+  "title": "Звʼяжіться з нами",
+  "name-label": "Ваше імʼя",
+  "name-pleceholder": "Введіть ваше імʼя",
+  "company-label": "Назва компанії або організації",
+  "company-placeholder": "Введіть назву вашої компанії або організації",
+  "email-label": "Пошта",
+  "phone-label": "Номер телефону",
+  "phone-placeholder": "Введіть ваш номер телефону",
+  "country-label": "Ваша країна",
+  "country-placeholder": "Введіть вашу країну ",
+  "service-label": "Продукт або сервіс, котрий вас цікавить",
+  "service-placeholder": "Розкажіть більш детально",
+  "message-label": "Повідомлення",
+  "message-placeholder": "Введіть повідомлення",
+  "button": "Відправити"
+}

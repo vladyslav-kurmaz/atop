@@ -1,27 +1,31 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "baseUrl": ".",
+    "target": "esnext", // Збережемо в налаштуваннях esnext для більш сучасної JS
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
+    "allowJs": true, // Дозволимо використання JavaScript файлів в TypeScript проекті
+    "skipLibCheck": true, // Пропустимо перевірку типів з бібліотек
     "strict": true,
-    "noEmit": true,
+    "noEmit": true, // Не генерувати файлу виводу JS, Next.js вирішує це самостійно
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node", // Покращена роздільна здатність шляхів для модулів Node.js
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true,
+    "incremental": true, // Включимо інкрементальну компіляцію
+    "strictNullChecks": true, // Строга перевірка на наявність значення null
+    "paths": {
+      "@/*": ["./*"],
+
+      "@/components/*": ["components/*"],
+      "@/locales/*": ["locales/*"]
+    },
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    // "types": ["@splidejs/react-splide"],
-    "paths": {
-      "@/*": ["./*"]
-    }
+    ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]

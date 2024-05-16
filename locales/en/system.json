@@ -1,0 +1,170 @@
+{
+  "title": "Management systems",
+  "description": "Development and production of electronic devices of various complexity for railway transport and test equipment.",
+
+  "products": "Products",
+
+  "read-more-close": "Fold in",
+  "read-more-open": "Read more",
+
+  "1": {
+    "title": "A set of electrical equipment for TsMC and TsMO wagons",
+    "titleCard": "A set of electrical equipment of a passenger car",
+    "description": {
+      "description": {
+        "0": "Electrical equipment is intended to manage, control, and diagnose power supply and control systems climate control, and lighting of passenger cars."
+      }
+    },
+    "subTitle": "Control panel",
+    "subDescription": {
+      "0": "The nominal voltage is 110 V.",
+      "1": "The remote control provides control, control, and diagnostics of the following car systems in automatic and manual modes:"
+    },
+    "subList": {
+      "0": "energy supply;",
+      "1": "lighting;",
+      "2": "climate system - heating (H/V and H/V), (monoblock attic air conditioner);",
+      "3": "special consumers."
+    },
+    "subTitle2": "High-voltage box",
+    "subDescription2": {
+      "0": "Nominal voltage:"
+    },
+    "subList2": {
+      "0": "ланцюгів управління, постійна – 110 В",
+      "1": "високовольтних ланцюгів, постійна або змінна – 3000 В"
+    },
+    "subDescription3": {
+      "0": "The high-voltage box provides:"
+    },
+    "subList3": {
+      "0": "reception and switching of electricity from the undercarriage main line;",
+      "1": "protection of heating circuits from overloads and short circuits;",
+      "2": "protection against insulation breakdown of boiler electric heaters;",
+      "3": "protection of personnel from high voltage, including when opening the box cover;",
+      "4": "sending signals to the control panel about the presence of voltage in the undercarriage line and about the breakdown of the insulation of the electric heaters of the boiler",
+      "5": "control of two groups of boiler heaters with a capacity of 24 kW each."
+    },
+    "subTitle3": "External power supply box",
+    "subDescription4": {
+      "0": "It provides power supply to the car from the three-phase voltage of the industrial network 380 V 50 Hz where the cars are standing and from the under car generator when the car is moving. At the same time, the external power supply box also provides a charge mode for the battery with regulation of the charging current. The composition includes rectifier bridges from the generator and transformer and control, control, and protection bodies."
+    },
+    "subList4": {
+      "0": "input voltage - ~380 V 50 Hz",
+      "1": "the number of phases is 3",
+      "2": "the output voltage is constant - 120 V ... 145 V",
+      "3": "nominal output power – 36 kW"
+    }
+  },
+  "2": {
+    "title": "Blocksclimate control of air conditioners AVK-30 and KV1-28",
+    "titleCard": "Air conditioner control units KV-1-28, AVK-30",
+    "description": {
+      "description": {
+        "0": "The air conditioner control unit is designed to control the air conditioner in automatic mode (ventilation, cooling, heating) and in manual mode (cooling, ventilation). It can be used as an additional equipment in the case when the car control panel does not have an air conditioner control system in its functionality."
+      }
+    },
+    "subListTitle": "The main functions of the air conditioner control unit:",
+    "subList": {
+      "0": "Ensuring control of the power and low-current circuits of the air conditioner.",
+      "1": "Ensuring the operation of the elements of the refrigerating machine of the air conditioner in relation to the external and internal parameters of the climate of the car.",
+      "2": "Ensuring the protection of air conditioner elements.",
+      "3": "Management of air exchange in the carriage interior."
+    }
+  },
+  "3": {
+    "title": "Passenger and conductor remote controls.",
+    "titleCard": "Passenger and conductor remote controls.",
+    "description": {
+      "description": {
+        "0": "The air conditioner control unit is designed to control the air conditioner in automatic mode (ventilation, cooling, heating) and in manual mode (cooling, ventilation). It can be used as an additional equipment in the case when the car control panel does not have an air conditioner control system in its functionality."
+      }
+    },
+    "subListTitle": "The passenger control panel includes the following elements:",
+    "subList": {
+      "0": "digital temperature display indicators in the compartment and outside the car;",
+      "1": "bodies of indication and regulation of temperature in the compartment;",
+      "2": "bodies of indication and regulation of ventilation in the compartment;",
+      "3": "bodies of indication and regulation of lighting in the compartment;",
+      "4": "button for calling the conductor with an indication (in the conductor's remote only an indication);",
+      "5": "toilet occupancy indicators;",
+      "6": "speaker volume control."
+    }
+  },
+  "4": {
+    "title": "Video information system of the car",
+    "titleCard": "Information system and video surveillance",
+    "description": {
+      "description": {
+        "0": "The system is designed to provide comfort, expand services and provide information during the trip for staff and passengers. The complex is used for installation in wagons of models 47K (D) during the KVR, wagons 61-779 and their modifications."
+      }
+    },
+    "subListTitle": "Composition of the set:",
+    "subList": {
+      "0": "system control unit;",
+      "1": "control monitor and video surveillance;",
+      "2": "passenger remotes;",
+      "3": "conductor's remote control;",
+      "4": "electronic indexes of compartment numbers and seats;",
+      "5": "chargers with an individual lamp;",
+      "6": "information boards 'Current line';",
+      "7": "information boards for the schedule;",
+      "8": "external information boards;",
+      "9": "video surveillance cameras;",
+      "10": "Wi-Fi module;",
+      "11": "GPS module;",
+      "12": "a set of mounting parts."
+    },
+    "subDescription": {
+      "0": "The external sign board is installed on the external vestibule doors or in the car body and is designed to display information:"
+    },
+    "subList2": {
+      "0": "train number;",
+      "1": "route name;",
+      "2": "wagon number."
+    },
+    "subDescription2": {
+      "0": "The information board for the schedule is a contrast LCD display with a touch screen and protective glass. The location of the scoreboard is opposite the third and sixth passenger compartments.",
+      "1": "The scoreboard is designed to display information:"
+    },
+    "subList3": {
+      "0": "train schedule;",
+      "1": "route number and name, wagon number;",
+      "2": "depending on the time of movement - the name of the settlement;",
+      "3": "current date (day: month: year) and time (hour: minute);",
+      "4": "temperature in the car and outside;",
+      "5": "rules, instructions for passengers;",
+      "6": "advertisement, advertisements;",
+      "7": "additional information for passengers."
+    },
+    "subDescription3": {
+      "0": "The 'Running Line' LED sign is installed one above the door of the passenger compartment and one above the oscillating door.",
+      "1": "Designed to display information:"
+    },
+    "subList4": {
+      "0": "current date (day: month: year) and time (hour: minute);",
+      "1": "temperature in the car and outside;",
+      "2": "route number and name, wagon number;",
+      "3": "indication 'Occupied/Free' for each of the toilets."
+    },
+    "subDescription4": {
+      "0": "The video surveillance camera is installed in the following premises:"
+    },
+    "subList5": {
+      "0": "a large corridor - above the door of the passenger compartment - 1 pc.;",
+      "1": "a large corridor - above swinging doors - 1 pc.;",
+      "2": "small corridor above swinging doors - 1 pc.",
+      "3": "oblique corridor (above the door of the passenger compartment) - 1 pc."
+    },
+    "subDescription5": {
+      "0": "A computer with a touch monitor or a monoblock is located in the driver's service compartment. Performs the following functions:"
+    },
+    "subList6": {
+      "0": "loading information and displaying information on two boards;",
+      "1": "downloading information and displaying information on the LED line;",
+      "2": "ensures the preservation of information from video cameras;",
+      "3": "the possibility of viewing the previous video image;",
+      "4": "the possibility of saving the video image on the medium."
+    }
+  }
+}

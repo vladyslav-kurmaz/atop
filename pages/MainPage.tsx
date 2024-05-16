@@ -6,7 +6,7 @@ import Preloader from '@/components/Preloader/Preloader';
 import preloaderFunk from '@/utils/preloader';
 // import Partners from '@/components/Partners/Partners';
 
-const MainComponent = lazy(() => import('@/components/Main/Main'));
+// const MainComponent = lazy(() => import('@/components/Main/Main'));
 const Experience = lazy(() => import('@/components/Experience/Experience'));
 const Grow = lazy(() => import('@/components/Grow/Grow'));
 const Direction = lazy(() => import('@/components/Direction/Direction'));
@@ -15,16 +15,7 @@ const Partners = lazy(() => import('@/components/Partners/Partners'));
 const Contacts = lazy(() => import('@/components/Contacts/Contacts'));
 
 const MainPage = () => {
-  const [preloader, setPreloader] = useState(true);
 
-  // useEffect(() => {
-  //   console.log(1);
-    
-  //   // const per = preloaderFunk();
-  //   console.log(per);
-    
-  // }, [])
-  
 
   return (
     <div className='mainPage'>
@@ -36,7 +27,7 @@ const MainPage = () => {
 
       <Suspense fallback={<Preloader/>}>
 
-        <MainComponent/>
+        {/* <MainComponent/> */}
         <Experience/>
         <Grow/>
         <Direction/>

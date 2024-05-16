@@ -1,0 +1,249 @@
+{
+  "title": "Services",
+  "description": "LLC A.T.O.R. offers a wide range of services in engineering, metalworking, woodworking, manufacturing products from composite materials, etc. for railway and social transport.",
+
+  "preview": {
+    "1": {
+      "title": "Laser cutting of sheet metal and pipes",
+      "description": "Our company will fulfill your order for laser metal cutting with high precision and efficiency."
+    },
+    "2": {
+      "title": "Bending of sheet metal",
+      "description": "A full range of metalworking services at a modern enterprise with CNC machines."
+    },
+    "3": {
+      "title": "Bending of pipes and profiles",
+      "description": "We offer services for mandrel bending of pipes made of ferrous or non-ferrous metals on modern equipment with increased quality."
+    },
+    "4": {
+      "title": "Metalworking",
+      "description": "A full range of metalworking services on modern CNC equipment."
+    },
+    "5": {
+      "title": "Production from composite materials",
+      "description": "Production of plastic products by thermoforming and production of fiberglass products"
+    },
+    "6": {
+      "title": "Instrumentation",
+      "description": "The enterprise performs manufacturing and installation works and provides technical support during the operation of products."
+    },
+    "7": {
+      "title": "Engineering",
+      "description": "A.T.O.R. LLC is a production and engineering company that has a design and technology division that is engaged in the creation of new types of products."
+    },
+    "8": {
+      "title": "Assembly production",
+      "description": "The assembly department of the enterprise employs highly qualified workers capable of performing work of any complexity."
+    },
+    "9": {
+      "title": "Woodworking",
+      "description": "A complex of works on processing wood, plywood, MDF.Production of walls, partitions, interior doors."
+    },
+    "10": {
+      "title": "Software development",
+      "description": "'NVO' A.T.O.R. LLC develops software that fully meets customer requirements."
+    }
+  },
+
+  "services": "Services",
+  "read-more-close": "Fold in",
+  "read-more-open": "Read more",
+  "1": {
+    "title": "Laser cutting of sheet metal and pipes",
+    "description": {
+      "0": "Laser cutting of metal is an opportunity to obtain high-quality parts in a short time without large material costs. Our company will fulfill your order for laser metal cutting with high precision and efficiency.",
+      "1": "Works are performed on high-precision machines by highly qualified personnel."
+    },
+    "subListTitle": "Laser cutting of metal:",
+    "subList": {
+      "0": "up to 20 mm - carbon steel;",
+      "1": "up to 10 mm - stainless steel;",
+      "2": "up to 8 mm - aluminum."
+    },
+    "subTitle2": "Laser cutting of round and square pipes and profiles",
+    "subDescription": {
+      "0": "In the process of laser cutting of pipes at our complex, it is possible to manufacture various technological connections of pipes, to cut holes of various configurations."
+    }
+  },
+  "2": {
+    "title": "Bending of sheet metal",
+    "description": {
+      "0": "The company provides sheet metal bending services (steel, stainless steel, aluminum) with a thickness from 0.5 to 8 mm and a length of up to 2500 mm.",
+      "1": "The use of modern CNC bending equipment makes it possible to obtain parts of various shapes of any complexity. The use of bending to obtain bent products from sheet metal allows to reduce the number of welds or completely eliminate them when creating complex metal products, which increases its strength and extends the service life."
+    },
+    "subListTitle": "Advantages of sheet metal bending technology:",
+    "subList": {
+      "0": "obtaining products with a more aesthetic appearance;",
+      "1": "absence of corrosion defects in finished products;",
+      "2": "reducing the number of welds;",
+      "3": "high strength of finished parts;",
+      "4": "exact compliance of folds with product requirements."
+    }
+   
+  },
+  "3": {
+    "title": "Metalworking",
+    "description": {
+      "0": "Production of metal structures and individual elements weighing up to 1,000 kg with subsequent application of a protective (decorative) coating."
+    },
+    "subListTitle": "The full cycle of manufacturing metal products:",
+    "subList": {
+      "0": "design and development;",
+      "1": "procurement production;",
+      "2": "sheet metal bending;",
+      "3": "bending of pipes and profiles;",
+      "4": "laser cutting of sheet metal and pipes;",
+      "5": "welding production;",
+      "6": "assembly works;",
+      "7": "packaging of the finished product."
+    },
+    "subDescription": {"0": "Works are performed on high-precision CNC machines by highly qualified personnel."}
+    ,
+    "subListTitle2": "Laser cutting of metal:",
+    "subList2": {
+      "0": "up to 20 mm - carbon steel;",
+      "1": "up to 10 mm - stainless steel;",
+      "2": "up to 8 mm - aluminum."
+     
+    },
+    "subTitle": "Laser cutting of round and square pipes and profiles",
+    "subDescription2": {
+      "0": "In the process of laser cutting of pipes at our complex, it is possible to manufacture various technological connections of pipes, to cut holes of various configurations."
+    }
+    ,
+    "subTitle2": "Bending of sheet metal",
+    "subDescription3": {
+      "0": "The work is carried out on modern technological equipment, which allows bending a sheet up to 2500 mm long, with a metal thickness of up to 4 mm, as well as a sheet up to 8 mm thick and up to 1500 mm long."
+    },
+    "subTitle3": "Bending of profile and round pipes with a mandrel on a CNC machine",
+    "subDescription4": {
+      "0": "Bending the pipe with a mandrel minimizes the percentage of defective parts and allows you to create finished products of high quality. Metal bending on a mandrel machine allows you to create forms without microcracks, without constrictions and wave folds that appear inside the wall."
+    },
+    "subListTitle3": "Welding works",
+    "subList3": {
+      "0": "steel;",
+      "1": "Stainless Steel;",
+      "2": "aluminum alloys."
+     
+    },
+    "subListTitle4": "Locksmith processing of metal",
+    "subList4": {
+      "0": "markup;",
+      "1": "editing;",
+      "2": "pollination;",
+      "3": "threading;",
+      "4": "a run;",
+      "5": "drilling;",
+      "6": "countersinking, etc."
+    },
+    "subListTitle5": "Development of design and working design documentation for metal structures",
+    "subList5": {
+      "0": "3D design of parts and assemblies;",
+      "1": "high-quality drawings according to your initial data;",
+      "2": "guarantee of confidentiality;",
+      "3": "consultations on the project."
+    },
+    "subTitle4": "Call!"
+  },
+  "4": {
+    "title": "Production from composite materials",
+    "description": {
+      "0": "Production of fiberglass products",
+      "1": "Fiberglass is a composite material consisting of fiberglass filler and binder.",
+      "2": "Fiberglass products have high strength, low weight, can work at temperatures from -40 to +60°C, and have a long service life.",
+      "3": "The production of fiberglass products by the manual method using the technology of contact molding is widely used in the production of fiberglass products in single copies and small batches.",
+      "4": "The advantages of this method are the relatively small cost of equipment for the manufacture of fiberglass, as well as the insignificant cost of the tool.",
+      "5": "LLC 'NVO A.T.O.R.' ready to cooperate with customers."
+    },
+    "subTitle": "Thermoforming of products",
+    "subDescription": {"0": "Thermoforming is a process of manufacturing products of complex shape from plastic. The creation of molded elements involves two stages of production:"},
+    "subList": {
+      "0": "Production of equipment, which will be used for thermoforming. The equipment is manufactured on a high-precision milling machine.",
+      "1": "The plastic for molding is softened by heating in the molding machine, after which it is placed on a pre-prepared tool and air is pumped out between the plastic and the tool, giving the plastic the desired shape."
+    },
+    "subDescription2": {"0": "Our equipment allows us to produce moldings of any complexity up to 1500x2500 mm in size. We can produce vacuum forming works with the provision of equipment by the customer, or by producing it ourselves."}
+  },
+  "5": {
+    "title": "Appliance development",
+    "description": {
+      "0": "The company carries out manufacturing, installation and provides technical support for the operation of products."
+     }
+  },
+
+  "6": {
+    "title": "Engineering",
+    "description": {
+      "0": "A.T.O.R. LLC is a production and engineering company, which includes a design and technology division, which is engaged in the creation of new types of products in the direction of passenger cars, motorized cars (diesel trains and electric trains), locomotives , subway cars, specially equipped box vans, social transport and modernization of the existing car fleet, ensuring their high technical level, competitiveness and patentability, compliance with modern technical achievements, requirements of technical aesthetics and the most economical production technology."
+    },
+    "subDescription": {
+      "0": "Designing begins with the development of a design project and the detailed elaboration of each design element, followed by its implementation in three-dimensional models and drawings.",
+      "1": "The design and technology division performs work on certification, keeping certificates up-to-date and obtaining permits for materials and components used in the construction of wagons and rolling stock.",
+      "2": "A lot of own developments of A.T.O.R. LLC protected by a number of patents in the field of passenger railway transport.",
+      "3": "The presence of designers, electronics engineers, programmers and technologists in the unit allows for a full design cycle, starting with the development of design documentation and electrical diagrams, production and up to certification tests.",
+      "4": "The design and technology department is a combination of youth and experience in the development of railway-related products and more. Many years of experience in design works, the high potential of professionally trained and qualified designers guarantee the successful development and release of a complete set of design documentation. In the process of developing design and technical, design documentation, our employees will help to find the best way to solve any technical problem, realizing the most daring and unusual ideas of our clients."
+    },
+    "subListTitle": "We offer:",
+    "subList": {
+      "0": "development of design documentation;",
+      "1": "reverse engineering of products;",
+      "2": "development of design documentation according to the provided sample;",
+      "3": "development of documentation for non-standard designs, mechanisms."
+    },
+    "subListTitle2": "How we work:",
+    "subList2": {
+      "0": "Our specialist travels to the customer to assess the scope of work and carry out all the necessary measurements.",
+      "1": "The technical task is being developed, with the direct participation of the customer.",
+      "2": "According to the technical task, three-dimensional modeling and drawings are produced.",
+      "3": "At the stage of putting into production, consulting is carried out by our specialists."
+    }
+
+  },
+
+  "7": {
+    "title": "Assembly production",
+    "description": {
+      "0": "The assembly station is designed for the final stage of production, where all types of assembly work are performed, from small units to finished products.",
+      "1": "Production is equipped with all the necessary equipment and tools for assembling, packing and shipping products to the customer.",
+      "2": "The qualifications of the workers allow assembly and further inspection of complex assemblies and mechanisms on specialized stands. Products for wagons are created using ecological materials, light alloys, and welded structures. Standardization and unification of parts simplifies the assembly process."
+    }
+
+  },
+  "8": {
+    "title": "Woodworking",
+    "description": {
+      "0": "The company offers a full range of wood, plywood, and MDF processing works using modern equipment.Production of walls, partitions, interior doors."
+    }
+
+  },
+  "9": {
+    "title": "Software development",
+    "description": {
+      "0": "A.T.O.R. LLC develops software that fully meets customer requirements, provides qualified assistance at all stages of creation: from technical description to after-sales support solutions. Optimal solutions with the help of which our clients will significantly reduce their costs and time in achieving their business goals."
+    },
+    "subListTitle": "We offer the following types of software:",
+    "subList": {
+      "0": "Development of Web applications",
+      "1": "Development of desktop applications",
+      "2": "E-commerce solutions",
+      "3": "Software for embedded high-load systems",
+      "4": "IT outsourcing"
+    },
+    "subDescription": {"0": "Specialists of our company create products that meet certain customer requirements. Most modern technologies allow the use of several types of information processing at once. Today, we offer multi-purpose solutions that will solve complex tasks that require non-standard approaches. Our professional team guarantees a more efficient implementation of the company's projects for our partners."},
+    "subList2": {
+      "0": "C/C++",
+      "1": "C#",
+      "2": "Java",
+      "3": "Visual Basic",
+      "4": "Scripting languages",
+      "5": "reliability of proposed solutions",
+      "6": "support at all stages of the software life cycle.",
+      "7": "minimum terms of execution",
+      "8": "effective and flexible solutions with minimal costs",
+      "9": "qualified team of specialists"
+    },
+    "subDescription2": {"0": "We believe that all technical and informational tools in your office should help you and your employees solve current tasks, work more productively and achieve great results."},
+    "subTitle": "Don't know where to start?",
+    "subDescription3": {"0": "Trust us, take the first step on the way to the development of your business, describe your requirements and our manager will tell you how to order software development from us."}
+  }
+
+}

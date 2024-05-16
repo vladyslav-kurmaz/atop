@@ -1,0 +1,137 @@
+{
+  "main": {
+    "title": "We create products for rail transport & underground",
+    "description": "We offer components for major repairs of wagons of different series, electrical equipment, interior elements for passenger cars, control panels and other.",
+    "read-me": "Read More"
+  },
+  "experience": {
+    "title": "Experience & Departments",
+    "left-description": "A.T.O.R. LLC (Kharkiv) - an engineering company with extensive experience in the development, manufacture, and supply of interiors and exteriors, ecologically clean toilets (ECT), electrical equipment control systems for passenger cars, subway cars, social purpose transport and traction and rolling stock, from design to mass production.",
+    "right-title": "Main structural subdivisions",
+    "list1": "Design and Technology Bureau.",
+    "list2": "Bureau of technical control and certification.",
+    "list3": "Bureau of Software Development.",
+    "list4": "Production unit."
+
+  },
+
+  "grow": {
+    "title": "Our Achievements in Production",
+    "2012": {
+      "year": "2012",
+      "item1": "210 sets of wagon vestibule doors;",
+      "item2": "7 interior sets of a compartment car and 36 sets with transforming furniture;",
+      "item3": "62 interior sets of a non-compartment car;",
+      "item4": "1 set of car interior - garage;",
+      "item5": "1 set of restaurant car interior;",
+      "item6": "15 carriage sets of shelter-sliding doors of a subway car, driven with a controller."
+    },
+    "2013": {
+      "year": "2013",
+      "item1": "18 interior sets of a compartment car;",
+      "item2": "30 interior sets of a non-compartment car;",
+      "item3": "3 sets of baggage car interiors;",
+      "item4": "1 car interior set of a subway car."
+    },
+    "2014": {
+      "year": "2014",
+      "item1": "1 set of interior of an open-type compartment car;",
+      "item2": "12 sets of interior elements of a compartment passenger car;",
+      "item3": "2 sets of interior elements of a compartment passenger car for the foreman;",
+      "item4": "2 experimental sets of vestibule doors made of aluminum (ordinary and for people with disabilities;",
+      "item5": "5 interior car sets of a subway car."
+    },
+    "2015": {
+      "year": "2015",
+      "item1": "4 sets of interior and exterior elements of a compartment passenger car with transformable furniture;",
+      "item2": "12 sets of power supplies for the air conditioner with a built-in climate control system;",
+      "item3": "32 interior sets of a compartment car;",
+      "item4": "18 interior sets of a non-compartment car;"
+    },
+    "2017": {
+      "year": "2017",
+      "item1": "11 sets of interior elements of a compartment passenger car with transformable furniture;",
+      "item2": "17 car sets of interior elements of a compartment passenger car;",
+      "item3": "26 wagon sets of light construction ceilings."
+    },
+    "2018": {
+      "year": "2018",
+      "item1": "30 sets of toilets for electric trains mod. ЕР9Т, ЕР2Т;",
+      "item2": "restoring the functionality of ecologically clean toilets of 38 cars;",
+      "item3": "2 sets of remote controls for subway cars."
+    },
+    "2019": {
+      "year": "2019",
+      "item1": "42 sets of electrical supply of passenger cars for air conditioning AVK-25 and VKM-X;",
+      "item2": "modernization of 20 cars – replacement of drain tanks and fan pipes with heating."
+    },
+    "2020": {
+      "year": "2020",
+      "item1": "24 sets of interior and exterior elements of a compartment passenger car with transformable furniture;",
+      "item2": "23 sets of passenger control panels with additional functions;",
+      "item3": "1 set of sliding doors with an electric drive for KTM-5 tram (3 double doors)."
+    },
+    "2021": {
+      "year": "2021",
+      "item1": "14 sets of toilets for electric trains ЕР2Т, ЕР9Т;",
+      "item2": "8 sets of toilet facilities for persons with disabilities;",
+      "item3": "24 sets of electrical supplies for the AVK-25 air conditioner;",
+      "item4": "repair of seats for drivers of metro trains - 54 pcs.;",
+      "item5": "capital repair of the AGM type car tire."
+    },
+    "2022": {
+      "year": "2022",
+      "item1": "14 sets of environmentally friendly toilets;",
+      "item2": "8 sets of electrical supplies for the AVK-25 air conditioner;",
+      "item3": "4 sets of upholstered furniture and 10 sets of ceilings for a non-compartment carriage;",
+      "item4": "2 sets of exterior and interior products for KTM71-605 trams;",
+      "item5": "2 sets of driver's cabin doors and toilet doors for people with disabilities and 4 sets of wash basin installation for electric trains ЕР2Т, ЕР9Т;",
+      "item6": "2 experimental sets of interior elements of the driver's cab of diesel locomotives 2TE116;"
+    },
+    "2023": {
+      "year": "2023",
+      "item1": "25 sets of environmentally friendly toilets;",
+      "item2": "23 sets of power supply and control units under the air conditioner and AVK-30, KV-1-28;",
+      "item3": "5 sets of furniture of a non-compartment passenger car;",
+      "item4": "10 sets of compartment car vestibule doors;",
+      "item5": "25 sets of ceilingsand7 sets of ventilation grilles for ceilings non-compartment carriage;",
+      "item6": "36 motor-reducers for shelter-sliding doors."
+    }
+  },
+  "direction": {
+    "read-me": "Read More",
+    "title": "Work directions",
+    "title1": "Engineering",
+    "description1": "Creation of new types of products both in the direction of passenger car construction and in the direction of general engineering",
+    "title2": "Components for passenger cars",
+    "description2": "LLC NVO A.T.O.R. manufactures and supplies a wide range of components for the production of new and major repairs of passenger cars, diesel trains, and electric trains, including interiors and exteriors, and production of shelter-sliding doors, and automatic drive doors.",
+    "title3": "Management systems",
+    "description3": "Electrical equipment for management, control, and diagnostics of power supply systems in passenger cars, control of climate systems, and lighting passenger cars, provides control, control, and diagnosis of car systems in automatic and manual modes.",
+    "title4": "Vacuum toilet systems",
+    "description4": "The enterprise produces ecologically clean toilet complexes of the vacuum type for passenger cars and electric trains, as well as completely ready sanitary modules."
+  },
+  "enterprice": {
+    "title": "Company Capabilities",
+    "cart1": {
+      "title": "Metalworking",
+      "description": "A full range of metalworking services  (beginning from cutting and bending up to welding and painting) on modern equipment"
+    },
+    "cart2": {
+      "title": "Production from composite materials",
+      "description": "Production of plastic products by thermoforming and production of fiberglass products based on polyester resins."
+    },
+    "cart3": {
+      "title": "Woodworking",
+      "description": "A complex of works on processing wood, plywood, and MDF. Production of car walls, partitions, and interior doors."
+    }
+  },
+
+
+  "contacts": {
+    "title": "Contacts",
+    "adress": "Address",
+    "adress-info": "Ukraine, Kharkiv 61033 St. Shevchenko, 317",
+    "post": "Write us",
+    "phone": "For all requests"
+  }
+}
