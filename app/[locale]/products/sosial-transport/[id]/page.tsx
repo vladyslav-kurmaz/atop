@@ -14,6 +14,7 @@ import OneProduct from "@/components/OneProduct/OneProduct";
 import TranslationsProvider from "@/components/TranslationProvider/TranslationProvider";
 import initTranslations from "@/app/i18n";
 import { sosialTransport } from "@/data/data";
+import ServiceProductSlider from "@/components/ServiceProductSlider/ServiceProductSlider";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = params.id;
@@ -28,7 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ProductPage({ params }: Props) {
   const { t, resources } = await initTranslations(params.locale, [
-    "sosial-transport",
+    "social-transport",
+    "service-product",
   ]);
 
   const currentProduct = sosialTransport.filter(
@@ -140,11 +142,7 @@ export default async function ProductPage({ params }: Props) {
           </>
         );
       case 6:
-        return (
-          <>
-            {renderSubDescription(t, description.description)}
-          </>
-        );
+        return <>{renderSubDescription(t, description.description)}</>;
     }
   };
 
@@ -152,18 +150,22 @@ export default async function ProductPage({ params }: Props) {
   const getJsxDescription = renderDescription();
 
   return (
-    <TranslationsProvider
-      namespaces={["sosial-transport"]}
-      locale={params?.locale}
-      resources={resources}
-    >
-      <OneProduct
-        params={params}
-        data={currentProduct}
-        jsxIndo={getJsxInfo}
-        jsxDescription={getJsxDescription}
-        translate={["sosial-transport"]}
-      />
-    </TranslationsProvider>
+    <>
+      <TranslationsProvider
+        namespaces={["social-transport"]}
+        locale={params?.locale}
+        resources={resources}
+      >
+        <OneProduct
+          params={params}
+          data={currentProduct}
+          jsxIndo={getJsxInfo}
+          jsxDescription={getJsxDescription}
+          translate={["social-transport"]}
+        />
+
+        <ServiceProductSlider status={true} />
+      </TranslationsProvider>
+    </>
   );
 }

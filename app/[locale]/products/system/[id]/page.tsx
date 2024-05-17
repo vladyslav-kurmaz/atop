@@ -15,6 +15,7 @@ import { AllProductInfo } from "@/types/type";
 import { renderList } from "@/helpers/renderList";
 import { renderSubDescription } from "@/helpers/renderSubDescripton";
 import { systemData } from "@/data/data";
+import ServiceProductSlider from "@/components/ServiceProductSlider/ServiceProductSlider";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = params.id;
@@ -28,7 +29,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ProductPage({ params }: Props) {
-  const { t, resources } = await initTranslations(params.locale, ["system"]);
+  const { t, resources } = await initTranslations(params.locale, [
+    "system",
+    "service-product",
+  ]);
   const currentProduct = systemData.filter((item, i) => i === +params.id)[0];
   const {
     slider,
@@ -152,6 +156,7 @@ export default async function ProductPage({ params }: Props) {
         jsxDescription={getJsxDescription}
         translate={["system"]}
       />
+      <ServiceProductSlider status={true} />
     </TranslationsProvider>
   );
 }

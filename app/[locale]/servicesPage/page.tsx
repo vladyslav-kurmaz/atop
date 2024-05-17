@@ -34,7 +34,7 @@ const dataServices: Service[] = [
 export default async function MainServicesPage({ params }: { params: Params }) {
   
   const { t, resources } = await initTranslations(params.locale, [
-    'services'
+    'services', 
   ]);
 
   const renderService = (data: Service[] ) => {

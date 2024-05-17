@@ -8,8 +8,10 @@ import { AllProductInfo } from "@/types/type";
 import { useTranslation } from "react-i18next";
 
 type Props = {
+
   params: {
     id: string;
+    locale: string
   };
   translate: string[];
   data: AllProductInfo;
@@ -18,7 +20,7 @@ type Props = {
 };
 
 const OneProduct = ({ data, translate, jsxIndo, jsxDescription }: Props) => {
-  const { t } = useTranslation([...translate]);
+  const { t } = useTranslation([...translate, "service-product"]);
   const [readMore, setReadMore] = useState(false);
   
   const {
@@ -128,7 +130,6 @@ const OneProduct = ({ data, translate, jsxIndo, jsxDescription }: Props) => {
           </div>
         </div>
 
-        <ServiceProductSlider status={true} />
       </div>
     </>
   );

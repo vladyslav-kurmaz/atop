@@ -32,7 +32,10 @@ const data: PreviewData[] = [
 ];
 
 export default async function Products({ params }: { params: Params }) {
-  const { t } = await initTranslations(params.locale, ["social-transport"]);
+  const { t } = await initTranslations(params.locale, [
+    "social-transport",
+    
+  ]);
 
   const renderProduct = () => {
     return data.map((item, i) => {
@@ -52,7 +55,13 @@ export default async function Products({ params }: { params: Params }) {
             href={`/products/sosial-transport/${i}`}
             className="products__list-item-overLink"
           ></Link>
-          <Image src={src} alt={title} width={1000} height={240} className="mb-6 rounded-t-[12px]"/>
+          <Image
+            src={src}
+            alt={title}
+            width={1000}
+            height={240}
+            className="mb-6 rounded-t-[12px]"
+          />
           <p className="products__list-item-text px-6 ">{t(title)}</p>
           <div className="products__list-item-container px-6 pb-6 mt-auto">
             <span className="products__list-item-container-num">

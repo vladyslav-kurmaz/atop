@@ -449,7 +449,7 @@ const OneService = ({ params }: Props) => {
           )}
         </div>
 
-        <ServiceProductSlider status={false} />
+        {/* <ServiceProductSlider status={false} /> */}
       </div>
     </>
   );

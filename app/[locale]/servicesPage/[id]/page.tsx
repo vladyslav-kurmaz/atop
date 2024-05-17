@@ -71,9 +71,10 @@ import initTranslations from "@/app/i18n";
 import OneService from "@/components/OneService/OneService";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import TranslationsProvider from "@/components/TranslationProvider/TranslationProvider";
+import ServiceProductSlider from "@/components/ServiceProductSlider/ServiceProductSlider";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { t, resources } = await initTranslations(params.locale, ["services"]);
+  const { t, resources } = await initTranslations(params.locale, ["services", "service-product"]);
 
   const id = params.id;
 
@@ -86,16 +87,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ServicePage({ params }: Props) {
-  const { t, resources } = await initTranslations(params.locale, ["services"]);
+  const { t, resources } = await initTranslations(params.locale, ["services", "service-product"]);
 
   return (
     //  <OneServicePage params={params}/>
     <TranslationsProvider
-      namespaces={["main"]}
+      namespaces={["main", "service-product"]}
       locale={params?.locale}
       resources={resources}
     >
       <OneService params={params} />
+      <ServiceProductSlider status={false} />
     </TranslationsProvider>
+    
   );
 }

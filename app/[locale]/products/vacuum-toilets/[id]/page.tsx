@@ -14,6 +14,7 @@ import OneProduct from "@/components/OneProduct/OneProduct";
 import TranslationsProvider from "@/components/TranslationProvider/TranslationProvider";
 import initTranslations from "@/app/i18n";
 import { vacuumToiletsData } from "@/data/data";
+import ServiceProductSlider from "@/components/ServiceProductSlider/ServiceProductSlider";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = params.id;
@@ -29,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ProductPage({ params }: Props) {
   const { t, resources } = await initTranslations(params.locale, [
     "vacuum-toilet",
+    "service-product",
   ]);
 
   const currentProduct = vacuumToiletsData.filter(
@@ -149,6 +151,7 @@ export default async function ProductPage({ params }: Props) {
         jsxDescription={getJsxDescription}
         translate={["vacuum-toilet"]}
       />
+      <ServiceProductSlider status={true} />
     </TranslationsProvider>
   );
 }
