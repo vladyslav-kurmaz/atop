@@ -465,7 +465,7 @@ export default function Header() {
               <ul>
                 <li className="mb-8 "><Link className="text-[14px]" href={''}>info@ator.com.ua</Link></li>
                 <li><Link className="text-[14px]" href={''}>+38 095-303-2313</Link></li>
-                <li className="text-[14px]">м. Харків, Україна</li>
+                <li className="text-[14px]">{t('adress')}</li>
               </ul>
             </li>
           </ul>

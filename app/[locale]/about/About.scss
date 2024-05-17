@@ -17,12 +17,33 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     // align-items: center;
 
+    &-bottom {
+      display: flex;
+      // flex-direction: column;
+      gap: 40px;
+      padding-top: 48px;
+
+      &-item {
+        max-width: 652px;
+        width: 100%;
+        font-size: 20px;
+      }
+    }
+
+    &-text {
+      max-width: 678px;
+      width: 100%;
+    }
+
     &-info {
-      max-width: 600px;
+      // max-width: 600px;
       width: 100%;
       margin-right: 10px;
+      display: flex;
+      gap: 32px;
 
       &-text {
         color: #232323;
@@ -37,16 +58,18 @@
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
+        gap: 32px;
+        padding: 40px 0;
+        border-top: 1px solid #EAEAEA;
+        border-bottom: 1px solid #EAEAEA;
 
         &-item {
-          padding: 24px;
-          max-width: 284px;
-          max-height: 255px;
+          // padding: 24px 0;
+          max-width: 610px;
+          // max-height: 204px;
           width: 100%;
           height: 100%;
-          margin-bottom: 32px;
-          border-radius: 12px;
-          border: 1px solid #B9C3DE;
+          // border: 1px solid #B9C3DE;
 
           &-title {
             color: var(--base-black, #232323);
@@ -56,10 +79,11 @@
           }
 
           &-text {
-            color: #696969;
-            font-size: 16px;
-            font-weight: 300;
+            color: #2952BA;
+            font-size: 24px;
+            font-weight: 500;
             line-height: 150%;
+            max-width: 608px;
           }
         }
       }
@@ -77,6 +101,12 @@
         object-fit: cover;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .about__container-info-list-item {
+    max-width: 500px;
   }
 }
 
@@ -109,21 +139,39 @@
     &__container {
       flex-direction: column;
   
-      &-info {
+      &-text {
         max-width: 100%;
 
-  
+      }
+
+      &-bottom {
+        flex-direction: column;
+
+        &-item {
+          max-width: 100%;
+        }
+      }
+
+      &-info {
+        max-width: 100%;
+        flex-direction: column;
+        gap: 0;
+
         &-list {
           width: 100%;
-  
+          flex-wrap: wrap;
+          
           &-item {
             margin-right: 0;
-
-            max-width: 250px;
-            max-height: 270px;
-            height: 270px;
-            box-sizing: border-box;
-  
+            max-width: 100%;
+            // max-width: 250px;
+            // max-height: 270px;
+            // height: 270px;
+            // box-sizing: border-box;
+            
+            &-text {
+              max-width: 100%;
+            }
           }
         }
       }
@@ -145,54 +193,6 @@
   }
 }
 
-@media screen and (max-width: 1100px) {
-  .about {
-  
-    &__container {
-
-  
-      &-info {
-
-
-  
-        &-list {
-          justify-content: space-around;
-
-          &-item {
-            max-width: 40%;
-            max-height: 250px;
-
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .about {
-  
-    &__container {
-
-  
-      &-info {
-
-
-  
-        &-list {
-          justify-content: space-around;
-
-          &-item {
-            max-width: 40%;
-            max-height: 250px;
-
-          }
-        }
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 780px) {
   .about {
     &__container {
@@ -201,11 +201,7 @@
         &-list {
           justify-content: space-between;
 
-          &-item {
-            max-width: 45%;
-            max-height: 250px;
-
-          }
+        
         }
       }
     }
@@ -228,14 +224,16 @@
         }
 
         &-list {
-          flex-direction: column;
-          align-items: center;
+
+          padding: 20px 0;
+          // flex-direction: column;
+          // align-items: center;
 
           &-item {
-            max-width: 50%;
-            max-height: 224px;
+            // max-width: 50%;
+            // max-height: 224px;
 
-            max-width: 343px;
+            // max-width: 343px;
 
             &-title {
               font-size: 16px;
@@ -263,6 +261,14 @@
           height: 300px;
         }
       }
+    }
+
+    .about__container-bottom {
+      padding-top: 20px;
+    }
+
+    .about__container-bottom-item {
+      font-size: 14px;
     }
   }
 }
