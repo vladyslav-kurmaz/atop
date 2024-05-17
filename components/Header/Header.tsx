@@ -258,7 +258,7 @@ export default function Header() {
                 >
                   <li className="py-4 border-b-[1px] border-solid border-b-[#EAEAEA]">
                     <Link
-                      href={"/qualitySystem/certyficates"}
+                      href={"/qualitySystem/certificate"}
                       className="flex w-full justify-between text-[#000] hover:text-[#2044A1]"
                     >
                       {t("certyficates")}

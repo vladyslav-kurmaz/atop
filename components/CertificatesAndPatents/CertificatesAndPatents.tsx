@@ -48,10 +48,7 @@ const CertificatesAndPatents = ({status}: {status: boolean}) => {
           height={2000}
           onClick={(e) => {
             openImage(e);
-            
-            console.log(initialSlide);
-            console.log(showSlider);
-            
+                      
             
           }}
           className='certificateOrPatents__list-item-img'
