@@ -14,7 +14,17 @@ import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 
 export default async function Certificate({ params }: { params: Params }) {
   const { t, resources } = await initTranslations(params.locale, ["qualitySystem"]);
-
+  const certificates = [
+    "/certificates/1.webp",
+    "/certificates/2.webp",
+    "/certificates/3.webp",
+    "/certificates/4.webp",
+    "/certificates/5.webp",
+    "/certificates/6.webp",
+    "/certificates/7.webp",
+    "/certificates/8.webp",
+    "/certificates/9.webp",
+  ];
 
   return (
     // <Suspense fallback={<Preloader/>}>
@@ -22,7 +32,7 @@ export default async function Certificate({ params }: { params: Params }) {
       <h1 className="certificate__title">{t("sertificat-title")}</h1>
       <p className="certificate__text">{t("sertificat-desc")}</p>
 
-      <CertificatesAndPatents status={false} />
+      <CertificatesAndPatents data={certificates} />
     </div>
     // </Suspense>
   );

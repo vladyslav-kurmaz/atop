@@ -9,7 +9,7 @@ const SliderGalery = ({data, initialSlide, close}: {data: string[], initialSlide
   const renderSlide = () => {
     return data.map((item, i) => {
       return <div className="galery__image" key={i}>
-        <Image 
+        <img 
           width={1000} 
           height={1000} 
           src={item} 

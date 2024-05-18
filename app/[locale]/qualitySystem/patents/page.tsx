@@ -22,7 +22,26 @@ export default async function Patents({ params }: { params: Params }) {
   const { t, resources } = await initTranslations(params.locale, [
     'qualitySystem', 
   ]);
-
+  const patents = [
+    "/patents/1.webp",
+    "/patents/2.webp",
+    "/patents/3.webp",
+    "/patents/4.webp",
+    "/patents/5.webp",
+    "/patents/6.webp",
+    "/patents/7.webp",
+    "/patents/8.webp",
+    "/patents/9.webp",
+    "/patents/10.webp",
+    "/patents/11.webp",
+    "/patents/12.webp",
+    "/patents/13.webp",
+    "/patents/14.webp",
+    "/patents/15.webp",
+    "/patents/16.webp",
+    "/patents/17.webp",
+    "/patents/18.webp",
+  ];
 
   return (
     // <Suspense fallback={<Preloader/>}>
@@ -32,7 +51,7 @@ export default async function Patents({ params }: { params: Params }) {
           {t('patents-desc')}
         </p>
 
-        <CertificatesAndPatents status={true}/>
+        <CertificatesAndPatents data={patents}/>
 
       </div>
     // </Suspense>
