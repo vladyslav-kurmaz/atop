@@ -18,7 +18,7 @@ const Direction = async ({ params }: { params: Params }) => {
             {t("direction.description1")}
           </p>
           <Link
-            href="/servicesPage/1"
+            href="/servicesPage/6"
             className="mainPage__direction-list-item-readme"
           >
             {t("direction.read-me")}
@@ -57,7 +57,7 @@ const Direction = async ({ params }: { params: Params }) => {
             {t("direction.description2")}
           </p>
           <Link
-            href="/servicesPage/7"
+            href="/products/passenger/1"
             className="mainPage__direction-list-item-readme"
           >
             {t("direction.read-me")}
@@ -96,7 +96,7 @@ const Direction = async ({ params }: { params: Params }) => {
             {t("direction.description3")}
           </p>
           <Link
-            href="/servicesPage/6"
+            href="/products/system"
             className="mainPage__direction-list-item-readme"
           >
             {t("direction.read-me")}
@@ -134,8 +134,8 @@ const Direction = async ({ params }: { params: Params }) => {
           <p className="mainPage__direction-list-item-text">
             {t("direction.description4")}
           </p>
-          <a
-            href="servicesPage/3"
+          <Link
+            href="/products/vacuum-toilets"
             className="mainPage__direction-list-item-readme"
           >
             {t("direction.read-me")}
@@ -164,7 +164,7 @@ const Direction = async ({ params }: { params: Params }) => {
                 />
               </g>
             </svg>
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

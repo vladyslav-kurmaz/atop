@@ -12,19 +12,19 @@ const data = [
     src: metal,
     title: 'enterprice.cart1.title',
     description: 'enterprice.cart1.description',
-    link: ''
+    link: '/servicesPage/3'
   },
   {
     src: metalDew,
     title: 'enterprice.cart2.title',
     description: 'enterprice.cart2.description',
-    link: ''
+    link: '/servicesPage/4'
   },
   {
     src: wood,
     title: 'enterprice.cart3.title',
     description: 'enterprice.cart3.description',
-    link: ''
+    link: '/servicesPage/8'
   },
 ]
 
@@ -39,13 +39,13 @@ const Enterprice = async ({ params }: { params: Params }) => {
       <ul className="mainPage__enterprise-list">
           
         {data.map(item => (
-          <li className="mainPage__enterprise-list-item">
-          <Link href={'/servicesPage/11'} className='mainPage__enterprise-list-item-overLink'></Link>
+          <li key={item.title} className="mainPage__enterprise-list-item">
+          <Link href={item.link} className='mainPage__enterprise-list-item-overLink'></Link>
           
           <div className="mainPage__enterprise-list-item-content">
             <div className="mainPage__enterprise-list-item-content-container">
               <h4 className="mainPage__enterprise-list-item-content-container-title">{t(item.title)}
-              <Link href="/servicesPage/11" className="mainPage__enterprise-list-item-content-button">
+              <Link href={item.link} className="mainPage__enterprise-list-item-content-button">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <mask id="mask0_385_345" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                   <rect width="20" height="20" fill="#D9D9D9"/>
@@ -56,7 +56,7 @@ const Enterprice = async ({ params }: { params: Params }) => {
               </svg>
             </Link>
               </h4>
-              <Link href="/servicesPage/11" className="mainPage__enterprise-list-item-content-container-button">
+              <Link href={item.link} className="mainPage__enterprise-list-item-content-container-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <mask id="mask0_385_345" style={{"maskType":"alpha"}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
                     <rect width="20" height="20" fill="#D9D9D9"/>
