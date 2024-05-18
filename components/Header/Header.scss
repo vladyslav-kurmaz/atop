@@ -1,6 +1,6 @@
-@import '../../scss/variables';
+@import "../../scss/variables";
 
-.header{
+.header {
   // max-width: 1440px;
   width: 100%;
   display: flex;
@@ -8,11 +8,10 @@
   align-items: center;
   height: 72px;
   margin: 0 auto;
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: 1px solid #eaeaea;
   position: relative;
   background-color: #fff;
   z-index: 199;
-  
 
   &__desctop {
     margin: 0 auto;
@@ -41,18 +40,18 @@
         align-items: center;
         padding: 18px 10px;
         background-color: $buttonBlue;
-        color: #FFF;
+        color: #fff;
         font-size: 14px;
         font-weight: 500;
         border-radius: 100px;
-        transition: all .3s;
+        transition: all 0.3s;
         max-width: 150px;
         width: 100%;
         height: 40px;
 
         &:hover {
           background-color: $buttonBlueHover;
-          transition: all .3s;
+          transition: all 0.3s;
         }
 
         & svg {
@@ -82,16 +81,16 @@
           color: #232323;
           font-size: 16px;
           font-weight: 500;
-          transition: all .3s;
+          transition: all 0.3s;
           cursor: pointer;
-
-          
 
           &:hover {
             color: $buttonBlueHover;
-            transition: all .3s;
+            transition: all 0.3s;
           }
         }
+
+        
       }
     }
   }
@@ -102,7 +101,6 @@
     width: 100%;
     padding: 0 48px;
     z-index: 199;
-    
 
     & .header__button {
       display: flex;
@@ -110,15 +108,15 @@
       align-items: center;
       padding: 8px 13px;
       background-color: $buttonBlue;
-      color: #FFF;
+      color: #fff;
       font-size: 14px;
       font-weight: 500;
       border-radius: 100px;
-      transition: all .3s;
+      transition: all 0.3s;
 
       &:hover {
         background-color: $buttonBlueHover;
-        transition: all .3s;
+        transition: all 0.3s;
       }
 
       & svg {
@@ -137,13 +135,8 @@
         .header__mobile-logo {
           margin-left: 10px;
         }
-
-        
       }
-
     }
-
-
   }
 
   @keyframes openMenu {
@@ -182,11 +175,9 @@
     padding: 24px 16px;
     // max-width: 0;
     animation-name: openMenu;
-    animation-duration: .3s;
+    animation-duration: 0.3s;
     animation-timing-function: linear;
     overflow: auto;
-
-
 
     .header__list-item {
       background-color: #fff;
@@ -195,15 +186,20 @@
       font-weight: 600;
       padding: 16px 0;
       // border-bottom: 1px solid #EAEAEA;
-
     }
+
+    
   }
+}
+
+.p-0-c {
+  padding: 0 !important;
 }
 
 @media screen and (max-width: 900px) {
   .header__desctop {
     display: none;
-  } 
+  }
 
   .header__mobile {
     display: flex;
@@ -214,7 +210,7 @@
     & .header__container {
       width: 100%;
     }
-  } 
+  }
 
   .header__navigation .header__list {
     display: flex;
@@ -224,7 +220,7 @@
     left: 0;
     padding: 0 16px;
     width: 100%;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     display: none;
 
     &-item {
@@ -232,7 +228,7 @@
       width: 100%;
       height: 100%;
 
-      border-bottom: 1px solid #EAEAEA;
+      border-bottom: 1px solid #eaeaea;
 
       &:last-child {
         border-bottom: none;
@@ -250,5 +246,13 @@
   // .openMenu:checked ~ .header__list {
   //   display: flex;
   // }
+}
 
+
+
+@media screen and (max-width: 390px) {
+  .header__list-item,
+  .header__list-item-link {
+    font-size: 14px !important;
+  }
 }

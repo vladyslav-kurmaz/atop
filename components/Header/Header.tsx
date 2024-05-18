@@ -23,6 +23,8 @@ export default function Header() {
   const [animationMobileMenu, setAnimationMobileMenu] = useState(false);
   const [openProducts, setOpenProducts] = useState(false);
   const [openQualitySystem, setOpenQualitySystem] = useState(false);
+  const [openProductsMobile, setOpenProductsMobile] = useState(false);
+  const [openQualitySystemMobile, setOpenQualitySystemMobile] = useState(false);
   const { t } = useTranslation(["header"]);
   const pathname = usePathname();
 
@@ -45,11 +47,8 @@ export default function Header() {
       productRef: MutableRefObject<any>,
       qualityRef: MutableRefObject<any>
     ) => {
-
-
       if (productRef.current && !productRef.current.contains(e.target)) {
         setOpenProducts(false);
-        
       }
 
       if (qualityRef.current && !qualityRef.current.contains(e.target)) {
@@ -69,7 +68,7 @@ export default function Header() {
   }, [productRef, qualityRef]);
 
   const arrowIcon = (text: string, status: boolean) => (
-    <span className="header__list-item with-arrow">
+    <span className="header__list-item with-arrow flex items-center">
       {t(text)}{" "}
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -193,7 +192,7 @@ export default function Header() {
                 </Link>
               </li>
               <li
-                className=" relative"
+                className="header__list-item relative"
                 ref={productRef}
                 onClick={() => setOpenProducts(!openProducts)}
                 // onBlur={() => setOpenProducts(true)}
@@ -301,8 +300,6 @@ export default function Header() {
                     { value: "EN", text: "EN" },
                   ]}
                 />
-
-                
               </li>
             </ul>
           </nav>
@@ -426,18 +423,106 @@ export default function Header() {
                 {t("service")}
               </Link>
             </li>
-            <li className="header__list-item">
-              <Link href={"/products"} onClick={() => setOpenMobileMenu(false)}>
-                {t("product")}
-              </Link>
-            </li>
-            <li className="header__list-item">
-              <Link
-                href={"/qualitySystem"}
-                onClick={() => setOpenMobileMenu(false)}
+            <li
+              className={`header__list-item p-0-c flex flex-col transition-all duration-300 `}
+              onClick={() => setOpenProductsMobile((state) => !state)}
+            >
+              {/* <Link href={"/products"} onClick={() => setOpenMobileMenu(false)}> */}
+
+              <div className="flex">
+                {arrowIcon("product", openProductsMobile)}
+              </div>
+              <ul
+                className={` w-full pl-2 bg-white rounded-[12px] shadow-[#232323] overflow-hidden transition-all duration-300 ${openProductsMobile ? "max-h-[1000px] transition-all duration-300" : "max-h-[0] transition-all duration-300"}`}
               >
-                {t("qualitySystem")}
-              </Link>
+                <li
+      
+                >
+                  <Link
+                    className="flex w-full justify-between text-[#000] hover:text-[#2044A1]"
+                    href={"/products/passenger"}
+                    onClick={() => setOpenMobileMenu(false)}
+                  >
+                    {t("passenger")} {rightIcon}
+                  </Link>
+                </li>
+                <li className="py-4 ">
+                  <Link
+                    href={"/products/system"}
+                    className="flex w-full justify-between text-[#000] hover:text-[#2044A1]"
+                    onClick={() => setOpenMobileMenu(false)}
+                  >
+                    {t("system")} {rightIcon}
+                  </Link>
+                </li>
+                <li className="py-4">
+                  <Link
+                    href={"/products/vacuum-toilets"}
+                    className="flex w-full justify-between text-[#000] hover:text-[#2044A1]"
+                    onClick={() => setOpenMobileMenu(false)}
+                  >
+                    {t("vacuum-toilets")} {rightIcon}
+                  </Link>
+                </li>
+                <li className="py-4 ">
+                  <Link
+                    href={"/products/sosial-transport"}
+                    className="flex w-full justify-between text-[#000] hover:text-[#2044A1]"
+                    onClick={() => setOpenMobileMenu(false)}
+                  >
+                    {t("sosial-transport")} {rightIcon}
+                  </Link>
+                </li>
+                <li className="py-4 ">
+                  <Link
+                    href={"/products/special-wagons"}
+                    className="flex w-full justify-between text-[#000] hover:text-[#2044A1]"
+                    onClick={() => setOpenMobileMenu(false)}
+                  >
+                    {t("spacial-wagons")} {rightIcon}
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="header__list-item p-0-c" onClick={() => setOpenQualitySystemMobile((state) => !state)}>
+
+              <div className="flex">
+                {arrowIcon("qualitySystem", openQualitySystemMobile)}
+              </div>
+
+              <ul
+                className={`pl-2 w-full bg-white rounded-[12px] shadow-[#232323] overflow-hidden  transition-all duration-300 ${openQualitySystemMobile ? "max-h-[1000px]" : "max-h-[0] "}`}
+              >
+                <li className="py-4 ">
+                  <Link
+                    href={"/qualitySystem/certificate"}
+                    className="flex w-full justify-between text-[#000] hover:text-[#2044A1]"
+                    onClick={() => setOpenMobileMenu(false)}
+                  >
+                    {t("certyficates")}
+                    {rightIcon}
+                  </Link>
+                </li>
+                <li className="py-4 ">
+                  <Link
+                    href={"/qualitySystem/patents"}
+                    className="flex w-full justify-between text-[#000] hover:text-[#2044A1]"
+                    onClick={() => setOpenMobileMenu(false)}
+                  >
+                    {t("patents")} {rightIcon}
+                  </Link>
+                </li>
+                <li className="py-4 ">
+                  <Link
+                    href={"/qualitySystem/system-manage-quality"}
+                    className="flex w-full justify-between text-[#000] hover:text-[#2044A1]"
+                    onClick={() => setOpenMobileMenu(false)}
+                  >
+                    {t("system-manage-quality")}
+                    {rightIcon}
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className="header__list-item">
               <Link href={"/about"} onClick={() => setOpenMobileMenu(false)}>
@@ -459,13 +544,20 @@ export default function Header() {
                   { value: "EN", text: "EN" },
                 ]}
               />
-              
             </li>
             <li className="header__list-item   mt-auto">
               <ul>
-                <li className="mb-8 "><Link className="text-[14px]" href={''}>info@ator.com.ua</Link></li>
-                <li><Link className="text-[14px]" href={''}>+38 095-303-2313</Link></li>
-                <li className="text-[14px]">{t('adress')}</li>
+                <li className="mb-8 ">
+                  <Link className="text-[14px]" href={""}>
+                    info@ator.com.ua
+                  </Link>
+                </li>
+                <li>
+                  <Link className="text-[14px]" href={""}>
+                    +38 095-303-2313
+                  </Link>
+                </li>
+                <li className="text-[14px]">{t("adress")}</li>
               </ul>
             </li>
           </ul>
