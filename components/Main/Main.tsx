@@ -21,7 +21,7 @@ const MainComponent = async ({params}: {params: Params}) => {
 
           <p className='mainPage__first-description'>{t("main.description")}</p>
 
-          <Link href={'/products/2'} className='mainPage__first-button'>{t("main.read-me")}</Link>
+          <Link href={'/about'} className='mainPage__first-button'>{t("main.read-me")}</Link>
         </div>
       </div>
   )

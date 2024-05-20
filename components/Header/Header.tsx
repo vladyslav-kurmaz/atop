@@ -74,7 +74,7 @@ export default function Header() {
         height="20"
         viewBox="0 0 20 20"
         fill="none"
-        className={`${status ? "rotate-180" : ""}`}
+        className={`${status ? "" : "rotate-180"}`}
       >
         <mask
           id="mask0_3070_9999"
