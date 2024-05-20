@@ -10,8 +10,6 @@ import logo from "../../image/logo.webp";
 import "./Footer.scss";
 import { useTranslation } from "react-i18next";
 
-// {open}: {open: () => void}
-
 const Footer = () => {
   const { t } = useTranslation(["footer", "header"]);
   const pathname = usePathname();
@@ -125,7 +123,7 @@ const Footer = () => {
           <Link
             href={"/writeUs"}
             // onClick={open}
-            className="footer__info-contact"
+            className="footer__info-contact flex flex-nowrap"
           >
             {t("write-us")}
             <svg
@@ -170,29 +168,24 @@ const Footer = () => {
           <ul className="footer__company">
             <li className="footer__company-item">
               <Link href="/servicesPage" className="footer__company-item-link">
-                {t("sevices")}
+                {t("services")}
               </Link>
             </li>
-            <li className="footer__company-item" onClick={() => setOpenProductsMobile((state) => !state)}>
-              {/* <Link
-                href="/products/passenger"
-                className="footer__company-item-link"
+            <li
+              className="footer__company-item"
+              onClick={() => setOpenProductsMobile((state) => !state)}
+            >
+              <div
+                className={`flex ${openProductsMobile ? "mb-2" : ""} cursor-pointer`}
               >
-                {t("products")}
-              </Link> */}
-
-              
-              <div className={`flex ${openProductsMobile ? 'mb-2': ""} cursor-pointer`}>
-                {arrowIcon("propducts", openProductsMobile)}
+                {arrowIcon("products", openProductsMobile)}
               </div>
               <ul
                 className={` w-full pl-2 bg-transparent rounded-[12px] shadow-[#232323] overflow-hidden transition-all duration-300 ${openProductsMobile ? "max-h-[1000px] transition-all duration-300" : "max-h-[0] transition-all duration-300"}`}
               >
-                <li
-      
-                >
+                <li>
                   <Link
-                    className="flex w-full justify-between text-white"
+                    className="flex w-full justify-between text-white pt-4"
                     href={"/products/passenger"}
                   >
                     {t("passenger")} {rightIcon}
@@ -202,7 +195,6 @@ const Footer = () => {
                   <Link
                     href={"/products/system"}
                     className="flex w-full justify-between text-white"
-
                   >
                     {t("system")} {rightIcon}
                   </Link>
@@ -211,7 +203,6 @@ const Footer = () => {
                   <Link
                     href={"/products/vacuum-toilets"}
                     className="flex w-full justify-between text-white"
-        
                   >
                     {t("vacuum-toilets")} {rightIcon}
                   </Link>
@@ -220,7 +211,6 @@ const Footer = () => {
                   <Link
                     href={"/products/sosial-transport"}
                     className="flex w-full justify-between text-white"
-       
                   >
                     {t("sosial-transport")} {rightIcon}
                   </Link>
@@ -229,7 +219,6 @@ const Footer = () => {
                   <Link
                     href={"/products/special-wagons"}
                     className="flex w-full justify-between text-white"
-  
                   >
                     {t("spacial-wagons")} {rightIcon}
                   </Link>
@@ -247,7 +236,7 @@ const Footer = () => {
                 {t("quality-system")}
               </Link> */}
               <div className="flex cursor-pointer">
-                {arrowIcon("qulity-system", openQualitySystemMobile)}
+                {arrowIcon("quality-system", openQualitySystemMobile)}
               </div>
 
               <ul
@@ -257,7 +246,6 @@ const Footer = () => {
                   <Link
                     href={"/qualitySystem/certificate"}
                     className="flex w-full justify-between text-white "
-                   
                   >
                     {t("certyficates")}
                     {rightIcon}
@@ -267,7 +255,6 @@ const Footer = () => {
                   <Link
                     href={"/qualitySystem/patents"}
                     className="flex w-full justify-between text-white "
-                    
                   >
                     {t("patents")} {rightIcon}
                   </Link>
@@ -276,7 +263,6 @@ const Footer = () => {
                   <Link
                     href={"/qualitySystem/system-manage-quality"}
                     className="flex w-full justify-between text-white "
-                    
                   >
                     {t("system-manage-quality")}
                     {rightIcon}
