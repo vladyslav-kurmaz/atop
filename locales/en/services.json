@@ -42,6 +42,10 @@
     "10": {
       "title": "Software development",
       "description": "'NVO' A.T.O.R. LLC develops software that fully meets customer requirements."
+    },
+    "11": {
+      "title": "Welding production",
+      "description": "The company offers welding services for ferrous metals, stainless steel, and aluminum."
     }
   },
 
@@ -244,6 +248,15 @@
     "subDescription2": {"0": "We believe that all technical and informational tools in your office should help you and your employees solve current tasks, work more productively and achieve great results."},
     "subTitle": "Don't know where to start?",
     "subDescription3": {"0": "Trust us, take the first step on the way to the development of your business, describe your requirements and our manager will tell you how to order software development from us."}
+  },
+  "10": {
+    "title": "Welding production",
+    "description": {
+      "0": "The company offers welding services for ferrous metals, stainless steel, and aluminum.",
+      "1": "The work is performed by highly qualified welders who have undergone training and certification according to SOU-35.2-000-17-584-030-1(2).",
+      "2": "Our company has extensive experience in performing welding works and manufacturing custom-made welded metal structures of any complexity and configuration. We will help you realize all your ideas and projects."
+    }
+
   }
 
 }

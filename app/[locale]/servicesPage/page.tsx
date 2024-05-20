@@ -1,10 +1,14 @@
 
-
-
-import type { Metadata } from 'next'
-export const metadata: Metadata = {
-  title: 'Services',
-  description: 'On this page you have saw our services'
+export async function generateMetadata({ params }: { params: any }) {
+  return {
+    title:
+      params.locale === "en"
+        ? "Services - A.T.O.R"
+        : "Послуги – А.Т.О.Р",
+    description: params.locale === "en"
+    ? "On this page you have saw our services"
+    : "На цій сторінці ви побачили наші послуги",
+  };
 }
 
 import './servicesPage.scss';
@@ -36,6 +40,8 @@ export default async function MainServicesPage({ params }: { params: Params }) {
   const { t, resources } = await initTranslations(params.locale, [
     'services', 
   ]);
+
+  
 
   const renderService = (data: Service[] ) => {
     return data.map((item, i) => {

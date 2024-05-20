@@ -20,10 +20,7 @@ const Preloader = () => {
   
 
   useEffect(() => {
-    
     preloaderFunk(setPersDisplay);
-    // setPersDisplay(percentage)
-    // console.log(percentage);
   }, [])
   
   // // const persents = ;

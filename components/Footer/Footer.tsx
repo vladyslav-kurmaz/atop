@@ -170,7 +170,7 @@ const Footer = () => {
           <ul className="footer__company">
             <li className="footer__company-item">
               <Link href="/servicesPage" className="footer__company-item-link">
-                {t("services")}
+                {t("sevices")}
               </Link>
             </li>
             <li className="footer__company-item" onClick={() => setOpenProductsMobile((state) => !state)}>
@@ -182,8 +182,8 @@ const Footer = () => {
               </Link> */}
 
               
-              <div className={`flex ${openProductsMobile ? 'mb-2': ""}`}>
-                {arrowIcon("header:product", openProductsMobile)}
+              <div className={`flex ${openProductsMobile ? 'mb-2': ""} cursor-pointer`}>
+                {arrowIcon("propducts", openProductsMobile)}
               </div>
               <ul
                 className={` w-full pl-2 bg-transparent rounded-[12px] shadow-[#232323] overflow-hidden transition-all duration-300 ${openProductsMobile ? "max-h-[1000px] transition-all duration-300" : "max-h-[0] transition-all duration-300"}`}
@@ -195,7 +195,7 @@ const Footer = () => {
                     className="flex w-full justify-between text-white"
                     href={"/products/passenger"}
                   >
-                    {t("header:passenger")} {rightIcon}
+                    {t("passenger")} {rightIcon}
                   </Link>
                 </li>
                 <li className="py-4 ">
@@ -204,7 +204,7 @@ const Footer = () => {
                     className="flex w-full justify-between text-white"
 
                   >
-                    {t("header:system")} {rightIcon}
+                    {t("system")} {rightIcon}
                   </Link>
                 </li>
                 <li className="py-4">
@@ -213,7 +213,7 @@ const Footer = () => {
                     className="flex w-full justify-between text-white"
         
                   >
-                    {t("header:vacuum-toilets")} {rightIcon}
+                    {t("vacuum-toilets")} {rightIcon}
                   </Link>
                 </li>
                 <li className="py-4 ">
@@ -222,7 +222,7 @@ const Footer = () => {
                     className="flex w-full justify-between text-white"
        
                   >
-                    {t("header:sosial-transport")} {rightIcon}
+                    {t("sosial-transport")} {rightIcon}
                   </Link>
                 </li>
                 <li className="py-4 ">
@@ -231,7 +231,7 @@ const Footer = () => {
                     className="flex w-full justify-between text-white"
   
                   >
-                    {t("header:spacial-wagons")} {rightIcon}
+                    {t("spacial-wagons")} {rightIcon}
                   </Link>
                 </li>
               </ul>
@@ -246,8 +246,8 @@ const Footer = () => {
               >
                 {t("quality-system")}
               </Link> */}
-              <div className="flex">
-                {arrowIcon("quality-system", openQualitySystemMobile)}
+              <div className="flex cursor-pointer">
+                {arrowIcon("qulity-system", openQualitySystemMobile)}
               </div>
 
               <ul
@@ -259,26 +259,26 @@ const Footer = () => {
                     className="flex w-full justify-between text-white "
                    
                   >
-                    {t("header:certyficates")}
+                    {t("certyficates")}
                     {rightIcon}
                   </Link>
                 </li>
                 <li className="py-4 ">
                   <Link
                     href={"/qualitySystem/patents"}
-                    className="flex w-full justify-between text-white hover:text-[#2044A1]"
+                    className="flex w-full justify-between text-white "
                     
                   >
-                    {t("header:patents")} {rightIcon}
+                    {t("patents")} {rightIcon}
                   </Link>
                 </li>
                 <li className="py-4 ">
                   <Link
                     href={"/qualitySystem/system-manage-quality"}
-                    className="flex w-full justify-between text-white hover:text-[#2044A1]"
+                    className="flex w-full justify-between text-white "
                     
                   >
-                    {t("header:system-manage-quality")}
+                    {t("system-manage-quality")}
                     {rightIcon}
                   </Link>
                 </li>

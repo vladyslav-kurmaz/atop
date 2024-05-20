@@ -18,10 +18,7 @@ const SliderGalery = ({data, initialSlide, close}: {data: string[], initialSlide
           alt={`slide ${i}`} key={i} />
       </div>
     })
-  }
-
-  console.log(initialSlide);
-  
+  }  
 
   const settings = {
     arrows:true,

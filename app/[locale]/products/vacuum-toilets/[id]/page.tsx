@@ -16,14 +16,17 @@ import initTranslations from "@/app/i18n";
 import { vacuumToiletsData } from "@/data/data";
 import ServiceProductSlider from "@/components/ServiceProductSlider/ServiceProductSlider";
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: any }) {
+  const { t, resources } = await initTranslations(params.locale, [
+    "vacuum-toilet",
+    "service-product",
+  ]);
   const id = params.id;
-
   const product = vacuumToiletsData.filter((item, i) => i === +id)[0];
-
+  
   return {
-    title: product.title,
-    description: `You can read about ${product.title}`,
+    title: t(product.title),
+    description: t(product.description)
   };
 }
 

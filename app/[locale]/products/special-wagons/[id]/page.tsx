@@ -17,14 +17,17 @@ import { renderSubDescription } from "@/helpers/renderSubDescripton";
 import { specialWagon } from "@/data/data";
 import ServiceProductSlider from "@/components/ServiceProductSlider/ServiceProductSlider";
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: any }) {
+  const { t, resources } = await initTranslations(params.locale, [
+    "special-wagon",
+    "service-product",
+  ]);
   const id = params.id;
-
   const product = specialWagon.filter((item, i) => i === +id)[0];
-
+  
   return {
-    title: product.title,
-    description: `You read about ${product.title}`,
+    title: t(product.title),
+    description: t(product.description)
   };
 }
 

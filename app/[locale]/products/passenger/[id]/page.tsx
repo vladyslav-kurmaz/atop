@@ -18,14 +18,28 @@ import { renderSubDescription } from "@/helpers/renderSubDescripton";
 import { passengerData } from "@/data/data";
 import ServiceProductSlider from "@/components/ServiceProductSlider/ServiceProductSlider";
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+// export async function generateMetadata({ params }: Props): Promise<Metadata> {
+//   const id = params.id;
+
+//   const product = passengerData.filter((item, i) => i === +id)[0];
+
+//   return {
+//     title: product.title,
+//     description: `You read about ${product.title}`,
+//   };
+// }
+
+export async function generateMetadata({ params }: { params: any }) {
+  const { t, resources } = await initTranslations(params.locale, [
+    "passengers",
+    "service-product",
+  ]);
   const id = params.id;
-
   const product = passengerData.filter((item, i) => i === +id)[0];
-
+  
   return {
-    title: product.title,
-    description: `You read about ${product.title}`,
+    title: t(product.title),
+    description: t(product.description)
   };
 }
 

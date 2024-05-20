@@ -6,15 +6,14 @@ import Image from "next/image";
 
 import "../Products.scss";
 
-export const metadata: Metadata = {
-  title: "Products",
-  description: "On this page you have saw our products",
-};
-
-// import './Products.scss';
-// export const metadata: Metadata = {
-//   title: 'AETD Products',
-// }
+export async function generateMetadata({ params }: { params: any }) {
+  return {
+    title:
+      params.locale === "en"
+        ? "For passenger car construction"
+        : "Для пасажирського вагонобудування",
+  };
+}
 
 type PreviewData = {
   title: string;
@@ -52,7 +51,13 @@ export default async function Products({ params }: { params: Params }) {
             href={`/products/passenger/${i}`}
             className="products__list-item-overLink"
           ></Link>
-          <Image src={src} alt={title} width={1000} height={240} className="mb-6 rounded-t-[12px]"/>
+          <Image
+            src={src}
+            alt={title}
+            width={1000}
+            height={240}
+            className="mb-6 rounded-t-[12px]"
+          />
           <p className="products__list-item-text px-6 ">{t(title)}</p>
           <div className="products__list-item-container px-6 pb-6 mt-auto">
             <span className="products__list-item-container-num">

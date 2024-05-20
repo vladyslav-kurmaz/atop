@@ -28,8 +28,6 @@ export default function Header() {
   const { t } = useTranslation(["header"]);
   const pathname = usePathname();
 
-  // console.log(t("header:test"));
-
   useEffect(() => {
     if (openMobileMenu) {
       document.body.style.overflow = "hidden";

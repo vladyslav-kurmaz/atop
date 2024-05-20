@@ -6,10 +6,14 @@ import Image from "next/image";
 
 import "../Products.scss";
 
-export const metadata: Metadata = {
-  title: "Products",
-  description: "On this page you have saw our products",
-};
+export async function generateMetadata({ params }: { params: any }) {
+  return {
+    title:
+      params.locale === "en"
+        ? "Vacuum toilet systems"
+        : "Вакуумні туалетні системи",
+  };
+}
 
 // import './Products.scss';
 // export const metadata: Metadata = {

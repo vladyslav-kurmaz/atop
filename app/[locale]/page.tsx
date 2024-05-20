@@ -1,9 +1,9 @@
-
-
 import type { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "AETD",
-};
+export async function generateMetadata({ params }: { params: any }) {
+  return {
+    title: params.locale === "en" ? "LLC NVO A.T.O.R." : "ТОВ «НВО «А.Т.О.Р»",
+  };
+}
 
 import "./mainPage.scss";
 import { Suspense, lazy } from "react";
@@ -19,39 +19,38 @@ import initTranslations from "../i18n";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import TranslationsProvider from "@/components/TranslationProvider/TranslationProvider";
 
-
 export default async function Home({ params }: { params: Params }) {
-  const { t, resources } = await initTranslations(params.locale, [
+  const { t, resources, i18n } = await initTranslations(params.locale, [
     "header",
     "main",
   ]);
 
   return (
     <div className="mainPage">
-      {/* {preloader ? <Preloader/> : null} */}
-      {/* close={setPreloader}
-    {preloader ? <Preloader /> : null} */}
-
-      {/* {true && <Preloader />} */}
-
-      {/* <Suspense fallback={<Preloader/>}> */}
 
       <MainComponent params={params} />
       <Experience params={params} />
-        <TranslationsProvider
-          namespaces={["main"]}
-          locale={params?.locale}
-          resources={resources}
-        >
-          <Grow />
-        </TranslationsProvider>
+      <TranslationsProvider
+        namespaces={["main"]}
+        locale={params?.locale}
+        resources={resources}
+      >
+        <Grow />
+      </TranslationsProvider>
 
-      <Direction params={params}/>
-      <Enterprice params={params}/>
-      <Partners/>
-      <Contacts params={params}/>
+      <Direction params={params} />
+      <Enterprice params={params} />
+
+      <TranslationsProvider
+        namespaces={["main"]}
+        locale={params?.locale}
+        resources={resources}
+      >
+        <Partners />
+      </TranslationsProvider>
+
+      <Contacts params={params} />
       {/* </Suspense> */}
     </div>
   );
 }
-

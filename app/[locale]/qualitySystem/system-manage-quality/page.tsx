@@ -2,11 +2,14 @@
 
 import CertificatesAndPatents from "@/components/CertificatesAndPatents/CertificatesAndPatents";
 
-import type { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "Patents – А.E.T.D",
-  description: "Patents presented by the company А.E.T.D",
-};
+export async function generateMetadata({ params }: { params: any }) {
+  return {
+    title:
+      params.locale === "en"
+        ? "Certification of materials and products - A.T.O.R"
+        : "Сертифікація матеріалів і продукції – А.Т.О.Р",
+  };
+}
 
 import "./Patents.scss";
 import initTranslations from "@/app/i18n";

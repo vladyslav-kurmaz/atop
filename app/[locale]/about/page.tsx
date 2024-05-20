@@ -5,10 +5,11 @@ import aboutUs from "../../../image/aboutus.webp";
 import type { Metadata } from "next";
 import initTranslations from "@/app/i18n";
 
-export const metadata: Metadata = {
-  title: "About A.E.T.D.",
-  description: "About A.E.T.D.",
-};
+export async function generateMetadata({ params }: { params: any }) {
+  return {
+    title: params.locale === "en" ? "About LLC NVO A.T.O.R." : "Про ТОВ «НВО «А.Т.О.Р»",
+  };
+}
 
 export default async function About({ params }: { params: Params }) {
   const { t, resources } = await initTranslations(params.locale, ["about-us"]);

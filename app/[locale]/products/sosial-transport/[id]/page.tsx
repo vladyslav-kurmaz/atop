@@ -16,14 +16,17 @@ import initTranslations from "@/app/i18n";
 import { sosialTransport } from "@/data/data";
 import ServiceProductSlider from "@/components/ServiceProductSlider/ServiceProductSlider";
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: any }) {
+  const { t, resources } = await initTranslations(params.locale, [
+    "social-transport",
+    "service-product",
+  ]);
   const id = params.id;
-
   const product = sosialTransport.filter((item, i) => i === +id)[0];
 
   return {
-    title: product.title,
-    description: `You can read about ${product.title}`,
+    title: t(product.titleCard),
+    description: t(product.description),
   };
 }
 

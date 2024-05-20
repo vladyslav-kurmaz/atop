@@ -81,7 +81,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = dataServices.filter((item, i) => i === +id)[0];
 
   return {
-    title: product.title,
+    title: t(product.title),
     description: `You read about ${t(product.title)}`,
   };
 }

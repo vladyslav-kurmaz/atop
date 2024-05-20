@@ -38,9 +38,9 @@ const Select = ({
 
   const ref = useRef(null);
   const changeLanguage = (value: string) => {
-
     const currentPathnameWithParams = `${currentPathname}`;
     LanguageChanger(router, currentPathnameWithParams, value, currentLanguge);
+
 
     setOpenList(false);
   };

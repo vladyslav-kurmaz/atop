@@ -427,6 +427,31 @@
       "1": "sliding aluminum doors from the corridor to the salon with glass in the transport version;",
       "2": "sliding doors in the service compartment and conductors' rest compartment;",
       "3": "toilet doors."
+    },
+
+    "subDescription3": {
+      "0": "The doors of the toilets are made of rotary (inside the toilet) with an electric locking lock.",
+      "1": "The doors from the vestibules to the car are made of fire-resistant plywood, lined with plastic, with the use of cellular filler. Door frames and door moldings are made of polished stainless steel."
+    },
+
+    "subListTitle3": "In the salon the wagon is equipped with the following equipment:",
+    "subList3": {
+      "0": "2nd class seats, upholstered with fire-resistant acrylic wear-resistant fabric with split pile on the front side;",
+      "1": "stainless steel luggage racks;",
+      "2": "glass partitions dividing the salon into zones;",
+      "3": "aluminum luggage shelves with built-in glass (triplex) and LED strip lighting; hooks for clothes that move along the side wall and hidden fastening of curtains;",
+      "4": "stationary tables without sharp corners, made of fire-resistant plywood covered with plastic, with folding elements for passenger convenience;",
+      "5": "televisions."
+    },
+    "subListTitle4": "A set of facing vestibules consists of:",
+    "subList4": {
+      "0": "flat wall cladding elements;",
+      "1": "doors of coal boxes;",
+      "2": "cover of signal lights;",
+      "3": "handbrake frame (fiberglass)."
+    },
+    "subDescription4": {
+      "0": "All vestibule lining elements are made of stainless tetrapolished and mirror steel."
     }
   },
   "6": {

@@ -19,8 +19,12 @@ import kyivMetro from "@/image/partner/kyiv-metro.png";
 import kyivpass from "@/image/partner/kyivpas.png";
 import skoda from "@/image/partner/skoda.png";
 import tram from "@/image/partner/tram.png";
+import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
+import initTranslations from "@/app/i18n";
+import { useTranslation } from "react-i18next";
 
-const Partners = () => {
+const Partners =  () => {
+  const { t } = useTranslation(["main"]);
   const settings = {
     arrows: true,
     centerPadding: "0px",
@@ -84,7 +88,7 @@ const Partners = () => {
 
   return (
     <div className="mainPage__partners">
-      <h3 className="mainPage__partners-title">Our Partners & Clients</h3>
+      <h3 className="mainPage__partners-title">{t("partners-title")}</h3>
       {/* <div className="flex gap">
         <button
           className="mainPage__grow-container-slider-switchers-prev"

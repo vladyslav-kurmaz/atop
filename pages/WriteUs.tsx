@@ -233,11 +233,11 @@ const WriteUsComponent = () => {
                 {validationForm(formData.sevices, 'sevices')?.errorStatus ? <div className="modal__form-label-error">{validationForm(formData.sevices, 'sevices')?.message}</div> : null}
             </label>
             <label htmlFor="text" className='modal__form-label'>
-              <span>Message</span>
+              <span>{t("message-label")}</span>
               <textarea 
                 id='text' 
                 name='message' 
-                placeholder='Type your message' 
+                placeholder={t("message-placeholder")}
                 className='modal__form-label-input'
                 value={formData.message}
                 onChange={(e) => changeInput(e)}/>
@@ -245,7 +245,7 @@ const WriteUsComponent = () => {
                 {validationForm(formData.message, 'message')?.errorStatus ? <div className="modal__form-label-error">{validationForm(formData.message, 'message')?.message}</div> : null}
             </label>
           </div>
-          <button className='modal__form-submit' type='submit' disabled={disabled}>Send Message</button>
+          <button className='modal__form-submit' type='submit' disabled={disabled}>{t("button")}</button>
         </form>
       </div>
     </>
