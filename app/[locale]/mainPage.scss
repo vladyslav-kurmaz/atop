@@ -498,6 +498,22 @@
     }
   }
 
+  @media screen and (max-width: 370px) {
+    .mainPage__first-title {
+      font-size: 35px;
+    }
+
+    .mainPage__first-description {
+      font-size: 14px;
+    }
+
+    .mainPage__first-container {
+      padding: 64px 20px;
+    }
+
+    
+  }
+
   &__direction {
     max-width: 1440px;
     width: 100%;
