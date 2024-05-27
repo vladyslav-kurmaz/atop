@@ -286,7 +286,7 @@ const Footer = () => {
         <ul className="footer__social">
           <li className="footer__social-item">{t("social-network")}</li>
           <li className="footer__social-item">
-            <a href="#" target="_blank" className="footer__social-item-link">
+            <a href="https://www.facebook.com/profile.php?id=100066403879972" target="_blank" className="footer__social-item-link">
               Facebook
             </a>
           </li>

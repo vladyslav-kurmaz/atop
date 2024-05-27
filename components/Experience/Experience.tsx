@@ -46,6 +46,7 @@ const Experience = async ({params}: {params: Params}) => {
             <Image
               src={tarmpel}  
               alt='trampel'
+              className="h-full"
               // layout='fill'
               // style={{maxWidth: '656px', maxHeight: '437px', objectFit: 'contain'}}
             />
@@ -55,6 +56,7 @@ const Experience = async ({params}: {params: Params}) => {
             <Image
               src={chair}  
               alt='chair'
+              className="h-full"
               // className="w-full h-full"
               // style={{maxWidth: '656px', maxHeight: '437px', objectFit: 'contain'}}
 

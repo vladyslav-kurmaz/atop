@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import metalDew from '@/image/enterprice/metal-develop.png';
+import metalDew from '@/image/enterprice/metal-develop.webp';
 import metal from '@/image/enterprice/metal.png';
 import wood from '@/image/enterprice/wood.png';
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
