@@ -3,7 +3,7 @@
 // import { dataSelect } from "@/types/types";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
-import { useRef, useState } from "react";
+import { MutableRefObject, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import LanguageChanger from "@/utils/LanguageChanger";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -33,10 +33,31 @@ const Select = ({
   const router = useRouter();
   const currentPathname = usePathname();
   const searchParams = useSearchParams();
+  const languageRef = useRef<any>(null);
   // const searchTags = searchParams.get("tag");
   // const searchPage = searchParams.get("page");
 
-  const ref = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (
+      e: any,
+      languageRef: MutableRefObject<any>,
+    ) => {
+      if (languageRef.current && !languageRef.current.contains(e.target)) {
+        setOpenList(false);
+      }
+    };
+
+    document.addEventListener("mousedown", (e) =>
+      handleClickOutside(e, languageRef,)
+    );
+
+    return () => {
+      document.removeEventListener("mousedown", (e) =>
+        handleClickOutside(e, languageRef)
+      );
+    };
+  }, [languageRef]);
+
   const changeLanguage = (value: string) => {
     const currentPathnameWithParams = `${currentPathname}`;
     LanguageChanger(router, currentPathnameWithParams, value, currentLanguge);
@@ -86,7 +107,8 @@ const Select = ({
         {curentItem(data)}
       </div>
       <div
-        className={`flex z-50 lg:absolute lg:right-0 top-full  rounded  transition-all duration-300  box-border lg:bg-slate-50 bg-white bottom-0 flex-col lg:w-auto w-full overflow-hidden ${openList ? "lg:py-3 lg:px-3 pl-3 max-h-[1000] lg:min-h-max lg:border" : "max-h-[0]"}`}
+        ref={languageRef}
+        className={`flex z-50 lg:absolute lg:right-0 top-full  rounded  transition-all duration-300  box-border lg:bg-slate-50 bg-white bottom-0 flex-col lg:w-auto w-full overflow-hidden ${openList ? "lg:py-3 lg:px-3 pl-3 max-h-[1000] lg:min-h-[90px] lg:border" : "max-h-[0]"}`}
       >
         {renderItem(data)}
       </div>
