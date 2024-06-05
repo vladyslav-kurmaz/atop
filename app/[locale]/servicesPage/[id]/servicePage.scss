@@ -6,10 +6,12 @@
   padding-bottom: 104px;
 
   &__img {
+    max-width: 1440px;
     width: 100%;
     height: 100%;
     object-fit: fill;
     height: 654px;
+    margin: 0 auto;
 
   }
 
