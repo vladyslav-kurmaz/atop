@@ -218,6 +218,7 @@ export const passengerData: AllProductInfo[] = [
       "/product/passenger/tarpan/3-2.webp",
       "/product/passenger/tarpan/3-3.webp",
       "/product/passenger/tarpan/3-4.webp",
+      "/product/passenger/tarpan/3-5.webp",
     ],
     title: "3.title",
     titleCard: "3.titleCard",
@@ -545,7 +546,6 @@ export const systemData: AllProductInfo[] = [
       "/product/system/electro/1-1.webp",
       "/product/system/electro/1-2.webp",
       "/product/system/electro/1-3.webp",
-      "/product/system/electro/1-4.webp",
     ],
     title: "1.title",
     titleCard: "1.titleCard",
@@ -566,7 +566,6 @@ export const systemData: AllProductInfo[] = [
     slider: [
       "/product/system/condition/2-1.webp",
       "/product/system/condition/2-2.webp",
-      "/product/system/condition/2-3.webp",
     ],
     title: "2.title",
     titleCard: "2.titleCard",
@@ -578,7 +577,8 @@ export const systemData: AllProductInfo[] = [
     slider: [
       "/product/system/pult/3-1.webp",
       "/product/system/pult/3-2.webp",
-      // "/product/system/pult/3-3.webp",
+      "/product/system/pult/3-3.webp",
+      "/product/system/pult/3-4.webp",
     ],
     title: "3.title",
     titleCard: "3.titleCard",
@@ -715,7 +715,7 @@ export const vacuumToiletsData: AllProductInfo[] = [
   {
     slider: [
       "/product/vacuum/san-module/2-1.webp",
-      "/product/vacuum/san-module/2-2.webp",
+      // "/product/vacuum/san-module/2-2.webp",
     ],
     title: "2.title",
     titleCard: "2.titleCard",
@@ -769,7 +769,7 @@ export const vacuumToiletsData: AllProductInfo[] = [
       "/product/vacuum/disel/3-1.webp",
       "/product/vacuum/disel/3-2.webp",
       "/product/vacuum/disel/3-2.webp",
-      "/product/vacuum/disel/3-4.webp",
+      // "/product/vacuum/disel/3-4.webp",
     ],
     title: "3.title",
     titleCard: "3.titleCard",
