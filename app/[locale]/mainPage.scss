@@ -267,12 +267,18 @@
 
   &__grow {
     width: 100%;
+    
+    .slick-slide  {
+      display: flex;
+      justify-content: center;
+    }
 
     &-container {
       max-width: 1440px;
       width: 100%;
       margin: 0 auto;
       padding: 48px;
+      position: relative;
 
       &-title {
         color: #232323;
@@ -286,12 +292,18 @@
         position: relative;
         width: 100%;
 
+        
+
         &-switchers {
           width: 88px;
           display: flex;
           justify-content: space-between;
-          margin-bottom: 24px;
+          // position: absolute;
+          // width: 100%;
+    
+          // margin-bottom: 24px;
           // display: none;
+          // top: 50%;
 
           &-prev, &-next {
             width: 40px;
@@ -304,6 +316,24 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            background-color: #fff;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            transform: translateY(-50%);
+            z-index: 199;
+          }
+
+          &-prev {
+            left: 60px;
+
+
+          }
+
+          &-next {
+            right: 80px;
+            
+
           }
         }
 
@@ -313,6 +343,8 @@
           align-items: center;
           width: 100%;
           overflow: hidden;
+          position: relative;
+          z-index: 2;
 
             & .slick-slider {
               width: 100%;
@@ -346,7 +378,7 @@
 
               & li {
                 color: #232323;
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 400;
                 // margin-bottom: 10px;
               }
@@ -444,11 +476,19 @@
               // color: #E1E1E1;
               opacity: .5;
             }
+
+            &-prev {
+              left: 15px;
+            }
+
+            &-next {
+              right: 15px;
+            }
           }
 
           &-list {
             flex-wrap: nowrap;
-            width: 1032px;
+            // width: 1032px;
             position: relative;
             top: 0;
             left: 0px;

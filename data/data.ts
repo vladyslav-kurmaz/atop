@@ -420,6 +420,7 @@ export const passengerData: AllProductInfo[] = [
       "/product/passenger/parts-for-disel/6-2.webp",
       "/product/passenger/parts-for-disel/6-3.webp",
       "/product/passenger/parts-for-disel/6-4.webp",
+      "/product/passenger/parts-for-disel/6-5.webp",
     ],
     title: "6.title",
     titleCard: "6.titleCard",
@@ -814,7 +815,6 @@ export const sosialTransport: AllProductInfo[] = [
   {
     slider: [
       "/product/social/parts-for-new-wagon/1-1.webp",
-      "/product/social/parts-for-new-wagon/1-2.webp",
       "/product/social/parts-for-new-wagon/1-3.webp",
       "/product/social/parts-for-new-wagon/1-4.webp",
     ],

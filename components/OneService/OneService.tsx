@@ -107,8 +107,8 @@ const allServiceData: AllServiceInfo[] = [
     subTitle4: "3.subTitle4",
   },
   {
-    src: "/servicesPage/5-1.webp",
-    src2: "/servicesPage/5-2.webp",
+    src: "/servicesPage/5-2.webp",
+    src2: "/servicesPage/5-1.webp",
     title: "4.title",
     description: [
       "4.description.0",
@@ -147,7 +147,8 @@ const allServiceData: AllServiceInfo[] = [
     subList2: ["6.subList2.0", "6.subList2.1", "6.subList2.2", "6.subList2.3"],
   },
   {
-    src: "/servicesPage/8-1.webp",
+    src: "/servicesPage/8.webp",
+    src2: "/servicesPage/8-2.webp",
     title: "7.title",
     description: ["7.description.0", "7.description.1", "7.description.2"],
   },
