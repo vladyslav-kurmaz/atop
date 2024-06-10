@@ -769,7 +769,7 @@ export const vacuumToiletsData: AllProductInfo[] = [
     slider: [
       "/product/vacuum/disel/3-1.webp",
       "/product/vacuum/disel/3-2.webp",
-      "/product/vacuum/disel/3-2.webp",
+      // "/product/vacuum/disel/3-2.webp",
       // "/product/vacuum/disel/3-4.webp",
     ],
     title: "3.title",

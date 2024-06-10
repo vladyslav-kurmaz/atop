@@ -8,6 +8,39 @@ import Slider from "react-slick";
 
 const data = [
   {
+    year: "grow.2021.year",
+    items: [
+      "grow.2021.item1",
+      "grow.2021.item2",
+      "grow.2021.item3",
+      "grow.2021.item4",
+      "grow.2021.item5",
+    ],
+  },
+  {
+    year: "grow.2022.year",
+    items: [
+      "grow.2022.item1",
+      "grow.2022.item2",
+      "grow.2022.item3",
+      "grow.2022.item4",
+      "grow.2022.item5",
+      "grow.2022.item6",
+    ],
+  },
+  {
+    year: "grow.2023.year",
+    items: [
+      "grow.2023.item1",
+      "grow.2023.item2",
+      "grow.2023.item3",
+      "grow.2023.item4",
+      "grow.2023.item5",
+      "grow.2023.item6",
+    ],
+  },
+  
+  {
     year: "grow.2012.year",
     items: [
       "grow.2012.item1",
@@ -75,38 +108,6 @@ const data = [
       "grow.2020.item1",
       "grow.2020.item2",
       "grow.2020.item3",
-    ],
-  },
-  {
-    year: "grow.2021.year",
-    items: [
-      "grow.2021.item1",
-      "grow.2021.item2",
-      "grow.2021.item3",
-      "grow.2021.item4",
-      "grow.2021.item5",
-    ],
-  },
-  {
-    year: "grow.2022.year",
-    items: [
-      "grow.2022.item1",
-      "grow.2022.item2",
-      "grow.2022.item3",
-      "grow.2022.item4",
-      "grow.2022.item5",
-      "grow.2022.item6",
-    ],
-  },
-  {
-    year: "grow.2023.year",
-    items: [
-      "grow.2023.item1",
-      "grow.2023.item2",
-      "grow.2023.item3",
-      "grow.2023.item4",
-      "grow.2023.item5",
-      "grow.2023.item6",
     ],
   },
   
