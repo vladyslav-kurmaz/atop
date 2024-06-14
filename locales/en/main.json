@@ -131,7 +131,8 @@
   "contacts": {
     "title": "Contacts",
     "adress": "Address",
-    "adress-info": "Ukraine, Kharkiv 61033 St. Shevchenko, 317",
+    "adress-info-city": "Ukraine, Kharkiv 61033 ",
+    "adress-info-street": "St. Shevchenko, 317",
     "post": "Write us",
     "phone": "For all requests"
   }
