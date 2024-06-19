@@ -168,7 +168,7 @@ const Footer = () => {
           <ul className="footer__company">
             <li className="footer__company-item">
               <Link href="/servicesPage" className="footer__company-item-link">
-                {t("services")}
+                {t("sevices")}
               </Link>
             </li>
             <li
