@@ -21,6 +21,8 @@ export default async function SystemManage({ params }: { params: Params }) {
     "/system/system-1.webp",
     "/system/system-2.webp",
     "/system/system-3.webp",
+    "/system/system-4.webp",
+    "/system/system-5.webp",
   ];
   return (
     // <Suspense fallback={<Preloader/>}>
