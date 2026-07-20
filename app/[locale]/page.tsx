@@ -9,6 +9,7 @@ import "./mainPage.scss";
 import { Suspense, lazy } from "react";
 import Preloader from "@/components/Preloader/Preloader";
 import MainComponent from "@/components/Main/Main";
+import Memorial from "@/components/Memorial/Memorial";
 import Experience from "@/components/Experience/Experience";
 import Grow from "@/components/Grow/Grow";
 import Direction from "@/components/Direction/Direction";
@@ -18,6 +19,8 @@ import Contacts from "@/components/Contacts/Contacts";
 import initTranslations from "../i18n";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import TranslationsProvider from "@/components/TranslationProvider/TranslationProvider";
+
+export const revalidate = 3600;
 
 export default async function Home({ params }: { params: Params }) {
   const { t, resources, i18n } = await initTranslations(params.locale, [
@@ -29,6 +32,7 @@ export default async function Home({ params }: { params: Params }) {
     <div className="mainPage">
 
       <MainComponent params={params} />
+      <Memorial params={params} />
       <Experience params={params} />
       <TranslationsProvider
         namespaces={["main"]}

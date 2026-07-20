@@ -126,6 +126,152 @@
     }
   }
 
+  &__memorial {
+    width: 100%;
+    background-color: #FFFFFF;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    &-container {
+      max-width: 760px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 96px 48px 88px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-style: italic;
+      font-size: 22px;
+      color: #6B6A62;
+      margin-bottom: 20px;
+
+      &::before,
+      &::after {
+        content: '';
+        width: 64px;
+        height: 1px;
+        background-color: #C9C6BB;
+      }
+    }
+
+    &-title {
+      max-width: 620px;
+      text-align: center;
+      color: #1A1A17;
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 122%;
+      margin-bottom: 16px;
+    }
+
+    &-subtitle {
+      text-align: center;
+      color: #5A594F;
+      font-size: 19px;
+      margin-bottom: 6px;
+    }
+
+    &-date {
+      text-align: center;
+      color: #8A8975;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      margin-bottom: 48px;
+    }
+
+    &-photo {
+      position: relative;
+      width: 320px;
+      height: 400px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 24px 48px rgba(26, 26, 23, 0.16);
+      margin-bottom: 56px;
+
+      & img {
+        object-fit: cover;
+      }
+    }
+
+    &-body {
+      max-width: 720px;
+      width: 100%;
+
+      & p {
+        color: #2B2A24;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 190%;
+        margin-bottom: 24px;
+      }
+
+      &-final {
+        text-align: center;
+        font-style: italic;
+        color: #1A1A17 !important;
+        font-size: 24px !important;
+        margin-top: 40px;
+        margin-bottom: 0 !important;
+        padding-top: 32px;
+        border-top: 1px solid rgba(26, 26, 23, 0.12);
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    &__memorial {
+      &-container {
+        padding: 64px 20px 56px;
+      }
+
+      &-eyebrow {
+        gap: 12px;
+        font-size: 18px;
+
+        &::before,
+        &::after {
+          width: 32px;
+        }
+      }
+
+      &-title {
+        font-size: 28px;
+      }
+
+      &-subtitle {
+        font-size: 16px;
+      }
+
+      &-date {
+        font-size: 13px;
+        margin-bottom: 32px;
+      }
+
+      &-photo {
+        width: 220px;
+        height: 275px;
+        margin-bottom: 40px;
+      }
+
+      &-body {
+        & p {
+          font-size: 16px;
+          line-height: 180%;
+        }
+
+        &-final {
+          font-size: 19px !important;
+        }
+      }
+    }
+  }
+
   &__experience {
     display: flex;
     justify-content: space-between;
